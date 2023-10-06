@@ -2,7 +2,14 @@
 
 El tema de nuestro sitio es una tienda de ropa deportiva, y nuestro objetivo es llegar a un amplio público, especialmente enfocándonos en aquellos que practican deportes y buscan ropa de alta calidad.
 
-## Referentes de Inspiración:
+## Integrantes:
+
+- Paola Noeli Moriconi
+- Gustavo Lugones
+- Miguel Ruiz
+- Facundo Rodriguez
+
+### Referentes de Inspiración:
 
 - Nuestros cinco referentes de inspiración y las razones por las que los elegimos:
 
