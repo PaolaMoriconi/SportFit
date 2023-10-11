@@ -1,3 +1,12 @@
+Bienvenido a nuestro proyecto de eCommerce, llamado SportFit, especializado en ropa deportiva. Nuestro objetivo es llegar a un amplio público que quiere buscar ropa deportiva de buena calidad. Pero tambien nos enfocándonos especialmente en aquellos que practican deportes. 
+ 
+ los integrates del grupo somos tres, con un mismo objectivo en comun crear un eCommerce con un estilo unico y nunca visto. 
+ - Paola Noeli Moriconi.
+- Miguel Ruiz.
+- Facundo Rodriguez.
+
+los invitos a recorrer este trayecto con nosotros.
+
 ### Referentes de Inspiración:
 
 - Nuestros cinco referentes de inspiración y las razones por las que los elegimos:
