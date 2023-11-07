@@ -1,0 +1,23 @@
+:root{
+    background-color:#666f88;
+    background-color: #788199;
+    background-color: #8990a2;
+    background-color: #a3a8b7;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
