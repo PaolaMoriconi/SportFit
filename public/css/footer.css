@@ -21,8 +21,15 @@
     color: #000;
     font-weight: 700;
 }
+.footer__nav__redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
 
 .footer__nav__redes a{
 color: #000;
-text-align: center;
+font-size: 2em;
+margin: 0 5px;
 }
