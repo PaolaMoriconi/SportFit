@@ -1,0 +1,39 @@
+body.home{
+    background-color: var(--colorGrisAzuladoClaro);
+}
+.home__products{
+    display: flex;
+    flex-direction: row;
+}
+.home__article{
+    width: 90%;
+    margin: 20px 15px;
+    background-color:  var(--colorGrisClaro);
+}
+.home__article h4 {
+text-align: center;
+}
+
+@media(min-width: 768px){
+   
+    .home__banner{
+display: block;
+    }
+   
+.home__products{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 0;
+}
+    .home__article{
+        width: 49%;
+    }
+}
+@media(min-width: 1024px){
+ 
+.home__products{
+        width: 23%;
+    }
+}

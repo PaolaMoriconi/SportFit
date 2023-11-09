@@ -1,8 +1,9 @@
 :root{
-    background-color:#666f88;
-    background-color: #788199;
-    background-color: #8990a2;
-    background-color: #a3a8b7;
+   --colorGrisAzuladoOscuro:#666f88;
+   --colorGrisAzuladoClaro: #788199;
+   --colorgrisOscuro: #8990a2;
+   --colorGris: #a3a8b7;
+   --colorGrisClaro: #b5bac9;
 
 }
 
