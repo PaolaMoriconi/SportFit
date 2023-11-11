@@ -1,0 +1,29 @@
+.login__header{
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.login__header img{
+    width: 90%;
+}
+
+
+.login__box {
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+}
+.login__input--email{
+  border: none;
+  border-bottom: 1px solid var(--colorgrisAzuladocClaro);
+}
+.login__possition {
+  position: relative;
+}
+
+.login__possition i {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  color: var(--colorgrisOscuro);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportFit | Login</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c65f2f1cc8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="login__body">
+    <header class="login__header">
+      <img src="/img/logo.jpg" alt="Imagen del logo" id="logo" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/index">Home<i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="/login">Login<i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <i class="fa-solid fa-bars"></i>
+    </header>
+    <main class="login">
+      <section>
+        <div>
+          <h3>bienvenido</h3>
+        </div>
+        <form action="">
+          <div class="login__box">
+            <label class="login__label--email" for="email">Email</label>
+            <div class="login__possition">
+              <input
+                class="login__input--email"
+                id="email"
+                type="email"
+                placeholder="correo@correo.com"
+                name="email"
+              /><i class="fa-solid fa-envelope"></i>
+            </div>
+          </div>
+          <div class="login__box">
+            <label class="login__label--password" for="password"
+              >Contraseña</label
+            >
+            <div class="login__possition">
+              <input
+                class="login__input--password"
+                id="password"
+                type="password"
+                placeholder="Contraseña"
+                name="password"
+              /><i class="fa-solid fa-lock"></i>
+            </div>
+          </div>
+          <div>
+            <p>¿No tienes cuenta? <a class="link" href="#">Registrate</a></p>
+          </div>
+          <div>
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Recordame</label>
+          </div>
+          <div>
+            <button class="button button__primary" type="submit">
+              Iniciar Sesion
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
