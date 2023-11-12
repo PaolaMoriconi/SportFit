@@ -11,6 +11,12 @@ app.use(express.static(path.join(__dirname, '/public')))
 
 /* routes */
 app.get('/', (req,res) => res.sendFile(path.join(__dirname, 'views', 'index.html')));
+app.get('/register', (req, res) =>
+  res.sendFile(path.join(__dirname, 'views', 'register.html'))
+)
+app.get('/header', (req, res) =>
+  res.sendFile(path.join(__dirname, 'views', 'hearder.html'))
+)
 
 
 /*server*/ 
