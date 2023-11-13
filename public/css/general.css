@@ -22,3 +22,11 @@ body{
 img{
     width: 100%;
 }
+
+.boton{
+     padding: 10px;
+     background-color: var(--colorGrisAzuladoClaro);
+     color: #FFF;
+     border-radius: 5px;
+     width: 70%;
+ }

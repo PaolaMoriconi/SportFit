@@ -4,41 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportFit | Login</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <script
       src="https://kit.fontawesome.com/c65f2f1cc8.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body class="login__body">
-    <header class="login__header">
+    <header class="login__body__header">
+      <div>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div>
+        <i class="fa-solid fa-magnifying-glass"></i>      
+      </div>
       <img src="/img/logo.jpg" alt="Imagen del logo" id="logo" />
-      <nav>
-        <ul>
+      <nav class="login__body__header__nav--pages">
+        <ul class="login__body__header__nav--pages__ul">
           <li>
-            <a href="/index">Home<i class="fa-solid fa-house"></i></a>
+            <a href="/index"><i class="fa-solid fa-house"></i></a>
           </li>
           <li>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
           </li>
           <li>
-            <a href="/login">Login<i class="fa-solid fa-user"></i></a>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
           </li>
         </ul>
       </nav>
-      <i class="fa-solid fa-bars"></i>
+      <nav class="login__body__header__nav--categories">
+        <ul>
+          <li><a href="">Hombre</a></li>
+          <li><a href="">Mujer</a></li>
+        </ul>
+      </nav>
+
     </header>
-    <main class="login">
-      <section>
-        <div>
-          <h3>bienvenido</h3>
+    <main class="login__body__main">
+      <section class="login__body__main__section">
+        <div class="login__body__main__section--bienvenido">
+          <h2>bienvenido</h2>
         </div>
-        <form action="">
+        <form action="/login" method="post">
           <div class="login__box">
             <label class="login__label--email" for="email">Email</label>
             <div class="login__possition">
               <input
-                class="login__input--email"
+                class="login__input"
                 id="email"
                 type="email"
                 placeholder="correo@correo.com"
@@ -52,7 +64,7 @@
             >
             <div class="login__possition">
               <input
-                class="login__input--password"
+                class="login__input"
                 id="password"
                 type="password"
                 placeholder="Contraseña"
@@ -60,20 +72,38 @@
               /><i class="fa-solid fa-lock"></i>
             </div>
           </div>
-          <div>
-            <p>¿No tienes cuenta? <a class="link" href="#">Registrate</a></p>
-          </div>
-          <div>
+          <div class="opciones__login">
             <input type="checkbox" id="remember" name="remember" />
-            <label for="remember">Recordame</label>
+            <label for="remember" id="remember-check">Recuerdame</label>
+            <a href="" class="link">
+              <p>¿Olvidaste la contraseña?</p>
+            </a>
           </div>
-          <div>
-            <button class="button button__primary" type="submit">
+          <div class="opciones__login--register">
+            <p>¿No tienes cuenta?</p> 
+            <a href="/registro"><p>Registrate</p></a>
+          </div>
+          <div class="container--boton">
+            <button class="boton" type="submit">
               Iniciar Sesion
             </button>
           </div>
         </form>
       </section>
     </main>
+    <footer class="footer">
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Quienes</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__nav__redes">
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </nav>
+    </footer>
   </body>
 </html>
