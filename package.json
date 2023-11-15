@@ -1,7 +1,7 @@
 {
   "name": "sportfit-proyecto",
   "version": "1.0.0",
-  "description": "",
+  "description": "Bienvenido a nuestro proyecto de eCommerce, llamado SportFit, especializado en ropa deportiva. Nuestro objetivo es llegar a un amplio público que quiere buscar ropa deportiva de buena calidad. Pero tambien nos enfocándonos especialmente en aquellos que practican deportes.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
