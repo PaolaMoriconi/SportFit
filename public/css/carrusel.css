@@ -1,0 +1,21 @@
+/* carousel banner */
+.swiper_1 {
+    width: 100%;
+  }
+
+  .swiper-slide_1 {
+    text-align: center;
+    font-size: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide_1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ 

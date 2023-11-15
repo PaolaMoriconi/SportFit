@@ -11,75 +11,97 @@
   <title>Document</title>
 </head>
 <body class="productDetail"> 
-  <header class="login__body__header">
-    <div>
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <div>
-      <i class="fa-solid fa-magnifying-glass"></i>      
-    </div>
-    <img src="/img/logo.jpg" alt="Imagen del logo" id="logo" />
-    <nav class="login__body__header__nav--pages">
-      <ul class="login__body__header__nav--pages__ul">
-        <li>
-          <a href="/index"><i class="fa-solid fa-house"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li>
-          <a href="/login"><i class="fa-solid fa-user"></i></a>
-        </li>
-      </ul>
-    </nav>
-    <nav class="login__body__header__nav--categories">
-      <ul>
-        <li><a href="">Hombre</a></li>
-        <li><a href="">Mujer</a></li>
-      </ul>
-    </nav>
-
-  </header>
+  <header>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="icon--sportfit">
+          <a href="/"> <img src="/img/logo-2.png" alt="logoSportFIt"></a>
+                  
+        </div>
+    
+        <ul class="header__nav--left">
+          <li class="burguer-menu"><a href="#"><i class="fa-solid fa-bars"></i></a></li>  
+          <li class="icon"><a href="#"><i class="fa-solid fa-search"></i></a></li>
+          <div class="home__main__header--search">
+              <input class="home__main__input" type="text" placeholder="Buscar">  
+              <button type="submit"><i class="fa-solid fa-search"></i></button>     
+          </div>
+                    
+        </ul>  
+        <ul class="header__nav--right">
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>    
+      </nav>
+      <nav class="header__nav--categoria">
+        <ul class="header__nav__ul--categoria">
+          <li><a href="">hombre</a></li>
+          <li><a href="">mujer</a></li>           
+        </ul>
+      </nav>
+  
+    </header>
 <main class="main--productDetail">
   <section class="main__section--productDetail">
+    <div class="title--productDetail">
+      <img class="icon--adidas" src="/img/adidas.png" alt="icon--adidas">
+       <h3>Camiseta Adidas - Boca Jrs 22/2</h3>
+
+
+    </div>
     <article class="main__section__article--productDetail">
-      <div class="article--productDetail--imgBack">
-        <img src="/img/camisetaBoca-back.png" alt="camisetaBocaHombre">
-      </div>
       <div class="article--productDetail--img">
-        <img src="/img/camisetaBoca.png" alt="camisetaBocaHombre">        
-      </div>    
-    </article>
-
-    <article class="main__section__article--productDetail--detail">   
-      <div>
-
-          <h3> $34.000,00 </h3>
-          <p> Talles </p>
-
-       </div>
-      <div class="article--productDetail--sizes">      
-        <p>S</p>
-        <p>M</p>
-        <p>L</p>
-        <p>XL</p>
+        <div class="article--productDetail--imgBack">
+          <img src="/img/camisetaBoca-back.png" alt="camisetaBocaHombre">
+        </div>
+        <div class="article--productDetail--imgFront">
+          <img src="/img/camisetaBoca.png" alt="camisetaBocaHombre">        
+        </div> 
+        <h3> $45.000,00 </h3>   
       </div>
+       
+      <div class="main__section__article--productDetail--detail">
+       
+      <div class="article--productDetail--talles">
+      <p> Talles </p>     
+      <div class="article--productDetail--sizes">
+        <p>S</p>
+      <p>M</p>
+      <p>L</p>
+      <p>XL</p>
+
+      </div>         
+    </div> 
+      </div> 
     </article>
   </section>
 
   <section  class="main__section--productDetail">
-    <div>
-      <button type="submit"> añadir al carrito</button>
-      <div>
-        <p>cantidad</p>
+    <div class="botton">
+      <button  class="car--btn" type="submit"> añadir al carrito</button>
+      <div class="box--total">
+        <small>cantidad</small>
          <p>1</p>
 
-      </div>
-    
-
+      </div> 
     </div>
    
-    <article>
+    <article class="main__section--productDetail--description">
+          <h3>acerca del producto</h3>
+          <div>
+            <p> Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors Tercera,
+               elaborada en poliéster,
+               con tecnología de absorción del sudor AEROREADY.
+               <br>
+                Rinde homenaje al campo de entrenamiento del club como 
+                se ve en el estampado
+                 CASA AMARILLA de la espalda. 
+                 <br>
+                 Mostra tu pasión por el xeneize con el escudo 
+                 tejido en el pecho y alenta todos los días a tu equipo.
+            </p>
+
+          </div>
 
     </article>
 

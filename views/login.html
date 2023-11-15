@@ -11,34 +11,34 @@
     ></script>
   </head>
   <body class="login__body">
-    <header class="login__body__header">
-      <div>
-        <i class="fa-solid fa-bars"></i>
-      </div>
-      <div>
-        <i class="fa-solid fa-magnifying-glass"></i>      
-      </div>
-      <img src="/img/logo.jpg" alt="Imagen del logo" id="logo" />
-      <nav class="login__body__header__nav--pages">
-        <ul class="login__body__header__nav--pages__ul">
-          <li>
-            <a href="/index"><i class="fa-solid fa-house"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-          <li>
-            <a href="/login"><i class="fa-solid fa-user"></i></a>
-          </li>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="icon--sportfit">
+          <a href="/"><img src="/img/logo-2.png" alt="logoSportFIt"></a>
+                  
+        </div>
+    
+        <ul class="header__nav--left">
+          <li class="burguer-menu"><a href="#"><i class="fa-solid fa-bars"></i></a></li>  
+          <li class="icon"><a href="#"><i class="fa-solid fa-search"></i></a></li>
+          <div class="home__main__header--search">
+              <input class="home__main__input" type="text" placeholder="Buscar">  
+              <button type="submit"><i class="fa-solid fa-search"></i></button>     
+          </div>
+                    
+        </ul>  
+        <ul class="header__nav--right">
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>    
+      </nav>
+      <nav class="header__nav--categoria">
+        <ul class="header__nav__ul--categoria">
+          <li><a href="">hombre</a></li>
+          <li><a href="">mujer</a></li>           
         </ul>
       </nav>
-      <nav class="login__body__header__nav--categories">
-        <ul>
-          <li><a href="">Hombre</a></li>
-          <li><a href="">Mujer</a></li>
-        </ul>
-      </nav>
-
+  
     </header>
     <main class="login__body__main">
       <section class="login__body__main__section">
@@ -81,7 +81,7 @@
           </div>
           <div class="opciones__login--register">
             <p>¿No tienes cuenta?</p> 
-            <a href="/registro"><p>Registrate</p></a>
+            <a href="/register"><p>Registrate</p></a>
           </div>
           <div class="container--boton">
             <button class="boton" type="submit">

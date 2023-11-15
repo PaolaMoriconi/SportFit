@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportFit  | Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script
       src="https://kit.fontawesome.com/e2983a7846.js"
@@ -12,27 +13,70 @@
   </head>
   <body class="home">
     <header>
-      <img src="/img/logo.jpg" alt="Imagen del logo" id="logo"/>
-      <nav>
-        <ul>
-          <li><a href="#"><i class="fa-solid fa-house" ></i></a></li>
-          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="/login.html"><i class="fa-solid fa-user"></i></a></li>
-        </ul>
-      </nav>
-      <i class="fa-solid fa-bars"></i>
-      <nav>
-        <ul>
-          <a href="">HOMBRE</a>
-          <a href="">MUJER</a>
-        </ul>
-      </nav>
-    </header>
+      <header class="header">
+        <nav class="header__nav">
+          <div class="icon--sportfit">
+            <a href="/"> <img src="/img/logo-2.png" alt="logoSportFIt"></a>
+                    
+          </div>
+      
+          <ul class="header__nav--left">
+            <li class="burguer-menu"><a href="#"><i class="fa-solid fa-bars"></i></a></li>  
+            <li class="icon"><a href="#"><i class="fa-solid fa-search"></i></a></li>
+            <div class="home__main__header--search">
+                <input class="home__main__input" type="text" placeholder="Buscar">  
+                <button type="submit"><i class="fa-solid fa-search"></i></button>     
+            </div>
+                      
+          </ul>  
+          <ul class="header__nav--right">
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+          </ul>    
+        </nav>
+        <nav class="header__nav--categoria">
+          <ul class="header__nav__ul--categoria">
+            <li><a href="">hombre</a></li>
+            <li><a href="">mujer</a></li>           
+          </ul>
+        </nav>
+    
+      </header>
     <main class="main__home">
-      <div class="home__banner">
-        <img src="/img/banner1.jpg" alt="banner"/>
-       
+      <div class="swiper mySwiper_1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-slide_1">
+                <img src="img/banner1.jpg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+                <img src="/img/banner2.jpg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+                <img src="/img/banner3.jpg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/img/banner4.jpg" alt="">
+          </div>
+          <div class="swiper-slide swiper-slide_1">
+            <img src="/img/banner5.jpg" alt="">
+        </div>
+        </div>
+      <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swiper-button-prev_1"></div>
+        <div class="swiper-button-next swiper-button-next_1"></div>
+        <div class="swiper-button-next swiper-button-next_1"></div>
+        <div class="swiper-button-next swiper-button-next_1"></div>
+        <div class="swiper-button-next swiper-button-next_1"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
+    
       <div class="home__products">
         <article class="home__article">
           <img src="/img/camisetaBocaHombre.jpg" alt="Camiseta de boca para hombre"/>
@@ -103,5 +147,24 @@
         <a href=""><i class="fa-brands fa-instagram"></i></a>
       </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper_1 = new Swiper('.mySwiper_1', {
+
+          // If we need pagination
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+
+          // Navigation arrows
+          navigation: {
+              nextEl: '.swiper-button-next_1',
+              prevEl: '.swiper-button-prev_1',
+          },
+
+      });
+    </script>
+
   </body>
 </html>
