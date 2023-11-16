@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportFit  | Register</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e2983a7846.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="register">
+    <header class="header">
+      <nav class="header__nav">
+        <div class="icon--sportfit">
+          <a href="/"><img src="/img/logo-2.png" alt="logoSportFIt"></a>
+                  
+        </div>
+    
+        <ul class="header__nav--left">
+          <li class="burguer-menu"><a href="#"><i class="fa-solid fa-bars"></i></a></li>  
+          <li class="icon"><a href="#"><i class="fa-solid fa-search"></i></a></li>
+          <div class="home__main__header--search">
+              <input class="home__main__input" type="text" placeholder="Buscar">  
+              <button type="submit"><i class="fa-solid fa-search"></i></button>     
+          </div>
+                    
+        </ul>  
+        <ul class="header__nav--right">
+          <li><a href="/carritoCompras"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>    
+      </nav>
+      <nav class="header__nav--categoria">
+        <ul class="header__nav__ul--categoria">
+          <li><a href="">hombre</a></li>
+          <li><a href="">mujer</a></li>           
+        </ul>
+      </nav>
+    </header>
+    <main class="main__carr">
+        <h2 id="text-titulo">TU CARRITO</h2>
+      <hr>
+      <div id="primerTotal">
+        <p>TOTAL [3 Productos] <b>$95.000</b></p>
+      </div>
+      <nav id="seguirComprando">
+        <a href="/"><b>SEGUIR COMPRANDO</b></a>
+      </nav>
+      <section class="carr__products">
+        <article class="carr__products__article">
+          <img src="/img/camisetaBocaHombre.jpg" alt="Camiseta de boca para hombre" />
+          <div id="icons__products">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="detalles">
+            <h4>Camiseta de boca para hombre</h4>
+            <p>Talle: L</p>
+            <small id="ultimasUni">Ultimas Unidades</small>
+            <p id="precio">$45.000</p>
+          </div>
+          <select name="select" id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </article>
+        <article class="carr__products__article">
+          <img src="/img/shortHombreGris.jpg" alt="Short de hombre gris" />
+          <div id="icons__products">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="detalles">
+            <h4>Short de hombre gris</h4>
+            <p>Talle: L</p>
+            <p id="precio">$25.000</p>
+          </div>
+          <select name="select" id="select2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </article>
+        <article class="carr__products__article">
+          <img src="/img/shortMujerRosa.jpg" alt="Short de mujer rosa" />
+          <div id="icons__products">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <div class="detalles">
+            <h4>Short de mujer rosa</h4>
+            <p>Talle: M</p>
+            <small id="ultimasUni">Ultimas Unidades</small>
+            <p id="precio">$25.000</p>
+          </div>
+          <select name="select" id="select2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </article>
+      </section>
+      <nav class="cod-promo">
+        <i class="fa-solid fa-tag"></i><a href="#"><b> USA UN CODIGO PROMOCIONAL</i></a>
+      </nav>
+      <section id="text__resumen">
+      <h3 id="text-titulo">
+        RESUMEN DE PEDIDO
+      </h3>
+      <div class="resumen">
+        <div id="resumen1">
+          <p>3 Productos</p>
+          <p>Entrega</p><br><br>
+          <p>TOTAL</p>
+        </div>
+        <div id="resumen2">
+          <p>$95.000</p>
+          <p>Gratis</p><br><br>
+          <p>$95.000</p>
+        </div>
+      </div>
+    </section>
+      <section class="button">
+        <button id="button-pagar" type="button">IR A PAGAR</button><i class="fa-solid fa-arrow-right"></i>
+      </section>
+      <section class="envio-cambio">
+        <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
+        <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
+      </section>
+      <h3 id="text-titulo">MEDIOS DE PAGO</h3>
+      <div id="medio-pago">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+      </div>
+    </main>
+    <footer class="footer">
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Quienes</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__nav__redes">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </nav>
+      </footer>
+    </body>
+  </html>
