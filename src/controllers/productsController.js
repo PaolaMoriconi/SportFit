@@ -4,13 +4,13 @@ const products = [
     nombre: "Camiseta de boca para hombre",
     precio: 45000,
     descripcion: `Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors Tercera,
-          elaborada en poliéster,
-          con tecnología de absorción del sudor AEROREADY.
-          Rinde homenaje al campo de entrenamiento del club como se ve en el estampado
-            CASA AMARILLA de la espalda. 
-            Mostra tu pasión por el xeneize con el escudo 
-            tejido en el pecho y alenta todos los días a tu equipo.`,
-    image: "camisetaBocaHombre.jpg",
+  elaborada en poliéster,
+  con tecnología de absorción del sudor AEROREADY.
+  Rinde homenaje al campo de entrenamiento del club como se ve en el estampado
+  CASA AMARILLA de la espalda. 
+  Mostra tu pasión por el xeneize con el escudo 
+  tejido en el pecho y alenta todos los días a tu equipo.`,
+    image: "camisetaBoca.png",
   },
   {
     id: 2,
