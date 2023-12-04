@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="main--productDetail">
+      <section class="main__section--productDetail">
+        <div class="title--productDetail">
+          <img
+            class="icon--adidas"
+            src="/images/adidas.png"
+            alt="icon--adidas"
+          />
+          <h3><%= product.nombre %></h3>
+        </div>
+        <article class="main__section__article--productDetail">
+          <div class="article--productDetail--img">
+            <div class="article--productDetail--imgBack">
+              <img
+                src="/images/camisetaBoca-back.png"
+                alt="camisetaBocaHombre"
+              />
+            </div>
+            <div class="article--productDetail--imgFront">
+              <img
+                src="/images/<%= product.image %>"
+                alt="camisetaBocaHombre"
+              />
+            </div>
+            <h3><%= product.precio %></h3>
+          </div>
+
+          <div class="main__section__article--productDetail--detail">
+            <div class="article--productDetail--talles">
+              <p>Talles</p>
+              <div class="article--productDetail--sizes">
+                <p>S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="main__section--productDetail">
+        <div class="botton">
+          <button class="car--btn" type="submit">añadir al carrito</button>
+          <div class="box--total">
+            <small>cantidad</small>
+            <p>1</p>
+          </div>
+        </div>
+
+        <article class="main__section--productDetail--description">
+          <h3>acerca del producto</h3>
+          <div>
+            <p><%= product.descripcion %></p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
