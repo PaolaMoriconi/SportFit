@@ -1,0 +1,60 @@
+[
+    {
+      "id": 1,
+      "nombre": "Camiseta de boca para hombre",
+      "precio": 45000,
+      "descripcion": "Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
+      "image": "camisetaBoca.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Camiseta de boca para mujer",
+      "precio": 45000,
+      "descripcion":"Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
+        "image": "/camisetaBocaMujer.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Short de hombre ",
+      "precio": 25000,
+      "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
+      "image": "shortHombreGris.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Short de mujer  ",
+      "precio": 25000,
+      "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
+      "image": "shortMujerRosa.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Conjunto deportivo ",
+      "precio": 30000,
+      "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad, seguridad durante el ejercicio realizado",
+      
+       
+     "image": "conjuntoDeportivoHombre.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Conjunto deportivo",
+      "precio": 30000,
+      "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad , seguridad durante el ejercicio realizado",
+      "image": "conjuntoDeportivoMujer.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Remera de hombre",
+      "precio": 20000,
+      "descripcion":"Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
+      "image": "remeraNegraHombre.jpeg"
+    },
+    {
+      "id": 8,
+      "nombre": "Conjunto deportivo",
+      "precio": 30000,
+      "descripcion":"Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
+      "image":"remeraMujerFucsia.jpg"
+    }
+  ]
