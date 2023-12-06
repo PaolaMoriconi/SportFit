@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {index} = require("../controllers/indexController")
+const {index, admin, searchAdmin} = require("../controllers/indexController")
 
-/* GET home page. */
-router.get('/',index);
+/* / */
+router
+  .get('/',index)
+  .get('/admin',admin)
+
 
 
 module.exports = router;
