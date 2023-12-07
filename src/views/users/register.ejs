@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    
+    <main class="register__main">
+      <section class ="register__main__section">
+        
+          <h3  class="register--title">Registro</h3>
+
+        </div>
+        <form action="" method="GET" class="register__form--conteiner">
+          
+         
+
+          <div class="form__group">
+            <label  class="form__label" for="name" id="name">Nombre</label>
+            <input class="form__input" type="text"  name="name">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label"  for="surname" id="surname">Apellido</label>
+            <input class="form__input type="text" name="surname">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email" id="email">Email <i class="fa-solid fa-envelope email"></i></label>
+            <input class="form__input type="email" name="email">
+          </div>
+          
+          <div class="form__group">
+            <label class="form__label"  for="password" id="password">Contraseña <i class="fa-solid fa-lock password"></i></label>
+            <input class="form__input" type="password"  name="password">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label"  for="password2" id="password2">Confirma tu contraseña <i class="fa-solid fa-lock password2"></i></label>
+            <input class="form__input" type="password" name="password2">
+          </div>
+
+          <div class="form__botton">
+            <button class="register--btn" type="submit">Regístrate</button>
+
+          </div> 
+
+         
+            <div class="form__span">
+              <p >
+                <input type="checkbox" name="receive" id="receive">
+                Quiero recibir e-mails con las ultimas novedades, lanzamientos y ofertas exclusivas 
+              </p>  
+              <p >
+
+                Al registrarte, aceptas nuestras Condiciones de uso y Politica de privacidad.   
+              </p>           
+        
+              <p>¿Ya tienes una cuenta?<a class= "link"href="login"> Iniciar Sesión</a></p>
+
+
+            </div>
+           
+          
+        </form>
+        
+      </section>
+</main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

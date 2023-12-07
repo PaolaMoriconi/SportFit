@@ -10,8 +10,8 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    padding: 20px;
-    margin:15px 0;
+    /*padding: 20px;
+    margin:15px 0;*/
     justify-content: center;
     text-align: center;
     
@@ -81,7 +81,6 @@
   width: 100%; 
   display: flex;
   justify-content: center;
-  align-self: center;
   margin: 10px;
   
 } 
@@ -152,7 +151,7 @@
 
     .main__section__article--productDetail h3 {
       font-size: 1.4rem;
-      margin-left: 73px;
+      
 
     }
 
@@ -172,21 +171,25 @@
 
 
  .article--productDetail--talles {
-  top: 170px;
-  position: relative;
-  left: 162px;
+    top: 65px;
+    position: relative;
+    left: 114px;
+
 }
 
+.article--productDetail--img{
+  height: 477px;
 
+}
 .article--productDetail--imgBack {
-  top: 73px;
-  right: 208px;
-  width: 48%;
+  top: 19px;
+  right: 137px;
+  width: 37%;
 }
 
 
 .article--productDetail--imgFront {
-  bottom: 85px;
+  bottom: 138px;
 }
 
 .car--btn {
@@ -204,4 +207,13 @@
 }
 
 
- }
+.main__section--productDetail--description {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    padding: 8px;
+}
+}
+
+
+ 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<%- include('../partials/head', {
+  title : 'Editar'
+}) %>
+
+<body>
+  <%- include('../partials/headerAdmin') %>
+  
+  <main class="container">  
+    <section class="row my-5">
+      <div class="col-12 col-md-10 mx-auto">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin" class="text-primary">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editar: "Productos"</li>
+              </ol>
+            </nav>      
+          </div>
+          <div class="card-body">
+            
+            <form action="" class="row">
+              <h3>Editar: "Productos"</h3>
+              <hr>
+              <div class="col-12 col-md-6 mb-3">
+                <div class="form-floating">
+                  <input name="name" type="text" class="form-control" id="name">
+                  <label for="name">Nombre</label>
+                </div>
+                
+              </div>
+              <div class="col-6  col-md-3 mb-3">
+                <div class="form-floating">
+                  <input name="precio" type="text" class="form-control" id="precio">
+                  <label for="precio">Precio</label>
+                </div>
+              </div>
+              <div class="col-6 col-md-3 mb-3">
+               
+                <input  name="image" type="file" class="form-control" id="image" hidden>
+                <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
+            
+            </div>         
+              <div class="col-12 col-md-6 mb-3">
+                <div class="form-floating">
+                  <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
+                    <option value="" selected hidden></option>
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                    
+                  </select>
+                  <label for="categoria">Categoria</label>
+                </div>
+               </div>  
+              
+              <div class="col-12 mb-3">
+
+                  <div class="form-floating">
+                    <textarea name="description" class="form-control"  id="description" style="height: 150px;"></textarea>
+                    <label for="description">Descripción</label>
+                  </div> 
+              </div>
+
+             
+
+            <div class="col-12 d-flex justify-content-end">
+              <button class="btn btn-lg btn-primary" >Guardar</l>
+          
+          </div>
+              
+            </form>
+            
+            
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  
+ 
+  
+</body>
+
+</html>

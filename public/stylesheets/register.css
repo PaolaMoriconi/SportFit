@@ -1,6 +1,5 @@
 .register{
   font-family: var(--Texto);
-
 }
 
 .register--title{
@@ -28,14 +27,14 @@
   
 } 
 .email{
-  bottom: 228px;
+  bottom: 232px;
 }
 .password{
-  bottom: 142px;
+  bottom: 146px;
 
 }
 .password2{
-  bottom:54px;
+  bottom:60px;
 }
 .form__label{
   color: var(--colorgrisOscuro);
@@ -68,15 +67,17 @@
 }
 
 .form__span{
-  text-align: justify;
+  text-align: center;
   font-size: 15px;
+ 
 }
-.form__span--login a{
+.form__span p{
+  padding: 5px;
+}
+.form__span a{
   color: #000000;
   font-weight: 900;
 }
-
-
 
 /* TABLET */
 @media (min-width: 768px){
@@ -94,13 +95,13 @@
     
   } 
   .email{
-    bottom: 203px;
+    bottom: 207px;
   }
   .password {
-    bottom: 117px;
+    bottom: 121px;
 }
 .password2 {
-  bottom: 29px;
+  bottom: 34px;
 }
   
   
@@ -122,27 +123,39 @@
     width: 100%;
   }
    .form__group {
-    width: 48%;
+    width: 60%;
   }
     
 .form__botton{
-  width: 50%;
+  width: 60%;
 }
   .register--btn{
     width: 100%;
   }
 
-  .email{
-    left: 486px;
-    top: 277px;
+  .email, .password, .password2{
+    right:295px;
+
+  }
+  .email{ 
+    top: 359px;
   }
   .password{
-    right: 49px;
-    top: 275px;
+
+    top: 446px;
   
   }
   .password2 {
-    right: 285px;
-    top: 363px;
+    top: 533px;
+
 }
+}
+
+/* DESKTOP */
+@media (min-width: 1440px){
+  .email, .password, .password2 {
+    right: 314px;
+}
+
+
 }
