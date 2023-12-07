@@ -49,9 +49,11 @@
               src="/images/<%= product.image %>"
               alt="Camiseta de boca para hombre"
             />
-            <h2><%= product.nombre %></h2>
-            <p><%= product.precio %></p>
-            <p><%= product.descripcion %></p>
+            <div class="home__article__info">
+              <h2><%= product.nombre %></h2>
+              <p>$<%= product.precio %></p>
+              <p><%= product.descripcion %></p>
+            </div>
           </a>
         </article>
         <% }) %>

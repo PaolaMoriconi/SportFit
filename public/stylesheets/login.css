@@ -125,6 +125,9 @@
   }
 
   .login__body__main__section label{
-    font-size: 1.1em;
+    font-size: 1.5em;
+  }
+  .login__box{
+    margin-bottom: 60px;
   }
 }
