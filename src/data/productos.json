@@ -17,7 +17,7 @@
     },
     {
       "id": 3,
-      "nombre": "Short  de hombre ",
+      "nombre": "Short depotivo  de hombre ",
       "precio": 25000,
       "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortHombreGris.jpg",
@@ -25,7 +25,7 @@
     },
     {
       "id": 4,
-      "nombre": "Short de mujer  ",
+      "nombre": "Short deportivo de mujer  ",
       "precio": 25000,
       "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortMujerRosa.jpg",
@@ -33,7 +33,7 @@
     },
     {
       "id": 5,
-      "nombre": "Conjunto deportivo de hombre",
+      "nombre": "Conjunto deportivo ",
       "precio": 30000,
       "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad, seguridad durante el ejercicio realizado",       
      "image": "conjuntoDeportivoHombre.jpg",
@@ -41,7 +41,7 @@
     },
     {
       "id": 6,
-      "nombre": "Conjunto deportivo de mujer",
+      "nombre": "Conjunto deportivo ",
       "precio": 30000,
       "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad , seguridad durante el ejercicio realizado",
       "image": "conjuntoDeportivoMujer.jpg",

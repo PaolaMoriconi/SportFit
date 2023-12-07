@@ -15,6 +15,7 @@ body.home {
 }
 .home__article__info {
   background-color: var(--colorGrisClaro);
+  height: 205px;
 }
 
 .home__article h2 {
