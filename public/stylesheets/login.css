@@ -49,9 +49,10 @@
 
 }
 .login__box {
-  margin-bottom: 20px;
+  margin: 20vh 0;
   width: 100%;
   border: none;
+
 }
 .login__input{
   border: none;
@@ -71,9 +72,10 @@
 .opciones__login{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
   font-size: 12px;
-  margin: 10px 0;
+  margin: 10vh 0;
 }
 
 .opciones__login a {

@@ -39,6 +39,7 @@ body.home {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    padding: 1vh 1vw;
   }
   .home__article {
     width: 45%;
