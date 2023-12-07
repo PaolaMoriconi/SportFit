@@ -15,7 +15,10 @@ const productsController = {
   },
   add: (req, res) => {
     return res.render('products/productAdd')
-  }
+  },
+  cart: (req, res) => {
+    res.render('./products/carritoCompras')
+  },
 
   
 }

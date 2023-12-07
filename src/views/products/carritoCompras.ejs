@@ -1,44 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SportFit  | Register</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/e2983a7846.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body class="register">
-    <header class="header">
-      <nav class="header__nav">
-        <div class="icon--sportfit">
-          <a href="/"><img src="/img/logo-2.png" alt="logoSportFIt"></a>
-                  
-        </div>
-    
-        <ul class="header__nav--left">
-          <li class="burguer-menu"><a href="#"><i class="fa-solid fa-bars"></i></a></li>  
-          <li class="icon"><a href="#"><i class="fa-solid fa-search"></i></a></li>
-          <div class="home__main__header--search">
-              <input class="home__main__input" type="text" placeholder="Buscar">  
-              <button type="submit"><i class="fa-solid fa-search"></i></button>     
-          </div>
-                    
-        </ul>  
-        <ul class="header__nav--right">
-          <li><a href="/carritoCompras"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
-        </ul>    
-      </nav>
-      <nav class="header__nav--categoria">
-        <ul class="header__nav__ul--categoria">
-          <li><a href="">hombre</a></li>
-          <li><a href="">mujer</a></li>           
-        </ul>
-      </nav>
-    </header>
+<html lang="en">
+  <%- include('../partials/head', {
+    title : "Detalle del Producto"
+  }) %>
+  <body>
+    <%- include('../partials/header') %>
     <main class="main__carr">
       <h2 id="text-titulo">TU CARRITO</h2>
     <hr>
@@ -52,7 +18,7 @@
   <section class="main__carr2">
     <section class="carr__products">
       <article class="carr__products__article">
-        <img src="/img/camisetaBocaHombre.jpg" alt="Camiseta de boca para hombre" />
+        <img src="/images/camisetaBocaHombre.jpg" alt="Camiseta de boca para hombre" />
         <div id="icons__products">
           <i class="fa-solid fa-circle-xmark"></i>
           <i class="fa-regular fa-heart"></i>
@@ -71,7 +37,7 @@
         </select>
       </article>
       <article class="carr__products__article">
-        <img src="/img/shortHombreGris.jpg" alt="Short de hombre gris" />
+        <img src="/images/shortHombreGris.jpg" alt="Short de hombre gris" />
         <div id="icons__products">
           <i class="fa-solid fa-circle-xmark"></i>
           <i class="fa-regular fa-heart"></i>
@@ -89,7 +55,7 @@
         </select>
       </article>
       <article class="carr__products__article">
-        <img src="/img/shortMujerRosa.jpg" alt="Short de mujer rosa" />
+        <img src="/images/shortMujerRosa.jpg" alt="Short de mujer rosa" />
         <div id="icons__products">
           <i class="fa-solid fa-circle-xmark"></i>
           <i class="fa-regular fa-heart"></i>
@@ -148,19 +114,6 @@
   </section>
   </section>
   </main>
-    <footer class="footer">
-        <nav class="footer__nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Quienes</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-        <nav class="footer__nav__redes">
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
-          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-        </nav>
-      </footer>
+  <%- include('../partials/footer') %>
     </body>
   </html>
