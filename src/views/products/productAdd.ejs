@@ -36,12 +36,27 @@
                   <label for="precio">Precio</label>
                 </div>
               </div>
-              <div class="col-6 col-md-3 mb-3">
-               
-                <input  name="image" type="file" class="form-control" id="image" hidden>
-                <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
-            
-            </div>         
+              <div class="col-6  col-md-3 mb-3">
+                <div class="form-floating">
+                  <input name="descuento" type="text" class="form-control" id="descuento">
+                  <label for="descuento">Descuento</label>
+                </div>
+              </div>
+              <div class="col-6  col-md-3 mb-3">
+                <div class="form-floating">
+                  <select  name ="talles" class="form-select" id="categoria" aria-label="Floating label select example">
+                    <option value="" selected hidden></option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                    <option value="xxl">XXL</option>
+                    
+                  </select>
+                  <label for="talles">talles</label>
+                </div>
+              </div>
+                
               <div class="col-12 col-md-6 mb-3">
                 <div class="form-floating">
                   <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
@@ -52,7 +67,13 @@
                   </select>
                   <label for="categoria">Categoria</label>
                 </div>
-               </div>  
+               </div> 
+               <div class="col-6 col-md-3 mb-3">
+               
+                <input  name="image" type="file" class="form-control" id="image" hidden>
+                <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
+            
+            </div>        
               
               <div class="col-12 mb-3">
 

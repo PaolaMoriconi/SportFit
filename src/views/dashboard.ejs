@@ -29,12 +29,14 @@
               </thead>
               <tbody>
 
-                <% products.forEach(({id, nombre, categoria, precio, image, descripcion }) => { %>
+                <% products.forEach(({id, nombre, categoria, precio,talles, descuento, image, descripcion }) => { %>
                    <tr>
                     <th scope="row"><%= id %></th>
                     <td><%= nombre %></td>
                     <td><%= categoria %></td>
                     <td>$<%= precio %></td> 
+                    <td> <%=  talles %> </td>
+                    <td> <%=  descuento %> </td>
                     <td> 
                     <div class="d-flex gap-3">
                       <button class="btn btn-sm btn-outline-primary border-none" data-bs-toggle="modal" data-bs-target="#exampleModal<%= id %>" ><i class="fa-solid fa-eye"></i></button>
@@ -44,6 +46,8 @@
                             nombre,
                             image,
                             precio,
+                            talles,
+                            descuento,
                             categoria,
                             descripcion
                       }) %>

@@ -3,6 +3,8 @@
       "id": 1,
       "nombre": "Camiseta Boca Juniors ",
       "precio": 45000,
+      "descuento":"25%",
+      "talles":"s",
       "descripcion": "Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
       "image": "camisetaBoca.png",
       "categoria" : "hombre"    
@@ -11,6 +13,7 @@
       "id": 2,
       "nombre": "Camiseta Boca Juniors  Mujer",
       "precio": 45000,
+      "talles":"S",
       "descripcion":"Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
       "image": "/camisetaBocaMujer.jpg",
       "categoria" : "mujer"
@@ -19,6 +22,7 @@
       "id": 3,
       "nombre": "Short depotivo  de hombre ",
       "precio": 25000,
+      "talles":"L",
       "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortHombreGris.jpg",
       "categoria" : "hombre"
@@ -27,6 +31,8 @@
       "id": 4,
       "nombre": "Short deportivo de mujer  ",
       "precio": 25000,
+      "descuento":"40%",
+      "talles":"M",
       "descripcion":"Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortMujerRosa.jpg",
       "categoria" : "mujer"
@@ -35,6 +41,8 @@
       "id": 5,
       "nombre": "Conjunto deportivo ",
       "precio": 30000,
+      "descuento":"35%",
+      "talles":"XXL",
       "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad, seguridad durante el ejercicio realizado",       
      "image": "conjuntoDeportivoHombre.jpg",
      "categoria" : "hombre"
@@ -43,6 +51,7 @@
       "id": 6,
       "nombre": "Conjunto deportivo ",
       "precio": 30000,
+      "talles":"XL",
       "descripcion":"Los conjuntos están diseñados para brindar comodidad, libertad , seguridad durante el ejercicio realizado",
       "image": "conjuntoDeportivoMujer.jpg",
       "categoria" : "mujer"
@@ -51,6 +60,7 @@
       "id": 7,
       "nombre": "Remera de hombre",
       "precio": 20000,
+      "talles": "L",
       "descripcion":"Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
       "image": "remeraNegraHombre.jpeg",
       "categoria" : "hombre"
@@ -59,6 +69,8 @@
       "id": 8,
       "nombre": "Remera de mujer",
       "precio": 30000,
+      "descuento":"20%",
+      "talles": "XXL",
       "descripcion":"Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
       "image":"remeraMujerFucsia.jpg",
       "categoria" : "mujer"
