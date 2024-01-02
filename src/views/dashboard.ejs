@@ -13,50 +13,94 @@
       <div class="col-12 col-md-10 mx-auto">
         <div class="card">
           <div class="card-header d-flex justify-content-between">
-            <h4 class="card-title">Productos</h4>
+      
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin" class="text-primary">Productos</a></li>
+                <% if (locals.keyword) { %>
+                  <li class="breadcrumb-item active" aria-current="page">Productos de: <%= keyword %></li>
+                  <h4 class="card-title"></h4>
+    
+                 
+                <% }%>
+                </ol>
+            </nav>
+          
             <a class="btn btn-primary" href="/products/agregar"> Nuevo </a>
           </div>
           <div class="card-body table-resposive">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Categoria</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
+            <% if (products.length) { %>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+  
+                  <% products.forEach(({id, nombre, categoria, precio, image, detalleProducto }, index) => { %>
+                     <tr>
+                      <th scope="row"><%= index + 1  %></th>
+                      <td><%= nombre %></td>
+                      <td><%= categoria %></td>
+                      <td>$<%= precio %></td> 
+                      <td> 
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-sm btn-outline-primary border-none" data-bs-toggle="modal" data-bs-target="#exampleModal<%= id %>" >
+                          <i class="fa-solid fa-eye"></i></button>
+                        <a class="btn btn-sm btn-outline-success border-none" href="/products/editar/<%= id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+                        
+                       
+                        <button class="btn btn-sm btn-outline-danger border-none"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalDeleteWarning<%= id %>">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    <%- include('./partials/modalDeleteWarning',{ id, 
+                      nombre, 
+                      categoria, 
+                      precio, 
+                      image, 
+                      detalleProducto
+                        }) %>
+                       
+                                   
+                        <%- include('./partials/modalProductAdmin',{
+                          id, 
+                          nombre, 
+                          categoria, 
+                          precio, 
+                          image, 
+                          detalleProducto
+                             
+                        }) %>
+                      </div>
+                    </td>    
+                      
+                     </tr>
+                  <% }) %>
+  
+                  
+                  
+                </tbody>
+              </table>
+             
+            <% } else { %>
+              <div class="alert alert-warning" role="alert">
+                Producto no encontrado
+              
+              </div>
 
-                <% products.forEach(({id, nombre, categoria, precio, image, descripcion }) => { %>
-                   <tr>
-                    <th scope="row"><%= id %></th>
-                    <td><%= nombre %></td>
-                    <td><%= categoria %></td>
-                    <td>$<%= precio %></td> 
-                    <td> 
-                    <div class="d-flex gap-3">
-                      <button class="btn btn-sm btn-outline-primary border-none" data-bs-toggle="modal" data-bs-target="#exampleModal<%= id %>" ><i class="fa-solid fa-eye"></i></button>
-                      <a class="btn btn-sm btn-outline-success border-none" href="/products/editar/<%= id %>"><i class="fa-solid fa-pen-to-square"></i></a>
-                      <%- include('./partials/modalProductAdmin',{
-                            id,
-                            nombre,
-                            image,
-                            precio,
-                            categoria,
-                            descripcion
-                      }) %>
-                    </div>
-                  </td>    
-                    
-                   </tr>
-                <% }) %>
 
-                
-                
-              </tbody>
-            </table>
+
+              
+
+            <% }%>
+           
 
           </div>
         </div>

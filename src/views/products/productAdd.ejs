@@ -20,28 +20,40 @@
           </div>
           <div class="card-body">
             
-            <form action="" class="row">
+            <form action="/products/crear" method="POST" class="row">
               <h3>Nuevo: "Producto"</h3>
               <hr>
               <div class="col-12 col-md-6 mb-3">
                 <div class="form-floating">
-                  <input name="name" type="text" class="form-control" id="name">
-                  <label for="name">Nombre</label>
+                  <input name="nombre" type="text" class="form-control" id="nombre">
+                  <label for="nombre">Nombre</label>
                 </div>
                 
               </div>
-              <div class="col-6  col-md-3 mb-3">
-                <div class="form-floating">
-                  <input name="precio" type="text" class="form-control" id="precio">
-                  <label for="precio">Precio</label>
-                </div>
-              </div>
+             
               <div class="col-6 col-md-3 mb-3">
                
                 <input  name="image" type="file" class="form-control" id="image" hidden>
                 <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
+                
             
-            </div>         
+            </div> 
+            <div class="col-6 col-md-3 mb-3">
+               
+              <input  name="imageBack" type="file" class="form-control" id="imageBack" hidden>
+                <label class="btn btn-lg btn-outline-dark w-100" for="imageBack">Imagen posterior</label>
+              
+          
+          </div>  
+          <div class="col-6  col-md-3 mb-3">
+            <div class="form-floating">
+              <input name="precio" type="text" class="form-control" id="precio">
+              <label for="precio">Precio</label>
+            </div>
+          </div>     
+            
+            
+            
               <div class="col-12 col-md-6 mb-3">
                 <div class="form-floating">
                   <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
@@ -57,15 +69,15 @@
               <div class="col-12 mb-3">
 
                   <div class="form-floating">
-                    <textarea name="description" class="form-control"  id="description" style="height: 150px;"></textarea>
-                    <label for="description">Descripción</label>
+                    <textarea name="detalleProducto" class="form-control"  id="detalleProducto" style="height: 150px;"></textarea>
+                    <label for="detalleProducto">Descripción</label>
                   </div> 
               </div>
 
              
 
             <div class="col-12 d-flex justify-content-end">
-              <button class="btn btn-lg btn-primary" >Guardar</l>
+              <button type="submit" class="btn btn-lg btn-primary" >Guardar</l>
           
           </div>
               

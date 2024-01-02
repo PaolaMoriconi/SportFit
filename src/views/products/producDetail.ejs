@@ -4,31 +4,33 @@
     title : "Detalle del Producto"
   }) %>
   <body>
-    <%- include('../partials/header') %>
-    <main class="main--productDetail">
+     <%- include('../partials/header') %> 
+    
+    <main class="main--productDetail" >
       <section class="main__section--productDetail">
+        
         <div class="title--productDetail">
           <img
             class="icon--adidas"
             src="/images/adidas.png"
             alt="icon--adidas"
           />
-          <h3><%= product.nombre %></h3>
+          <h3><%= nombre %></h3>
         </div>
         <article class="main__section__article--productDetail">
           <div class="article--productDetail--img">
             <div class="article--productDetail--imgBack">
               <img
-                src="/images/camisetaBoca-back.png"
+                src="/images/<%= imageBack %>"
                 alt="camisetaBocaHombre"
               />
             </div>
             <div class="article--productDetail--imgFront">
               <img
-                src="/images/<%= product.image %>"
+                src="/images/<%= image %>"
                 alt="camisetaBocaHombre"
               />
-              <h3> $ <%= product.precio %></h3>
+              <h3> $ <%= precio %></h3>
             </div>
            
           </div>
@@ -45,25 +47,25 @@
             </div>
           </div>
         </article>
-      </section>
 
-      <section class="main__section--productDetail">
-        <div class="botton">
-          <button class="car--btn" type="submit">añadir al carrito</button>
-          <div class="box--total">
-            <small>cantidad</small>
-            <p>1</p>
+        <article>
+          <div class="botton">
+            <button class="car--btn" type="submit"><a href="/cart">añadir al carrito</a></button>
+            <div class="box--total">            
+              <small>cantidad</small>
+              <p>1</p>
+            </div>
           </div>
-        </div>
-
-        <article class="main__section--productDetail--description">
-          <h3>acerca del producto</h3>
-          <div>
-            <p><%= product.descripcion %></p>
-          </div>
+  
+          <article class="main__section--productDetail--description">
+            <h3>acerca del producto</h3>
+            <div>
+              <p><%= detalleProducto %></p>
+            </div>
+          </article>
         </article>
-      </section>
-    </main>
+      </section>  
+    </mai>
     <%- include('../partials/footer') %>
   </body>
 </html>

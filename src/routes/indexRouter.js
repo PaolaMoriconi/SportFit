@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const {index, admin, searchAdmin} = require("../controllers/indexController")
+const {index, admin, cart, searchAdmin} = require("../controllers/indexController")
 
 /* / */
 router
-  .get('/',index)
-  .get('/admin',admin)
+.get('/', index)
+.get('/admin', admin)
+.get('/cart', cart)
+.get('/admin/products/search', searchAdmin)
 
 
 
