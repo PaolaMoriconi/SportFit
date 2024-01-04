@@ -1,5 +1,3 @@
-
-module.exports = (req, res) => {
+module.exports = (req,res) => {
     return res.render('products/productAdd')
-     
 }

@@ -14,16 +14,25 @@
       <div class="modal-body">
         <div class="row">
 
-          <div class="col-12 col-lg-4 mb-3">
-            <img src="/images/<%= image %>" class="img-fluid" alt="">
+          <div class="col-14 col-lg-4 mb-3 align-items-center" >
+            <div class="row  d-flex align-items-center justify-content-center">
+              <div class="col-8">
+                <img src="images/<%= image || 'Imagen_por_defecto.jpg' %>" class="img-fluid" alt="">
+              </div>
+              <hr>
+              <div class="col-8">
+                <img src="images/<%= imageBack || 'Imagen_por_defecto.jpg' %>" class="img-fluid" alt="">
+              </div>
+            </div>     
           </div>
-
+          
           <div class="col-12 col-lg-8">
-            <ul class="list-group">
-             
-              <li class="list-group-item"> <b>Precio: </b>  $<%= precio %></li>
-              <li class="list-group-item"><b>Categoria: </b> <%= categoria %></li>
-              <li class="list-group-item"><b>Descripcion: </b> <%= detalleProducto %></li>
+            <ul class="list-group">          
+              <li class="list-group-item"><b>Precio: </b>$<%= precio %></li>
+              <li class="list-group-item"><b>Categoria: </b><%= categoria %></li>         
+              <li class="list-group-item"> <b>Talles: </b><%= talles %></li>
+              <li class="list-group-item"><b>Descuento: </b><%= descuento || "0" %>%</li>
+              <li class="list-group-item"><b>Descripcion: </b><%= detalleProducto %></li>
             </ul>
             
           </div>

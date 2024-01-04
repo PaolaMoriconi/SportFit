@@ -1,4 +1,4 @@
-const path = require("path")
+
 const { leerJSON } = require('../data')
 
 module.exports = {
@@ -8,34 +8,49 @@ module.exports = {
       products,
     })
   },
-  cart: (req, res) => {
-    res.render('./products/carritoCompras')
-  },
   admin: (req, res) => {
     const products = leerJSON('productos')
     return res.render('dashboard', {
       products,
     })
   },
-  searchAdmin : (req, res) => {
+  cart: (req, res) => {
+    res.render('./products/carritoCompras')
+  },
 
-    const {keyword} = req.query
+  searchAdmin: (req, res) => {
+    const { keyword } = req.query
 
     const products = leerJSON('productos')
 
     const result = products.filter((product) => {
-      
-       return product.nombre.toLowerCase().includes(keyword.toLowerCase()) ||
-         product.categoria.toLowerCase().includes(keyword.toLowerCase()) 
-      
+      return (
+        product.nombre.toLowerCase().includes(keyword.toLowerCase()) ||
+        product.categoria.toLowerCase().includes(keyword.toLowerCase())
+      )
     })
-     
 
     return res.render('dashboard', {
       products: result,
-      keyword
+      keyword,
+    })
+  },
+  search :(req, res) => {
+    const { keyword } = req.query
+
+    const products = leerJSON('productos')
+
+    const resultado = products.filter((product) => {
+      return (
+        product.nombre.toLowerCase().includes(keyword.toLowerCase()) ||
+        product.categoria.toLowerCase().includes(keyword.toLowerCase())
+      )
+    })
+
+    return res.render('index', {
+      products: resultado,
+      keyword,
     })
   }
-  
-}
 
+}

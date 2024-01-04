@@ -5,7 +5,7 @@
   title : 'Agregar'
 }) %>
 <body>
-  <%- include('../partials/headerAdmin') %>
+  <button%- include('../partials/headerAdmin') %>
   <main class="container">  
     <section class="row my-5">
       <div class="col-12 col-md-10 mx-auto">
@@ -20,7 +20,7 @@
           </div>
           <div class="card-body">
             
-            <form action="/products/crear" method="POST" class="row">
+            <form action="/products/crear" method="POST" enctype="multipart/form-data" class="row" >
               <h3>Nuevo: "Producto"</h3>
               <hr>
               <div class="col-12 col-md-6 mb-3">
@@ -51,16 +51,34 @@
               <label for="precio">Precio</label>
             </div>
           </div>     
-            
-            
-            
-              <div class="col-12 col-md-6 mb-3">
+
+          <div class="col-6  col-md-3 mb-3">
+            <div class="form-floating">
+              <input name="descuento" type="text" class="form-control" id="descuento">
+              <label for="descuento">Descuento</label>
+            </div>
+          </div>
+
+          <div class="col-6  col-md-3 mb-3">
+            <div class="form-floating">
+              <select  name ="talles" class="form-select" id="talles" aria-label="Floating label select example">
+                <option value="" selected hidden></option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>               
+              </select>
+              <label for="talles">talles</label>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6 mb-3">
                 <div class="form-floating">
                   <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
                     <option value="" selected hidden></option>
                     <option value="mujer">Mujer</option>
-                    <option value="hombre">Hombre</option>
-                    
+                    <option value="hombre">Hombre</option>                   
                   </select>
                   <label for="categoria">Categoria</label>
                 </div>
@@ -77,7 +95,7 @@
              
 
             <div class="col-12 d-flex justify-content-end">
-              <button type="submit" class="btn btn-lg btn-primary" >Guardar</l>
+              <button type="submit" class="btn btn-lg btn-primary" >Guardar</button>
           
           </div>
               

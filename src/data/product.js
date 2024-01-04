@@ -1,12 +1,27 @@
- const crypto = require('crypto')
 
-function Product (nombre = "", precio, detalleProducto , categoria) {
-  this.id = crypto.randomUUID()
-  this.nombre = nombre.trim();
-  this.precio = precio;
+ const { v4: uuidv4 } = require('uuid')
+
+
+
+
+function Product(
+  nombre,
+  precio,
+  detalleProducto,
+  descuento,
+  talles,
+  categoria, 
+  req
+) {
+  const { image, imageBack } = req.files
+  this.id = uuidv4()
+  this.nombre = nombre.trim()
+  this.precio = precio
   this.detalleProducto = detalleProducto.trim()
-  this.image = null;
-  this.imageBack = null;
-  this.categoria = categoria;
+  this.descuento = descuento || null
+  this.talles = talles
+  this.image = image ? image[0].filename : null
+  this.imageBack = imageBack ? imageBack[0].filename : null
+  this.categoria = categoria
 }
 module.exports = Product;

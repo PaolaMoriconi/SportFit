@@ -1,0 +1,31 @@
+[
+  {
+  "id": 1,
+"Nombre" : "Noeli Paola",
+"Apellido": "Moriconi",
+"Email": "paomori18@gmail.com",
+"Contraseña": "password",
+"Categoría": "category",
+"Imagen": "image"
+  },
+  {
+     "id": 2 ,
+"Nombre" : "Facundo Tomas",
+"Apellido": "Rodriguez",
+"Email": "facutomasr@gmail.com",
+"Contraseña": "password",
+"Categoría": "category",
+"Imagen": "image"
+  },
+  {
+      "id": 3,
+      "Nombre" : "",
+      "Apellido": "",
+      "Email": "",
+      "Contraseña": "password",
+      "Categoría": "category",
+      "Imagen": "image"
+          }
+  
+
+]

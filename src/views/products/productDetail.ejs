@@ -15,22 +15,22 @@
             src="/images/adidas.png"
             alt="icon--adidas"
           />
-          <h3><%= nombre %></h3>
+          <h3><%= product.nombre %></h3>
         </div>
         <article class="main__section__article--productDetail">
           <div class="article--productDetail--img">
             <div class="article--productDetail--imgBack">
               <img
-                src="/images/<%= imageBack %>"
+                src="/images/<%= product.imageBack %>"
                 alt="camisetaBocaHombre"
               />
             </div>
             <div class="article--productDetail--imgFront">
               <img
-                src="/images/<%= image %>"
+                src="/images/<%= product.image %>"
                 alt="camisetaBocaHombre"
               />
-              <h3> $ <%= precio %></h3>
+              <h3> $ <%= product.precio %></h3>
             </div>
            
           </div>
@@ -60,12 +60,12 @@
           <article class="main__section--productDetail--description">
             <h3>acerca del producto</h3>
             <div>
-              <p><%= detalleProducto %></p>
+              <p> <%= product.detalleProducto %> </p>
             </div>
           </article>
         </article>
       </section>  
-    </mai>
+    </main>
     <%- include('../partials/footer') %>
   </body>
 </html>

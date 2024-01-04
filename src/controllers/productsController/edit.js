@@ -1,13 +1,13 @@
-const { leerJSON } = require('../../data')
+const { leerJSON } = require("../../data");
 
-module.exports = (req, res) => {
-   const { id } = req.params
+module.exports = (req,res) => {
 
-   const products = leerJSON('productos')
+    const {id} = req.params;
+    const products = leerJSON('productos');
 
-   const product = products.find((product) => product.id == id)
+    const product = products.find((product) => product.id == id);
 
-    return res.render('./products/productEdit', {
-     ...product,
-   })
+    return res.render('products/productEdit',{
+        product
+    })
 }
