@@ -54,6 +54,6 @@ Mejorar tiempos de reunion y avances del proyecto, para llegar a la fecha de ent
 -Ver y analizar el avance del proyecto, que esta bien y en que se puede mejorar.
 ## HACER MENOS 
  -No mantener al tanto al grupo si surgen problemas.
- -No terner ninigun tipo de comunicacion con el grupo.
+ -No tener ningun tipo de comunicacion con el grupo.
 ## DEJAR DE HACER
 - ABANDONAR EL GRUPO. 
