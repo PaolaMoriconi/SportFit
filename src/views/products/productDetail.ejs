@@ -4,9 +4,11 @@
     title : "Detalle del Producto"
   }) %>
   <body>
-    <%- include('../partials/header') %>
-    <main class="main--productDetail">
+     <%- include('../partials/header') %> 
+    
+    <main class="main--productDetail" >
       <section class="main__section--productDetail">
+        
         <div class="title--productDetail">
           <img
             class="icon--adidas"
@@ -19,7 +21,7 @@
           <div class="article--productDetail--img">
             <div class="article--productDetail--imgBack">
               <img
-                src="/images/camisetaBoca-back.png"
+                src="/images/<%= product.imageBack %>"
                 alt="camisetaBocaHombre"
               />
             </div>
@@ -46,24 +48,24 @@
             </div>
           </div>
         </article>
-      </section>
 
-      <section class="main__section--productDetail">
-        <div class="botton">
-          <button class="car--btn" type="submit">añadir al carrito</button>
-          <div class="box--total">
-            <small>cantidad</small>
-            <p>1</p>
+        <article>
+          <div class="botton">
+            <button class="car--btn" type="submit"><a href="/cart">añadir al carrito</a></button>
+            <div class="box--total">            
+              <small>cantidad</small>
+              <p>1</p>
+            </div>
           </div>
-        </div>
-
-        <article class="main__section--productDetail--description">
-          <h3>acerca del producto</h3>
-          <div>
-            <p><%= product.descripcion %></p>
-          </div>
+  
+          <article class="main__section--productDetail--description">
+            <h3>acerca del producto</h3>
+            <div>
+              <p> <%= product.detalleProducto %> </p>
+            </div>
+          </article>
         </article>
-      </section>
+      </section>  
     </main>
     <%- include('../partials/footer') %>
   </body>

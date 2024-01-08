@@ -60,9 +60,9 @@
   }
 
   .home__main__input {
-    width: 61%;
+    width: 100%;
     padding: 10px;
-    padding-right: 160px;
+    padding-right: 85px;
     border-radius: 30px;
     border: 0;
   }
@@ -73,7 +73,7 @@
     border: 0;
     top: 11px;
     bottom: 15px;
-    right: 143px;
+    right: 17px;
     margin: auto;
   }
   .icon--sportfit img {

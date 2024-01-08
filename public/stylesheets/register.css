@@ -27,14 +27,14 @@
   
 } 
 .email{
-  bottom: 232px;
+  bottom: 182px;
 }
 .password{
-  bottom: 146px;
+  bottom: 82px;
 
 }
 .password2{
-  bottom:60px;
+  bottom: -18px;
 }
 .form__label{
   color: var(--colorgrisOscuro);
@@ -95,13 +95,13 @@
     
   } 
   .email{
-    bottom: 207px;
+    bottom: 155px;
   }
   .password {
-    bottom: 121px;
+    bottom: 56px;
 }
 .password2 {
-  bottom: 34px;
+  bottom: -45px;
 }
   
   
@@ -134,19 +134,19 @@
   }
 
   .email, .password, .password2{
-    right:295px;
+    right:293px;
 
   }
   .email{ 
-    top: 359px;
+    top: 411px;
   }
   .password{
 
-    top: 446px;
+    top: 511px;
   
   }
   .password2 {
-    top: 533px;
+    top: 613px;
 
 }
 }

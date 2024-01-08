@@ -7,46 +7,50 @@
   <body class="home">
     <%- include('./partials/header') %>
     <main class="main__home">
-      <div class="swiper mySwiper_1">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide swiper-slide_1">
-            <img src="/images/banner1.jpg" alt="" />
+      
+      <% if (products.length) { %>
+        <div class="swiper mySwiper_1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/images/banner1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/images/banner2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/images/banner3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/images/banner4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide swiper-slide_1">
+              <img src="/images/banner5.jpg" alt="" />
+            </div>
           </div>
-          <div class="swiper-slide swiper-slide_1">
-            <img src="/images/banner2.jpg" alt="" />
-          </div>
-          <div class="swiper-slide swiper-slide_1">
-            <img src="/images/banner3.jpg" alt="" />
-          </div>
-          <div class="swiper-slide swiper-slide_1">
-            <img src="/images/banner4.jpg" alt="" />
-          </div>
-          <div class="swiper-slide swiper-slide_1">
-            <img src="/images/banner5.jpg" alt="" />
-          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+  
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev swiper-button-prev_1"></div>
+          <div class="swiper-button-next swiper-button-next_1"></div>
+          <div class="swiper-button-next swiper-button-next_1"></div>
+          <div class="swiper-button-next swiper-button-next_1"></div>
+          <div class="swiper-button-next swiper-button-next_1"></div>
+  
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev swiper-button-prev_1"></div>
-        <div class="swiper-button-next swiper-button-next_1"></div>
-        <div class="swiper-button-next swiper-button-next_1"></div>
-        <div class="swiper-button-next swiper-button-next_1"></div>
-        <div class="swiper-button-next swiper-button-next_1"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-      </div>
+       
+     
 
       <div class="home__products">
         <% products.forEach(product => { %>
         <article class="home__article">
           <a href="/products/detail/<%= product.id %>">
             <img
-              src="/images/<%= product.image %>"
+              src="/images/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
               alt="Camiseta de boca para hombre"
             />
             <div class="home__article__info">
@@ -58,7 +62,22 @@
         </article>
         <% }) %>
       </div>
+      <% } else { %>
+        <div class="alert alert-light" role="alert">
+          Producto no encontrado, intente con otra busqueda        
+        </div>
+
+
+
+        
+
+      <% }%>
+     
+
     </main>
+
+    <%- include('./partials/scripts') %>
+
     <%- include('./partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
