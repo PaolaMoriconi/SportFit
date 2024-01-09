@@ -51,7 +51,7 @@
           <a href="/products/detail/<%= product.id %>">
             <img
               src="/images/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
-              alt="Camiseta de boca para hombre"
+              alt="<%= product.nombre %>"
             />
             <div class="home__article__info">
               <h2><%= product.nombre %></h2>

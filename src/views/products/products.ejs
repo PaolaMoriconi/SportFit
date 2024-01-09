@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head', {
+    title : "Todos los productos"
+  }) %>
+
+  <body class="">
+    <%- include('../partials/header') %>
+    <main>
+      <% if(products.length > 0){%>
+      <div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.nombre %>"
+            />
+            <div class="home__article__info">
+              <h2><%= product.nombre %></h2>
+              <p>$<%= product.precio %></p>
+              <p><%= product.descripcion %></p>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div>
+      <% } else { %>
+        <div class="alert alert-light" role="alert">
+          Producto no encontrado, intente con otra busqueda        
+        </div>
+
+
+
+        
+
+      <% }%>
+    </main>
+
+	
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
