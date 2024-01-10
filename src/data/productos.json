@@ -94,5 +94,27 @@
       "image": "remeraMujer.jpg",
       "imageBack": "remeraMujer-back.jpg",
       "categoria": "mujer"
+   },
+   {
+      "id": "71027b22-0164-4787-9543-f9236b52c76b",
+      "nombre": "Noeli Paola Moriconi",
+      "precio": "60000",
+      "detalleProducto": "10",
+      "descuento": "s",
+      "talles": "sadsadasdas",
+      "image": "Captura de pantalla (45).png-1704829496275-514597268.png",
+      "imageBack": "Captura de pantalla (45).png-1704829496283-446754734.png",
+      "categoria": "mujer"
+   },
+   {
+      "id": "de6519c2-b9dd-48a7-9b9e-965897bbca19",
+      "nombre": "Noeli Paola Moriconi",
+      "precio": "60000",
+      "detalleProducto": "10",
+      "descuento": "s",
+      "talles": "sadsadasdas",
+      "image": "Captura de pantalla (45).png-1704829615538-821186477.png",
+      "imageBack": "Captura de pantalla (45).png-1704829615544-878510954.png",
+      "categoria": "mujer"
    }
 ]
