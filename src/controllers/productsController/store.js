@@ -1,13 +1,13 @@
-
 const { leerJSON, escribirJSON } = require('../../data')
 const Product = require('../../data/product')
 
-
 module.exports = (req, res) => {
-  const { nombre, precio, descuento, talles,detalleProducto, categoria} =
+  const { nombre, precio, descuento, talles, detalleProducto, categoria } =
     req.body
-
-  const producto = new Product( 
+  const { id } = req.params
+  const { image, imageBack } = req.files
+  const producto = new Product(
+    id,
     nombre,
     precio,
     descuento,
@@ -19,10 +19,9 @@ module.exports = (req, res) => {
 
   const products = leerJSON('productos')
 
- 
   products.push(producto)
 
-  
   escribirJSON(products, 'productos')
-  res.redirect(`/products/detail/${products.id}`)
+
+  res.redirect(`/products/detail/${producto.id}`)
 }

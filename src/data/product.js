@@ -5,6 +5,7 @@
 
 
 function Product(
+  id,
   nombre,
   precio,
   detalleProducto,
