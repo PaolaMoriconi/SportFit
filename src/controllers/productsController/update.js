@@ -13,9 +13,15 @@ module.exports = (req,res) => {
        
         if(product.id == id){
 
-           image && existsSync('public/images/' + product.image) && unlinkSync('public/images/' + product.image[0])
-            
-           imageBack && existsSync('public/images/' + product.imageBack) && unlinkSync('public/images/' + product.imageBack[0])
+
+           if (image && existsSync('public/images/' + product.image)) {
+             unlinkSync('public/images/' + product.image)
+           }
+
+           if (imageBack && existsSync('public/images/' + product.imageBack)) {
+             unlinkSync('public/images/' + product.imageBack)
+           }
+           
 
             product.nombre = nombre.trim();
             product.precio = precio;
@@ -23,7 +29,7 @@ module.exports = (req,res) => {
             product.talles = talles          
             product.detalleProducto = detalleProducto.trim();       
             product.image = image ? image[0].filename : product.image
-            product.imageBack = imageBack ? imageBack[0].filename : product.image
+            product.imageBack = imageBack ? imageBack[0].filename : product.imageBack
             product.categoria = categoria;
               
               
