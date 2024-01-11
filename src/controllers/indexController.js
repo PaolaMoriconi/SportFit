@@ -15,7 +15,15 @@ module.exports = {
     })
   },
   cart: (req, res) => {
-    res.render('./products/carritoCompras')
+    const list = leerJSON('productos')
+  const products = [list[0],list[1],list[2]]
+  console.log("products",products);
+
+  res.render('products/carritoCompras', {
+    products:products
+  })
+
+
   },
 
   searchAdmin: (req, res) => {

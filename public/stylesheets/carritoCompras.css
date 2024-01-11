@@ -1,245 +1,162 @@
-.main__carr {
-    width: 100%;
+.body__carr {
+   
+    background-color: var( --colorgrisOscuro);
 }
 
-#text-titulo,
+.titulo-principal,
 #text-titulo-resumen {
-    margin-left: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    color: #ffffff;
 }
-
-#primerTotal {
-    padding: 15px 10px;
-}
-
-#seguirComprando {
-    padding: 5px;
-    font-size: 12px;
-}
-
-#seguirComprando a {
-    padding: 10px;
-    text-decoration: underline;
-    color: black;
-}
-
-.carr__products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-}
-
-.carr__products__article {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.carr__products__article img {
-    width: 40%;
-    height: 150px;
-}
-
-#icons__products {
+.products {
     display: flex;
     flex-direction: column;
-    order: 1;
-    align-self: flex-start;
-    padding: 35px 25px;
-}
+    gap: 20px;
+    align-items: center;
+  }
+.products__article {
+    margin: 10px 0;
+    width: 90%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    height: 195px;
+    border-radius: 5px;
+    
+  }
+  .products__article a{
+    width: 40%;
+    height: 50px;
 
-#select1,
-#select2 {
-    align-self: flex-end;
-    margin-bottom: 10px;
-}
 
-#cantidad {
-    align-self: flex-end;
-    margin-bottom: 10px;
-    gap: 1px;
+  }
+  .products__article__img{
+    position: relative;
+    top: 50px;
+  }
+  
+ .products__article__info {
+    background-color: var(--colorGrisClaro);
+    width: 60%;
+    height: 195px;
+    border-radius: 5px;
+  }
+  
+  .products__article h2 {
+    text-align: center;
+    font-size:20px;
+    color: #332f2c;
+    margin: 20px 10px 0px 0px ;
+   
+  }
+  .products__article__info p {
+ 
+    color: #332f2c;
+    text-decoration: none;
+    margin: 10px 10px
+  }
+  .icons__products  {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    bottom: 126px;
+    right: -5px;
+        padding: 5px 10px 0px 0px;
+        color: #332f2c;
+    }
+    .select
+ {
+   display: flex;
+   flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 23px;
+    left: -7px;
+    gap:5px;
 }
-
-.detalles {
-    display: grid;
-    width: 50%;
-    height: 18vh;
-    justify-content: space-evenly;
-}
-
-.detalles h4 {
-    padding-top: 25px;
-    padding-bottom: 15px;
-}
-
-#precio {
-    padding-top: 25px;
-}
-
-#ultimasUni {
-    color: red;
-    text-decoration: underline;
-}
-
-.cod-promo {
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
 .cod-promo a {
     color: black;
 }
-
-.resumen {
+.section__pagos{
+    background-color: var(--colorGrisClaro);
+    margin: 0px 10px
+}
+.cod-promo{
+    margin:5px 10px 0px
+}
+.detalle__pedido h3{
+color: #ffffff;
+text-align: center;
+}
+.div__products{
     display: flex;
-    width: 100%;
-    padding: 10px 30px;
-    gap: 170px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 0px 10px;
 }
-
-#br {
-    display: none;
+.button{
+   width: 100%;
 }
-
-.button {
+.button-pagar{
+    width: 80%;
+    margin: 10px 20px;
+    background-color: black;
+    color: white;
+    box-shadow: -5px 6px 2px 1px;
     display: flex;
-    width: 100%;
-    padding: 20px;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
 }
-
-#button-pagar {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 10px 25%;
-    border: none;
-    box-shadow: 6px 6px 6px #605757;
-}
-
-.button i {
-    color: #ffffff;
-    font-size: 25px;
+.button-pagar i{
     position: relative;
-    right: 28px;
-    top: 5px;
-    pad: 0 8px;
+    top:4px
 }
-
-.envio-cambio {
-    padding: 15px;
+.envio-cambio{
+    margin: 15px;
 }
-
-.envio-cambio p {
-    padding: 5px 0;
-    font-size: 12px;
-    text-decoration: underline;
+.medio-pago{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
 }
-
-#medio-pago {
-    font-size: 25px;
-    margin-left: 70px;
-}
-
-#medio-pago i {
-    font-size: 25px;
-    margin-left: 2px;
-}
-
 @media (min-width:768px) {
-
-
-    .carr__products__article {
-        width: 90%;
-        justify-content: space-between;
+    .products__article__img{
+        top: 9px;
+        width: 65%;
+        left: 50px;
     }
-
-    .carr__products__article img {
-        width: 50%;
-        height: 170px;
+    .titulo-principal{
+        font-size: 2rem;
+}
+.products__article h2{
+    font-size: 1.5rem;
+}
+.products__article__info p{
+    font-size: 20px;
+}
+}@media (min-width: 1024px) {
+    .products__article{
+        height: 264px;
     }
-
-    #text-resumen {
-        display: flex;
-        width: 90%;
-        justify-content: flex-end;
-    }
-
-    #select1 {
-        padding: 0 8px;
-        position: relative;
-        left: 40px;
-    }
-
-    #select2 {
-        padding: 0 8px;
-        position: relative;
-        left: 40px;
-    }
-
-    .resumen {
-        width: 100%;
-        justify-content: space-evenly;
+    .products__article__info{
+        height: 264px;
     }
 }
 
-@media (min-width: 1024px) {
-    #primerTotal {
-        font-size: 25px;
-    }
 
-    #seguirComprando,
-    .cod-promo {
-        font-size: 15px;
-        padding: 20px 0;
-    }
 
-    .carr__products {
-        display: flex;
-        width: 100%;
-    }
 
-    .carr__products__article {
-        border: 1px solid var(--colorGris);
-        margin-left: 10px;
-    }
 
-    .main__carr2 {
-        display: flex;
-        width: 90%;
-    }
 
-    .resumen__completo {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-    }
+  
 
-    #text-titulo-resumen {
-        width: 100%;
-        margin: 0;
-    }
 
-    #resumen1,
-    #resumen2 {
-        padding: 15px;
-    }
-
-    .button {
-        position: relative;
-        order: -1;
-        bottom: 80px;
-    }
-
-    #br {
-        display: flex;
-    }
-
-    .envio-cambio-pago {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-}

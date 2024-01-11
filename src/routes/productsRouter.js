@@ -9,6 +9,7 @@ const {
   add,
   update,
   remove,
+ 
 } = require("../controllers/productsController");
 
 router
@@ -26,6 +27,7 @@ router
     upload.fields([{ name: "image" }, { name: "imageBack" }]),
     update
   )
-  .delete("/remove/:id", remove);
+  .delete("/remove/:id", remove)
+  
 
 module.exports = router;
