@@ -143,7 +143,8 @@ text-align: center;
 .products__article__info p{
     font-size: 20px;
 }
-}@media (min-width: 1024px) {
+}
+@media (min-width: 1024px) {
     .products__article{
         height: 264px;
     }
@@ -151,6 +152,15 @@ text-align: center;
         height: 264px;
     }
 }
+@media (min-width: 1140px) {
+    .products__article__img{
+        top: 9px;
+        width: 50%;
+        left: 70px;
+      
+}
+}
+
 
 
 
