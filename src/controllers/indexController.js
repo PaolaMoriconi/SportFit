@@ -4,6 +4,7 @@ const { leerJSON } = require('../data')
 module.exports = {
   index: function (req, res) {
     const products = leerJSON('productos')
+    console.log("Session",req.session.userLogin)
     return res.render('index', {
       products,
     })

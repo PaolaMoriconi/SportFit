@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override')
+const session = require('express-session');
 
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
@@ -24,6 +25,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 /* metodos PUT PATH & DELETE */
 app.use(methodOverride('_method'))
+
+/* configuración de session */
+app.use(session( {
+  secret: "Sport Fit",
+  resave: false,
+  saveUninitialized: true
+}));
 
 
 
