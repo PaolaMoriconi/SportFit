@@ -1,20 +1,20 @@
 [
   {
-  "id": 1,
-"Nombre" : "Noeli Paola",
-"Apellido": "Moriconi",
-"Email": "paomori18@gmail.com",
-"password": "1234",
-"Categoría": "admi",
-"Imagen": "image"
+    "id": 1,
+    "Nombre": "Noeli Paola",
+    "Apellido": "Moriconi",
+    "Email": "paomori18@gmail.com",
+    "password": "1234",
+    "rol": "admi",
+    "Imagen": "image"
   },
   {
-  "id": 2 ,
-"Nombre" : "Facundo Tomas",
-"Apellido": "Rodriguez",
-"Email": "facutomasr@gmail.com",
-"password": "password",
-"Categoría": "admi",
-"Imagen": "image"
+    "id": 2,
+    "Nombre": "Facundo Tomas",
+    "Apellido": "Rodriguez",
+    "Email": "facutomasr@gmail.com",
+    "password": "password",
+    "rol": "admi",
+    "Imagen": "image"
   }
-  ]
+]
