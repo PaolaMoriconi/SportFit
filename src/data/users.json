@@ -5,7 +5,7 @@
       "surname": "Moriconi",
       "email": "paomori18@gmail.com",
       "password": "password",
-      "role": "category",
+      "role": "admin",
       "avatar": "image"
    },
    {
@@ -14,7 +14,7 @@
       "surname": "Rodriguez",
       "email": "facutomasr@gmail.com",
       "password": "password",
-      "role": "category",
+      "role": "admin",
       "avatar": "image"
    },
    {
