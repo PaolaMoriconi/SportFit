@@ -28,7 +28,7 @@ app.use(methodOverride('_method'))
 
 /* configuración de session */
 app.use(session( {
-  secret: "Sport Fit",
+  secret: "SportFit",
   resave: false,
   saveUninitialized: true
 }));
