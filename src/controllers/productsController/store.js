@@ -22,6 +22,5 @@ module.exports = (req, res) => {
   products.push(producto)
 
   escribirJSON(products, 'productos')
-
   res.redirect(`/products/detail/${producto.id}`)
 }

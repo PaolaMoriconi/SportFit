@@ -21,6 +21,7 @@ body.home {
 .home__article h2 {
   text-align: center;
   color: #332f2c;
+  font-size: 1.5rem;
 }
 .home__article p {
   text-align: center;

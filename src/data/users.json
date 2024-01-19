@@ -5,7 +5,7 @@
       "surname": "Moriconi",
       "email": "paomori18@gmail.com",
       "password": "password",
-      "rol": "category",
+      "role": "category",
       "avatar": "image"
    },
    {
@@ -14,7 +14,7 @@
       "surname": "Rodriguez",
       "email": "facutomasr@gmail.com",
       "password": "password",
-      "rol": "category",
+      "role": "category",
       "avatar": "image"
    },
    {
@@ -24,6 +24,33 @@
       "email": "e23fmail@gmail.com",
       "password": "12345",
       "avatar": "default-avatar.jpg",
-      "rol": "user"
+      "role": "user"
+   },
+   {
+      "id": "efa5aec5-e0ac-48ae-8074-92c02c0c57b8",
+      "name": "Boca",
+      "surname": "Juniors",
+      "email": "prueba12@gmail.com",
+      "password": "$2a$10$aVwRR5/jkplsf9Oe0caQj.5.ONzTLezccLvK9DchwR7LLoeBUSxyW",
+      "avatar": "default-avatar.jpg",
+      "role": "user"
+   },
+   {
+      "id": "1f7d2b08-107a-4668-9a48-b5e20304bcca",
+      "name": "Boca",
+      "surname": "Juniors",
+      "email": "bocajuniors@hola.com",
+      "password": "$2a$10$KOcO5K64NwNtBRGeK7tXk.QdSsMcLsZLPKvD1EQL.KfMpzBWBGsDe",
+      "avatar": "default-avatar.jpg",
+      "role": "user"
+   },
+   {
+      "id": "b6041cf2-701a-42cf-8fa9-1d267f763bd8",
+      "name": "Facundo Tomas Rodriguez",
+      "surname": "Juniors",
+      "email": "email@gmail.com",
+      "password": "$2a$10$bayEBmT0GdtjdH3CBJ73Q.MAYd5l4.RHAB2noYsFPWvZSinWV.zCK",
+      "avatar": "default-avatar.jpg",
+      "role": "user"
    }
 ]

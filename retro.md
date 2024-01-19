@@ -57,3 +57,20 @@ Mejorar tiempos de reunion y avances del proyecto, para llegar a la fecha de ent
  -No tener ningun tipo de comunicacion con el grupo.
 ## DEJAR DE HACER
 - ABANDONAR EL GRUPO. 
+
+# RETROSPECTIVA DEL GRUPO DEL CUARTO SPRINT.
+## COMENZAR A HACER 
+Resumen de las dailys y las reuniones semales.
+## HACER MAS
+- Opiniones. 
+- Pensamientos. 
+-Expresar y dar ideas del proyecto a nuestros compañeros/as.
+## CONTINUAR HACIENDO
+-Las daily. 
+-Conclusiones. 
+- Decisiones.
+-Ver y analizar el avance del proyecto, que esta bien y en que se puede mejorar.
+## HACER MENOS 
+ -No mantener al tanto al grupo si surgen problemas.
+ ## DEJAR DE HACER
+-No imformar o comunicr al grupo si surgen problemas.

@@ -5,29 +5,29 @@ const User = require('../data/User')
     login : (req,res) => {
         return res.render('users/login')
     },
-    processLogin : (req, res) => {
-          const errors = validationResult(req);
-            const {email} = req.body;
+     processLogin: (req, res) => {
+    const errores = validationResult(req);
+    console.log("errors:",errores);
+    const { email } = req.body;
 
-        if(errors.isEmpty()){
+    if (errores.isEmpty()) {
+      const { id, Nombre, Categoría } = leerJSON("users").find(
+        user => user.Email === email
+      );
 
-        const {id, name, rol} = leerJSON('users').find(user => user.email === email)
+      req.session.userLogin = {
+        id,
+        Nombre,
+        Categoría,
+      };
 
-            req.session.userLogin = {
-                id,
-                name,
-                rol
-            }
-
-            return res.redirect('/users/login')
-
-        }else {
-            return res.render('users/login',{
-                errors : errors.mapped()
-            })
-        }
-
-    },
+      return res.redirect("/");
+    } else {
+      return res.render("users/login", {
+        errors: errores.mapped(),
+      });
+    }
+  },
     register : (req,res) => {
         return res.render('users/register')
     },
@@ -63,10 +63,12 @@ const User = require('../data/User')
                 errors : errors.mapped()
              })
         }
-        return res.send(errors)
+       
     }
 
 
     }
 
     
+
+ 
