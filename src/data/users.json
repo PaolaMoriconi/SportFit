@@ -1,31 +1,29 @@
 [
-  {
-  "id": 1,
-"Nombre" : "Noeli Paola",
-"Apellido": "Moriconi",
-"Email": "paomori18@gmail.com",
-"Contraseña": "password",
-"Categoría": "category",
-"Imagen": "image"
-  },
-  {
-     "id": 2 ,
-"Nombre" : "Facundo Tomas",
-"Apellido": "Rodriguez",
-"Email": "facutomasr@gmail.com",
-"Contraseña": "password",
-"Categoría": "category",
-"Imagen": "image"
-  },
-  {
-      "id": 3,
-      "Nombre" : "",
-      "Apellido": "",
-      "Email": "",
-      "Contraseña": "password",
-      "Categoría": "category",
-      "Imagen": "image"
-          }
-  
-
+   {
+      "id": 1,
+      "name": "Noeli Paola",
+      "surname": "Moriconi",
+      "email": "paomori18@gmail.com",
+      "password": "password",
+      "rol": "category",
+      "avatar": "image"
+   },
+   {
+      "id": 2,
+      "name": "Facundo Tomas",
+      "surname": "Rodriguez",
+      "email": "facutomasr@gmail.com",
+      "password": "password",
+      "rol": "category",
+      "avatar": "image"
+   },
+   {
+      "id": "e4306547-bf1d-4cfe-98a7-f2bd931eefcc",
+      "name": "Boca",
+      "surname": "Juniors",
+      "email": "e23fmail@gmail.com",
+      "password": "12345",
+      "avatar": "default-avatar.jpg",
+      "rol": "user"
+   }
 ]

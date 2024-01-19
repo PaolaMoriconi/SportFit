@@ -15,7 +15,7 @@
             src="/images/adidas.png"
             alt="icon--adidas"
           />
-          <h3><%= product && product.nombre %></h3>
+          <h3><%= product.nombre %></h3>
         </div>
         <article class="main__section__article--productDetail">
           <div class="article--productDetail--img">
@@ -30,7 +30,7 @@
                 src="/images/<%= product.image %>"
                 alt="camisetaBocaHombre"
               />
-              <h3> $ <%= product &&  product.precio %></h3>
+              <h3> $ <%= product.precio %></h3>
             </div>
            
           </div>
@@ -61,7 +61,7 @@
           <article class="main__section--productDetail--description">
             <h3>acerca del producto</h3>
             <div>
-              <p> <%= product &&  product.detalleProducto %> </p>
+              <p> <%= product.detalleProducto %> </p>
             </div>
           </article>
         </article>
