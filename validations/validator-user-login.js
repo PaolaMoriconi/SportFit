@@ -17,9 +17,8 @@ module.exports = [
     .custom((value, { req }) => {
       const users = leerJSON("users");
       const user = users.find((user) => user.Email === req.body.email.trim());
-        console.log("value",value);
-        console.log("user.password",user.password);
-      if (!user && value.trim() != user.password) {
+       
+      if (!user|| !compareSync( value.trim() != user.password)) {
         return false;
       }
 
