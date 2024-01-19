@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override')
 const session = require('express-session');
+const cookieValidator = require('./middlewares/cookieValidator');
 
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
@@ -28,12 +29,12 @@ app.use(methodOverride('_method'))
 
 /* configuración de session */
 app.use(session( {
-  secret: "Sport Fit",
+  secret: "SportFit",
   resave: false,
   saveUninitialized: true
 }));
 
-
+app.use(cookieValidator);
 
 
 app.use('/', indexRouter);

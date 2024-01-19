@@ -10,7 +10,7 @@ module.exports = (req, res) => {
 
 
   res.render('products/productDetail', {
-       product,
+       product,user:req.session.user
   
   })
 
