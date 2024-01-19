@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override')
 const session = require('express-session');
+const cookieValidator = require('./middlewares/cookieValidator');
 
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
@@ -33,7 +34,7 @@ app.use(session( {
   saveUninitialized: true
 }));
 
-
+app.use(cookieValidator);
 
 
 app.use('/', indexRouter);
