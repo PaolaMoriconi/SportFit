@@ -11,14 +11,14 @@ const User = require('../data/User')
     const { email } = req.body;
 
     if (errores.isEmpty()) {
-      const { id, Nombre, Categoría } = leerJSON("users").find(
-        user => user.Email === email
+      const { id, name, role } = leerJSON("users").find(
+        user => user.email === email
       );
 
       req.session.userLogin = {
         id,
-        Nombre,
-        Categoría,
+        name,
+        role,
       };
 
       return res.redirect("/");
