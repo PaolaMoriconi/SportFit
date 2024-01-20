@@ -1,74 +1,24 @@
 [
    {
-      "id": 1,
-      "name": "Noeli Paola",
-      "surname": "Moriconi",
-      "email": "paomori18@gmail.com",
-      "password": "password",
-      "role": "category",
-      "avatar": "image"
-   },
-   {
       "id": 2,
       "name": "Facundo Tomas",
       "surname": "Rodriguez",
       "email": "facutomasr@gmail.com",
       "password": "password",
-      "role": "category",
+      "role": "admin",
       "avatar": "image"
    },
    {
-      "id": "e4306547-bf1d-4cfe-98a7-f2bd931eefcc",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "e23fmail@gmail.com",
-      "password": "12345",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "efa5aec5-e0ac-48ae-8074-92c02c0c57b8",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "prueba12@gmail.com",
-      "password": "$2a$10$aVwRR5/jkplsf9Oe0caQj.5.ONzTLezccLvK9DchwR7LLoeBUSxyW",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "c8e451a2-8b8d-4a9b-a1a5-0fc145e798df",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "email@gmail.com",
-      "password": "$2a$10$XPg4PK7EYPNnyCuWa6TSD.FDSTSIsuCgAyTaZ2W5uFZv6Gcahxr8e",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "a42234c0-f78c-4dba-a846-353cb0018d2e",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "email12@gmail.com",
-      "password": "$2a$10$sOAeullGkqBh.QZs5KDNeeDvjTRXRAhs2sYPLNgq5Azc5SALkTkvq",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "517b04ef-72c0-4d60-9e67-e61e76c14685",
-      "name": "Boca",
-      "surname": "pruebaaa",
-      "email": "prueba@gmail.com",
-      "password": "$2a$10$CW8sQuFEqSyLJhuwH75Ru.k33ogPlJ54EiM8LzpRbVIzp3LFB7d86",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "026904d1-8e0b-4a7d-b3c9-005b48b9d9ad",
-      "name": "Boca",
-      "surname": "Rodriguez",
-      "email": "email1@gmail.com",
-      "password": "$2a$10$8/PswjInEgk4Y7VCgTpULuV.hhhXFSMrHeVakIn8xCG1bXtx0qFam",
-      "avatar": "default-avatar.jpg",
-      "role": "admin"
+      "id": "017b04ef-72c0-4d60-9e67-e61e76c14685",
+      "name": "Julian Ed",
+      "surname": "Aquino",
+      "email": "julian.eduardo.aquino@gmail.com",
+      "adress": "Olegario Víctor Andrade 976",
+      "state": "Buenos Aires",
+      "district": "Bella Vista",
+      "phone": "+541150973344",
+      "password": "$2a$10$JAlpHPsaFnoiMZATE0/9I.4SnsbY5TmQU4Ohpa6h4uKlNQIxNzRMW",
+      "role": "user",
+      "avatar": "HUESO-1705735366835-327121706.png"
    }
 ]

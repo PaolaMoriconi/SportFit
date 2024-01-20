@@ -21,37 +21,30 @@
 
 
       <ul class="header__nav--right">
-        <% if (locals.user && (user.role === "user" || user.role === "admin")) { %>
-          <li><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <% } else { %>
-          <li><a href="/users/login"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <% } %>
-      
-        <% if (locals.user && user.name) { %>
-          <li><p><%= user.name %></p></li>
-        <% } else { %>
-          <li><a href="/users/login"><i class="fa-solid fa-user"></i></a></li>
-        <% } %>
+        <li>
+          <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <% if(locals.user && user.name) { %>
+        <li>
+          <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
+        </li>
+        <%}else{ %>
+          <li>
+            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+          </li>
+        <%}%>
       </ul>
       
       <nav class="header__nav--categoria">
-        <% if (locals.user && user.role === "admin") { %>
         <ul class="header__nav__ul--categoria">
           <li><a href="/products">Productos</a></li>
           <li><a href="">Hombre</a></li>
           <li><a href="">Mujer</a></li>
-          <li><a href="/admin">Dashboard</a></li>
-          
+          <% if (locals.user && user.role === "admin") { %>
+            <li><a href="/admin">Dashboard</a></li>
+          <% } %>
         </ul>
-        <% } else {%>
-          <ul class="header__nav__ul--categoria">
-            <li><a href="/products">Productos</a></li>
-            <li><a href="">Hombre</a></li>
-            <li><a href="">Mujer</a></li>    
-          </ul>
-        <% } %>
-      </nav>
-     
+      </nav>   
     </nav>
   </header>
 

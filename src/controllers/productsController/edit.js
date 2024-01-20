@@ -8,6 +8,6 @@ module.exports = (req,res) => {
     const product = products.find((product) => product.id == id);
 
     return res.render('products/productEdit',{
-        product,user:req.session.user
+        product,user:req.session.userLogin
     })
 }

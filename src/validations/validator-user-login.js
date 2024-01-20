@@ -17,7 +17,11 @@ module.exports = [
     .bail()
     .custom((value, { req }) => {
       const users = leerJSON('users')
-      const user = users.find((user) => user.email === req.body.email.trim())
+      console.log("value",value);
+      console.log("email",req.body.email);
+      const user = users.find(user => user.email === req.body.email.trim())
+      console.log("password",user.password);
+      console.log("?:",compareSync(value.trim(), user.password) );
       if (!user || !compareSync(value.trim(), user.password)) {
         return false
       }
