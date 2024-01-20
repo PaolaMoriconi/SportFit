@@ -21,9 +21,17 @@
 
 
       <ul class="header__nav--right">
+        <% if (locals.user && user.role === "user") { %>          
         <li>
           <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </li>
+        <% } else { %>
+          <li>
+            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+          </li>
+
+          <% }  %>
+     
         <% if(locals.user && user.name) { %>
         <li>
           <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
