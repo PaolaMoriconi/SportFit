@@ -6,13 +6,13 @@ module.exports = {
     const products = leerJSON('productos')
     console.log("Session",req.session.userLogin)
     return res.render('index', {
-      products,user:req.session.user
+      products,user:req.session.userLogin
     })
   },
   admin: (req, res) => {
     const products = leerJSON('productos')
     return res.render('dashboard', {
-      products,user:req.session.user
+      products,user:req.session.userLogin
     })
   },
   cart: (req, res) => {
@@ -20,7 +20,7 @@ module.exports = {
   const products = [list[0],list[1],list[2]]
 
   res.render('products/carritoCompras', {
-    products:products,user:req.session.user
+    products:products,user:req.session.userLogin
   })
 
 
@@ -41,7 +41,7 @@ module.exports = {
     return res.render('dashboard', {
       products: result,
       keyword,
-      user:req.session.user
+      user:req.session.userLogin
     })
   },
   search :(req, res) => {
@@ -59,7 +59,7 @@ module.exports = {
     return res.render('index', {
       products: resultado,
       keyword,
-      user:req.session.user
+      user:req.session.userLogin
     })
   }
 

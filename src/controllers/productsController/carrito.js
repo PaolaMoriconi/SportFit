@@ -7,7 +7,7 @@ module.exports = (req, res) => {
   console.log("products",products);
 
   res.render('products/carritoCompras', {
-    products:products,user:req.session.user
+    products:products,user:req.session.userLogin
   })
 
 }

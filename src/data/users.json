@@ -1,14 +1,5 @@
 [
    {
-      "id": 1,
-      "name": "Noeli Paola",
-      "surname": "Moriconi",
-      "email": "paomori18@gmail.com",
-      "password": "password",
-      "role": "admin",
-      "avatar": "image"
-   },
-   {
       "id": 2,
       "name": "Facundo Tomas",
       "surname": "Rodriguez",
@@ -61,5 +52,18 @@
       "password": "$2a$10$CW8sQuFEqSyLJhuwH75Ru.k33ogPlJ54EiM8LzpRbVIzp3LFB7d86",
       "avatar": "default-avatar.jpg",
       "role": "user"
+   },
+   {
+      "id": "017b04ef-72c0-4d60-9e67-e61e76c14685",
+      "name": "Julian Ed",
+      "surname": "Aquino",
+      "email": "julian.eduardo.aquino@gmail.com",
+      "adress": "Olegario Víctor Andrade 976",
+      "state": "Buenos Aires",
+      "district": "Bella Vista",
+      "phone": "+541150973344",
+      "password": "$2a$10$JAlpHPsaFnoiMZATE0/9I.4SnsbY5TmQU4Ohpa6h4uKlNQIxNzRMW",
+      "role": "user",
+      "avatar": "HUESO-1705735366835-327121706.png"
    }
 ]
