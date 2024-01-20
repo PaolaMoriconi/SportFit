@@ -1,6 +1,6 @@
 const cookieValidator = (req,res,next) => {
     if(req.cookies.remember){
-        req.session.user = req.cookies.user;
+        req.session.userLogin = req.cookies.user;
     }
     next();
 }

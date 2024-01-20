@@ -22,9 +22,9 @@
         <li>
           <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </li>
-        <% if(locals.user && user.Nombre) { %>
+        <% if(locals.user && user.name) { %>
         <li>
-          <p><%= user.Nombre %></p>
+          <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
         </li>
         <%}else{ %>
           <li>
