@@ -22,7 +22,7 @@ const User = require('../data/User')
       };
       
       if(req.body.remember == 'on'){
-        res.cookie('user',{id,Nombre,rol}, 1000 * 60 * 15);
+        res.cookie('user',{id,name,role}, 1000 * 60 * 15);
         res.cookie('remember',"true", 1000 * 60 * 15);
       }
 

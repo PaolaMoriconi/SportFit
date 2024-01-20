@@ -61,5 +61,14 @@
       "password": "$2a$10$CW8sQuFEqSyLJhuwH75Ru.k33ogPlJ54EiM8LzpRbVIzp3LFB7d86",
       "avatar": "default-avatar.jpg",
       "role": "user"
+   },
+   {
+      "id": "026904d1-8e0b-4a7d-b3c9-005b48b9d9ad",
+      "name": "Boca",
+      "surname": "Rodriguez",
+      "email": "email1@gmail.com",
+      "password": "$2a$10$8/PswjInEgk4Y7VCgTpULuV.hhhXFSMrHeVakIn8xCG1bXtx0qFam",
+      "avatar": "default-avatar.jpg",
+      "role": "admin"
    }
 ]
