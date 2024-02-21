@@ -9,51 +9,6 @@
       "avatar": "image"
    },
    {
-      "id": "e4306547-bf1d-4cfe-98a7-f2bd931eefcc",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "e23fmail@gmail.com",
-      "password": "12345",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "efa5aec5-e0ac-48ae-8074-92c02c0c57b8",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "prueba12@gmail.com",
-      "password": "$2a$10$aVwRR5/jkplsf9Oe0caQj.5.ONzTLezccLvK9DchwR7LLoeBUSxyW",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "c8e451a2-8b8d-4a9b-a1a5-0fc145e798df",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "email@gmail.com",
-      "password": "$2a$10$XPg4PK7EYPNnyCuWa6TSD.FDSTSIsuCgAyTaZ2W5uFZv6Gcahxr8e",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "a42234c0-f78c-4dba-a846-353cb0018d2e",
-      "name": "Boca",
-      "surname": "Juniors",
-      "email": "email12@gmail.com",
-      "password": "$2a$10$sOAeullGkqBh.QZs5KDNeeDvjTRXRAhs2sYPLNgq5Azc5SALkTkvq",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
-      "id": "517b04ef-72c0-4d60-9e67-e61e76c14685",
-      "name": "Boca",
-      "surname": "pruebaaa",
-      "email": "prueba@gmail.com",
-      "password": "$2a$10$CW8sQuFEqSyLJhuwH75Ru.k33ogPlJ54EiM8LzpRbVIzp3LFB7d86",
-      "avatar": "default-avatar.jpg",
-      "role": "user"
-   },
-   {
       "id": "017b04ef-72c0-4d60-9e67-e61e76c14685",
       "name": "Julian Ed",
       "surname": "Aquino",
