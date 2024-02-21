@@ -15,9 +15,7 @@
       "email": "e23fmail@gmail.com",
       "password": "12345",
       "avatar": "default-avatar.jpg",
-      "role": "user",
-      "adress":""
-      
+      "role": "user"
    },
    {
       "id": "efa5aec5-e0ac-48ae-8074-92c02c0c57b8",

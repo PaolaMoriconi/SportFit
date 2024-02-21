@@ -57,6 +57,12 @@ module.exports = {
       const { id } = req.params;
       const { name, surname, email, adress, state, district, phone } = req.body;
       const users = leerJSON("users");
+
+    
+
+
+
+
       const newArray = users.map((element) => {
         if (element.id == id) {
           return {
@@ -69,7 +75,7 @@ module.exports = {
             district: district ? district.trim() : "",
             phone: phone ? phone.trim() : "",
             password: element.password,
-            role: element.role,
+            role: element.role || "",
             avatar: req.file ? req.file.filename : element.avatar,
           };
         }
