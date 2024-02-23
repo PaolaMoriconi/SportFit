@@ -6,7 +6,8 @@ const {
   processRegister,
   processLogin,
   profile,
-  updateProfile
+  updateProfile,
+  test
 } = require('../controllers/usersController')
 const usersRegisterValidator = require('../validations/users-register-validator')
 const ValidatoruserLogin = require('../validations/validator-user-login')
@@ -26,6 +27,7 @@ router
   .post('/login', ValidatoruserLogin, processLogin)
   
   .get('/perfil/:id', profile)
+  .get('/all',test)
   .put('/perfil/:id', uploadProfile.single('avatar'),usersUpdateValidator,updateProfile)
 
 module.exports = router
