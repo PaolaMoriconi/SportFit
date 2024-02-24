@@ -1,6 +1,10 @@
 const { validationResult } = require("express-validator");
+/*
 const { leerJSON, escribirJSON } = require("../data");
 const User = require("../data/User");
+*/
+const db = require("../database/models");
+
 module.exports = {
   login: (req, res) => {
     return res.render("users/login", { user: req.session.userLogin });
@@ -20,7 +24,7 @@ module.exports = {
         id,
         name,
         role,
-        email
+        email,
       };
 
       if (req.body.remember == "on") {
@@ -57,11 +61,6 @@ module.exports = {
       const { id } = req.params;
       const { name, surname, email, adress, state, district, phone } = req.body;
       const users = leerJSON("users");
-
-    
-
-
-
 
       const newArray = users.map((element) => {
         if (element.id == id) {
@@ -119,5 +118,14 @@ module.exports = {
         errors: errors.mapped(),
       });
     }
+  },
+  test: (req, res) => {
+    db.User.findAll({
+      include: [{ association: "rols" }, { association: "address" }],
+    })
+      .then((response) => {
+        res.send(response)
+      })
+      .catch((err) => console.log(err));
   },
 };
