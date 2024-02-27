@@ -1,13 +1,15 @@
-const { leerJSON } = require("../../data");
+const db = require("../../database/models");
 
-module.exports = (req,res) => {
+module.exports = (req, res) => {
+  const { id } = req.params;
 
-    const {id} = req.params;
-    
-
-    const product = products.find((product) => product.id == id);
-
-    return res.render('products/productEdit',{
-        product,user:req.session.userLogin
-    })
-}
+  db.Product.findByPk(id,{
+    include:[{association:"categories"}]
+  }).then((resp) => {
+    console.log("product: ",resp)
+    res.render("products/productEdit", {
+      product:resp,
+      user: req.session.userLogin,
+    });
+  });
+};
