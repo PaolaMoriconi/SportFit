@@ -26,11 +26,11 @@ module.exports = (req, res) => {
       })
       
     } else {
-      
+      console.log("Errores: ",errors.mapped());
       res.render("/products", {
         user: req.session.userLogin,
         old: req.body,
-        errors: errors.mapped(),
+        errors: errors.mapped()
       });
     }
 
