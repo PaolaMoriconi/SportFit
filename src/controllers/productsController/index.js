@@ -1,4 +1,3 @@
-
 const add = require('./add')
 const detail = require('./detail')
 const edit = require('./edit')
