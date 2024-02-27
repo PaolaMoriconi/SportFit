@@ -1,0 +1,35 @@
+.footer{
+    background-color: var(--colorGrisAzuladoOscuro);
+}
+
+.footer__nav {
+    background-color: var(--colorGris);
+    border-radius: 5%;
+    margin: 20px auto;
+}
+
+.footer__nav ul{
+    text-align: center;
+}
+
+.footer__nav ul li {
+    border-bottom: 1px solid #FFF;
+    padding: 10px 0;
+}
+
+.footer__nav ul li a {
+    color: #000;
+    font-weight: 700;
+}
+.footer__nav__redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.footer__nav__redes a{
+color: #000;
+font-size: 2em;
+margin: 0 5px;
+}

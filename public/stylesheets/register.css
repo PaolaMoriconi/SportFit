@@ -1,0 +1,162 @@
+.register{
+  font-family: var(--Texto);
+}
+
+.register--title{
+  text-align: center;
+  color: var(--colorOscuro);
+  font-size: 1.5rem; 
+  text-shadow:  2px 2px #00000054;
+}
+.register__form--conteiner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+}
+.form__group{
+  width: 100%;
+  text-align: start;
+}
+.icon_remove{
+  opacity:  0;
+ }
+
+.password, .password2, .email{
+  position: absolute;
+  right: 50px;
+  
+} 
+.email{
+  bottom: 190px;
+}
+.password{
+  bottom: 88px;
+
+}
+.password2{
+  bottom: -15px;
+}
+.form__label{
+  color: var(--colorgrisOscuro);
+  cursor: pointer;
+}
+
+.form__input{
+  color: var(--colorOscuro);
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
+  outline: none;
+ 
+}
+.form__botton{
+  width: 100%;
+}
+.register--btn{
+  width: 100%;
+  background-color:var( --colorGrisAzuladoOscuro);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-shadow:  1px 3px #00000054;
+}
+
+.form__span{
+  text-align: center;
+  font-size: 15px;
+ 
+}
+.form__span p{
+  padding: 5px;
+}
+.form__span a{
+  color: #000000;
+  font-weight: 900;
+}
+
+/* TABLET */
+@media (min-width: 768px){
+  .register__main__section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .register__form--conteiner{
+    width: 70%;
+  }
+  .password, .password2, .email{
+    right:165px;
+    
+  } 
+  .email{
+    bottom: 167px;
+  }
+  .password {
+    bottom: 65px;
+}
+.password2 {
+  bottom: -40px;
+}
+  
+  
+  
+ 
+  
+  
+}
+
+  /* DESKTOP */
+  @media (min-width: 1024px){
+    .register__main__section {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; 
+    }
+
+  .register__form--conteiner {
+    width: 100%;
+  }
+   .form__group {
+    width: 60%;
+  }
+    
+.form__botton{
+  width: 60%;
+}
+  .register--btn{
+    width: 100%;
+  }
+
+  .email, .password, .password2{
+    right:310px;
+
+  }
+  .email{ 
+    top: 400px;
+  }
+  .password{
+
+    top: 505px;
+  
+  }
+  .password2 {
+    top: 610px;
+
+}
+}
+
+/* DESKTOP */
+@media (min-width: 1440px){
+  .email, .password, .password2 {
+    right: 325px;
+}
+
+
+}

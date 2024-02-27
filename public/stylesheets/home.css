@@ -1,0 +1,63 @@
+body.home {
+  background-color: var(--colorGrisAzuladoClaro);
+}
+.home__products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.home__article {
+  margin: 10px 0;
+  width: 90%;
+  background-color: #FFF;
+}
+.home__article__info {
+  background-color: var(--colorGrisClaro);
+  height: 220px;
+}
+
+.home__article h2 {
+  text-align: center;
+  color: #332f2c;
+  font-size: 1.5rem;
+}
+.home__article p {
+  text-align: center;
+  color: #332f2c;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .home__banner {
+    display: block;
+  }
+
+  .home__products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1vh 1vw;
+  }
+  .home__article {
+    width: 45%;
+  }
+
+  .home__article a{
+    text-decoration: none;
+  }
+
+  .home__article img{
+    height: 345px;
+  }
+}
+@media (min-width: 1024px) {
+  .home__article {
+    width: 23%;
+  }
+
+  
+}

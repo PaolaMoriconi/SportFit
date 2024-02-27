@@ -1,0 +1,135 @@
+.login__body__header{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--colorGrisAzuladoOscuro);
+}
+
+.login__body__header i, a{
+  color: #fff;
+}
+.fa-bars{
+  margin-left: 5px;
+}
+#logo{
+  width: 20%;
+}
+
+.login__body__header__nav--pages__ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.login__body__header__nav--pages__ul a{
+  margin: 0 5px;
+}
+
+.login__body__header__nav--categories{
+  display: none;
+}
+
+.login__body__main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5%;
+}
+
+.login__body__main__section--bienvenido H2{
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.login__body__main__section{
+  color: var(--colorGrisAzuladoClaro);
+
+}
+.login__box {
+  margin: 10vh 0;
+  width: 100%;
+  border: none;
+
+}
+.login__input{
+  border: none;
+  border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
+  width: 100%;
+}
+.login__possition {
+  position: relative;
+}
+
+.login__possition i {
+  position: absolute;
+  right: 5%;
+  color: var(--colorgrisOscuro);
+}
+
+.opciones__login{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  margin: 10vh 0;
+}
+
+.opciones__login a {
+  color: var(--colorGrisAzuladoClaro);
+}
+
+#remember-check{
+  font-weight: bold;
+}
+
+.link{
+  margin-left: 10px;
+}
+
+.opciones__login--register{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.opciones__login--register p{
+  margin-right: 5px;
+  color: var(--colorGrisAzuladoClaro);
+}
+
+.container--boton{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* media tablet */
+@media(min-width:768px) {
+  .login__body__main__section{
+    font-size: 1.5em;
+  }
+}
+
+/* media desktop */
+@media(min-width:1024px) {
+  .login__body__main__section{
+    font-size: 1.8em;
+  }
+
+  .login__body__main__section--bienvenido H2{
+    margin: 40px 0;
+  }
+
+  .login__body__main__section label{
+    font-size: 1.5em;
+  }
+  .login__box{
+    margin-bottom: 60px;
+  }
+}

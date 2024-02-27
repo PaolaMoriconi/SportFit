@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {
+    title : "Carrito de compras"
+  }) %>
+  <body class="body__carr">
+    <%- include('../partials/header') %>
+    <main>
+      
+      <h2 class="titulo-principal">TU CARRITO</h2>
+   
+      
+        <div class="products">
+          <% products.forEach(product => { %>
+          <article class="products__article">
+            <a href="/products/detail/<%= product.id %>">
+              <img
+                src="/images/<%= product.image || 'Imagen_por_defecto.jpg'  %>" class="products__article__img"
+                alt="<%= product.nombre %>"
+              />
+              <div class="products__article__info">
+                <h2><%= product.nombre %></h2>
+                <p> Talle:<%= product.talles %></p>
+                <p>$<%= product.precio %></p>
+                <div class="icons__products">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                  <i class="fa-regular fa-heart"></i></div>
+               <div  class="select"><small>Cantidad</small>
+              <select name="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+                
+              </div>
+            </a>
+          </article>
+          <% }) %>
+        </div>
+       <section class="section__pagos">
+         <nav class="cod-promo">
+      <i class="fa-solid fa-tag"></i><a href="#"><b> USA UN CODIGO PROMOCIONAL</i></a>
+    </nav>
+  <div class="detalle__pedido">
+    <h3>DETALLE DEL PEDIDO</h3>
+  </div>
+  <div class="div__products">
+    <p>3 Productos</p><p>$115.000</p>
+  </div>
+  <div class="div__products">
+        <p>Entrega</p><p>Gratis</p>
+      </div>
+        <div class="div__products">
+        <p>TOTAL</p><p>$115.000</p>
+      </div>
+    <div class="button">
+      <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    
+    <div class="envio-cambio">
+      <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
+      <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
+    </div>
+    <div class="medio-pago">
+      <h3>MEDIOS DE PAGO</h3>
+      <div class="medio__pago__iconos">
+      <i class="fa-brands fa-cc-visa"></i>
+      <i class="fa-brands fa-cc-mastercard"></i>
+      <i class="fa-brands fa-cc-amex"></i>
+    </div>
+  </div>
+ 
+  </section>
+  
+  </main>
+  <%- include('../partials/footer') %>
+    </body>
+  </html>

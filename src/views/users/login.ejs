@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main class="login__body__main">
+      <section class="login__body__main__section">
+        <div class="login__body__main__section--bienvenido">
+          <h2>bienvenido</h2>
+        </div>
+        <form action="" method="POST">
+          <div class="login__box">
+            <label class="login__label--email" for="email">Email</label>
+            <div class="login__possition">
+              <input
+                class="login__input"
+                id="email"
+                type="email"
+                placeholder="correo@correo.com"
+                name="email"
+              /><i class="fa-solid fa-envelope"></i>
+              <small class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+            </div>
+          </div>
+          <div class="login__box">
+            <label class="login__label--password" for="password"
+              >Contraseña</label
+            >
+            <div class="login__possition">
+              <input
+                class="login__input"
+                id="password"
+                type="password"
+                placeholder="Contraseña"
+                name="password"
+              /><i class="fa-solid fa-lock"></i>
+              <small class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
+            </div>
+          </div>
+          <div class="opciones__login">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember" id="remember-check">Recuerdame</label>
+            <a href="" class="link">
+              <p>¿Olvidaste la contraseña?</p>
+            </a>
+          </div>
+          <div class="opciones__login--register">
+            <p>¿No tienes cuenta?</p>
+            <a href="register"><p>Registrate</p></a>
+          </div>
+          <div class="container--boton">
+            <button class="boton" type="submit">Iniciar Sesion</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

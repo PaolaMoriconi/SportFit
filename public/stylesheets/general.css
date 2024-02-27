@@ -1,0 +1,50 @@
+:root{
+   --colorGrisAzuladoOscuro:#666f88;
+   --colorGrisAzuladoClaro: #788199;
+   --colorgrisOscuro: #8990a2;
+   --colorGris: #a3a8b7;
+   --colorGrisClaro: #b5bac9;
+   --colorOscuro:  rgba(24, 24, 24, 0.877);
+   --Texto: 'Lato'
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+
+.boton{
+     padding: 10px;
+     background-color: var(--colorGrisAzuladoClaro);
+     color: #FFF;
+     border-radius: 5px;
+     width: 70%;
+ }
+
+
+ textarea {
+    resize: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding-left:0
+}
+p{
+    margin: 0;
+}

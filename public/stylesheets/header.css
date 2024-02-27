@@ -1,0 +1,114 @@
+.header {
+  height: 65px;
+  font-family: var(--Texto);
+  background-color: var(--colorGrisAzuladoClaro);
+  text-align: center;
+}
+.home__main__header--search {
+  display: none;
+}
+.header__nav--left {
+  position: absolute;
+  left: 15px;
+  top: 21px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+.header__nav--right {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.header__nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.header__nav--categoria {
+  display: none;
+}
+
+.icon--sportfit img {
+  width: 60px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .header {
+    height: 90px;
+  }
+  .burguer-menu {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+
+  .home__main__header--search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .home__main__input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 85px;
+    border-radius: 30px;
+    border: 0;
+  }
+  .home__main__header--search button {
+    background-color: #fff;
+    color: var(--colorGrisAzuladoOscuro);
+    position: absolute;
+    border: 0;
+    top: 11px;
+    bottom: 15px;
+    right: 17px;
+    margin: auto;
+  }
+  .icon--sportfit img {
+    width: 80px;
+    margin: 5px;
+  }
+  .header__nav--categoria {
+    display: flex;
+    position: absolute;
+    left: 62px;
+    top: 68px;
+  }
+  .header__nav__ul--categoria {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  .header__nav__ul--categoria li a {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+  .header__nav__ul--categoria a{
+    font-size: 13px;
+    position: relative;
+    right: 35px;
+  }
+  .header__nav--right {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    font-size: 36px;
+  }
+}
