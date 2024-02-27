@@ -1,61 +1,55 @@
 <header class="header">
-    <nav class="header__nav">
-      <div class="icon--sportfit">
-        <a href="/"> <img src="/images/logo-2.png" alt="logoSportFIt" /></a>
-      </div>
+  <nav class="header__nav">
+    <div class="icon--sportfit">
+      <a href="/"> <img src="/images/logo-2.png" alt="logoSportFIt" /></a>
+    </div>
 
-      <ul class="header__nav--left">
-        <li class="burguer-menu">
-          <a href="#"><i class="fa-solid fa-bars"></i></a>
-        </li>
-        <li class="icon">
-          <a href="#"><i class="fa-solid fa-search"></i></a>
-        </li>
-        <form action="/search" method="GET">
+    <ul class="header__nav--left">
+      <li class="burguer-menu">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </li>
+      <li class="icon">
+        <a href="#"><i class="fa-solid fa-search"></i></a>
+      </li>
+      <form action="/search" method="GET">
         <div class="home__main__header--search">
-          <input class="home__main__input" type="text" placeholder="Buscar" name="keyword"/>
+          <input
+            class="home__main__input"
+            type="text"
+            placeholder="Buscar"
+            name="keyword"
+          />
           <button type="submit"><i class="fa-solid fa-search"></i></button>
         </div>
       </form>
+    </ul>
+
+    <ul class="header__nav--right">
+      <% if (locals.user && user.rol === "user") { %>
+      <li>
+        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+      </li>
+      <% } else { %>
+      <li>
+        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+      </li>
+
+      <% } %> <% if(locals.user && user.name) { %>
+      <li>
+        <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
+      </li>
+      <%} %>
+    </ul>
+
+    <nav class="header__nav--categoria">
+      <ul class="header__nav__ul--categoria">
+        <li><a href="/products">Productos</a></li>
+        <li><a href="">Hombre</a></li>
+        <li><a href="">Mujer</a></li>
+        <% if (locals.user && user.role === 1) { %>
+        <li><a href="/admin">Dashboard</a></li>
+        <% } %>
       </ul>
-
-
-      <ul class="header__nav--right">
-        <% if (locals.user && user.rol === "user") { %>          
-        <li>
-          <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <% } else { %>
-          <li>
-            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-          </li>
-
-          <% }  %>
-     
-        <% if(locals.user && user.name) { %>
-        <li>
-          <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
-        </li>
-        <%}else{ %>
-          <li>
-            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-          </li>
-        <%}%>
-      </ul>
-      
-      <nav class="header__nav--categoria">
-        <ul class="header__nav__ul--categoria">
-          <li><a href="/products">Productos</a></li>
-          <li><a href="">Hombre</a></li>
-          <li><a href="">Mujer</a></li>
-          <% if (locals.user && user.role === 1) { %>
-            <li><a href="/admin">Dashboard</a></li>
-          <% } %>
-        </ul>
-      </nav>   
     </nav>
-  </header>
-
-
-
-
+  </nav>
+</header>

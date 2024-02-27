@@ -6,6 +6,7 @@ module.exports = (req, res) => {
 
   const errors = validationResult(req)
   const { image, imageBack } = req.files
+  console.log("files:", req.files);
 
     
     if (errors.isEmpty()) {
@@ -15,11 +16,13 @@ module.exports = (req, res) => {
         price:precio,
         discount:descuento,
         description:detalleProducto,
-        image:"",
+        image:image[0].filename,
         category_id:categoria
       })
-      .then(()=>{
-        res.redirect(`/products`)
+      .then(({id})=>{
+        db.Image.create({name:imageBack[0].filename,product_id:id}).then(() =>{
+          res.redirect(`/products`)
+        })
       })
       
     } else {
