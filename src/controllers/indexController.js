@@ -1,18 +1,26 @@
-
+const db = require("../database/models")
+const { Op } = require("sequelize")
 const { leerJSON } = require('../data')
 
 module.exports = {
   index: function (req, res) {
-    const products = leerJSON('productos')
-    console.log("Session",req.session.userLogin)
-    return res.render('index', {
-      products,user:req.session.userLogin
+    db.Product.findAll()
+    .then(products =>{
+      return res.render('index', {
+        products,user:req.session.userLogin
+      })
+      
     })
   },
   admin: (req, res) => {
-    const products = leerJSON('productos')
-    return res.render('dashboard', {
-      products,user:req.session.userLogin
+    db.Product.findAll({
+      include:["categories"]
+    })
+    .then(products =>{
+      return res.render('dashboard', {
+        products,user:req.session.userLogin
+      })
+      
     })
   },
   cart: (req, res) => {
@@ -29,38 +37,38 @@ module.exports = {
   searchAdmin: (req, res) => {
     const { keyword } = req.query
 
-    const products = leerJSON('productos')
+    db.Product.findAll({
+      where:{
+        name:{[Op.substring] : keyword
 
-    const result = products.filter((product) => {
-      return (
-        product.nombre.toLowerCase().includes(keyword.toLowerCase()) ||
-        product.categoria.toLowerCase().includes(keyword.toLowerCase())
-      )
+        }
+
+      },
+      include:["categories"]
+    })
+    .then(products=>{
+      return res.render("dashboard",{products,keyword,user:req.session.userLogin})
     })
 
-    return res.render('dashboard', {
-      products: result,
-      keyword,
-      user:req.session.userLogin
-    })
+
   },
   search :(req, res) => {
     const { keyword } = req.query
 
-    const products = leerJSON('productos')
+    db.Product.findAll({
+      where:{
+        name:{[Op.substring] : keyword
 
-    const resultado = products.filter((product) => {
-      return (
-        product.nombre.toLowerCase().includes(keyword.toLowerCase()) ||
-        product.categoria.toLowerCase().includes(keyword.toLowerCase())
-      )
+        }
+
+      },
+      include:["categories"]
+    })
+    .then(products=>{
+      return res.render("index",{products,keyword,user:req.session.userLogin})
     })
 
-    return res.render('index', {
-      products: resultado,
-      keyword,
-      user:req.session.userLogin
-    })
+
   }
 
 }

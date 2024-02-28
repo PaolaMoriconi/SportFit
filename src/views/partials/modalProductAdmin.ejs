@@ -7,7 +7,7 @@
     <div class="modal-content">
       
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel"> <%= nombre %> </h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel"> <%= name %> </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -28,11 +28,11 @@
           
           <div class="col-12 col-lg-8">
             <ul class="list-group">          
-              <li class="list-group-item"><b>Precio: </b>$<%= precio %></li>
-              <li class="list-group-item"><b>Categoria: </b><%= categoria %></li>         
+              <li class="list-group-item"><b>Precio: </b>$<%= price %></li>
+              <li class="list-group-item"><b>Categoria: </b><%= category_id %></li>         
               <li class="list-group-item"> <b>Talles: </b><%= talles %></li>
-              <li class="list-group-item"><b>Descuento: </b><%= descuento || "0" %>%</li>
-              <li class="list-group-item"><b>Descripcion: </b><%= detalleProducto %></li>
+              <li class="list-group-item"><b>Descuento: </b><%= discount || "0" %>%</li>
+              <li class="list-group-item"><b>Descripcion: </b><%= description %></li>
             </ul>
             
           </div>

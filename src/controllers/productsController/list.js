@@ -1,11 +1,14 @@
-const { leerJSON } = require('../../data')
 
+const db = require("../../database/models")
+const { Op } = require("sequelize")
 module.exports = (req, res) => {
-  
-  const products = leerJSON('productos')
-
-  res.render('products/products', {
-       products,user:req.session.userLogin
+  db.Product.findAll()
+  .then(products =>{
+    return res.render("products/products", {
+      products,user:req.session.userLogin
+    })
+    
   })
+
 
 }

@@ -1,124 +1,215 @@
 <!DOCTYPE html>
 <html lang="ES">
-
-<%- include('../partials/head', {
-  title : 'Agregar'
-}) %>
-<body>
-  <button%- include('../partials/headerAdmin') %>
-  <main class="container">  
-    <section class="row my-5">
-      <div class="col-12 col-md-10 mx-auto">
-        <div class="card">
-          <div class="card-header d-flex justify-content-between">
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/admin" class="text-primary">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Nuevos: "Productos"</li>
-              </ol>
-            </nav>      
-          </div>
-          <div class="card-body">
-            
-            <form action="/products/crear" method="POST" enctype="multipart/form-data" class="row" >
-              <h3>Nuevo: "Producto"</h3>
-              <hr>
-              <div class="col-12 col-md-6 mb-3">
-                <div class="form-floating">
-                  <input name="nombre" type="text" class="form-control" id="nombre">
-                  <label for="nombre">Nombre</label>
-                </div>
-                
-              </div>
-             
-              <div class="col-6 col-md-3 mb-3">
-               
-                <input  name="image" type="file" class="form-control" id="image" hidden>
-                <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
-                
-            
-            </div> 
-            <div class="col-6 col-md-3 mb-3">
-               
-              <input  name="imageBack" type="file" class="form-control" id="imageBack" hidden>
-                <label class="btn btn-lg btn-outline-dark w-100" for="imageBack">Imagen posterior</label>
-              
-          
-          </div>  
-          <div class="col-6  col-md-3 mb-3">
-            <div class="form-floating">
-              <input name="precio" type="text" class="form-control" id="precio">
-              <label for="precio">Precio</label>
+  <%- include('../partials/head', { title : 'Agregar' }) %>
+  <body>
+    <button%- include('../partials/headerAdmin') %>
+    <main class="container">
+      <section class="row my-5">
+        <div class="col-12 col-md-10 mx-auto">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between">
+              <nav
+                style="
+                  --bs-breadcrumb-divider: url(
+                    &#34;data:image/svg + xml,
+                    %3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;
+                  );
+                "
+                aria-label="breadcrumb"
+              >
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="/admin" class="text-primary">Inicio</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Nuevos: "Productos"
+                  </li>
+                </ol>
+              </nav>
             </div>
-          </div>     
-
-          <div class="col-6  col-md-3 mb-3">
-            <div class="form-floating">
-              <input name="descuento" type="text" class="form-control" id="descuento">
-              <label for="descuento">Descuento</label>
-            </div>
-          </div>
-
-          <div class="col-6  col-md-3 mb-3">
-            <div class="form-floating">
-              <select  name ="talles" class="form-select" id="talles" aria-label="Floating label select example">
-                <option value="" selected hidden></option>
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-                <option value="xxl">XXL</option>               
-              </select>
-              <label for="talles">talles</label>
-            </div>
-          </div>
-          
-          <div class="col-12 col-md-6 mb-3">
-                <div class="form-floating">
-                  <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
-                    <option value="" selected hidden></option>
-                    <option value="mujer">Mujer</option>
-                    <option value="hombre">Hombre</option>                   
-                  </select>
-                  <label for="categoria">Categoria</label>
-                </div>
-               </div>              
-              
-              <div class="col-12 mb-3">
-
+            <div class="card-body">
+              <form
+                action="/products/crear"
+                method="POST"
+                enctype="multipart/form-data"
+                class="row"
+              >
+                <h3>Nuevo: "Producto"</h3>
+                <hr />
+                <div class="col-12 col-md-6 mb-3">
                   <div class="form-floating">
-                    <textarea name="detalleProducto" class="form-control"  id="detalleProducto" style="height: 150px;"></textarea>
+                    <input
+                      class="form__input <%= locals.errors && errors.nombre ? 'form-control is-invalid' : locals.old && old.nombre ? 'form-control is-valid' : '' %>"
+                      type="text"
+                      name="nombre"
+                      value="<%= locals.old && old.nombre ? old.nombre : null %>"
+                    />
+                    <label for="nombre">Nombre</label>
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.nombre ? errors.nombre.msg : null
+                      %></small
+                    >
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                  <input
+                    class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? ' is-valid' : '' %>"
+                    type="file"
+                    name="image"
+                    value="<%= locals.old && old.image ? old.image : null %>"
+                  />
+                  <small class="text-danger"
+                    ><%=locals.errors && errors.image ? errors.image.msg : null
+                    %></small
+                  >
+                  <label class="btn btn-lg btn-outline-dark w-100" for="image"
+                    >Imagen</label
+                  >
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                  <input
+                    class="form-control <%= locals.errors && errors.imageBack ? 'is-invalid' : locals.old && old.imageBack ? 'is-valid' : '' %>"
+                    type="file"
+                    name="imageBack"
+                    value="<%= locals.old && old.imageBack ? old.imageBack : null %>"
+                  />
+                  <small class="text-danger"
+                    ><%=locals.errors && errors.imageBack ? errors.imageBack.msg
+                    : null %></small
+                  >
+                  <label
+                    class="btn btn-lg btn-outline-dark w-100"
+                    for="imageBack"
+                    >Imagen posterior</label
+                  >
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                  <div class="form-floating">
+                    <input
+                      class="form__input <%= locals.errors && errors.precio ? 'form-control is-invalid' : locals.old && old.precio ? 'form-control is-valid' : '' %>"
+                      type="text"
+                      name="precio"
+                      value="<%= locals.old && old.precio ? old.precio : null %>"
+                    />
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.precio ? errors.precio.msg :
+                      null %></small
+                    >
+                    <label for="precio">Precio</label>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                  <div class="form-floating">
+                    <input
+                      class="form__input <%= locals.errors && errors.descuento ? 'form-control is-invalid' : locals.old && old.descuento ? 'form-control is-valid' : '' %>"
+                      type="text"
+                      name="descuento"
+                      value="<%= locals.old && old.descuento ? old.descuento : null %>"
+                    />
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.descuento ?
+                      errors.descuento.msg : null %></small
+                    >
+                    <label for="descuento">Descuento</label>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                  <div class="form-floating">
+                    <select
+                      name="talles"
+                      class="form-select"
+                      id="talles"
+                      aria-label="Floating label select example"
+                    >
+                      <option value="" selected hidden></option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                      <option value="xxl">XXL</option>
+                    </select>
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.talles ?
+                      errors.talles.msg : null %></small
+                    >
+                    <label for="talles">talles</label>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                  <div class="form-floating">
+                    <select
+                      name="categoria"
+                      class="form-select"
+                      id="categoria"
+                      aria-label="Floating label select example"
+                    >
+                      <option value="" selected hidden></option>
+                      <% categorias.forEach(colores => { %>
+                      <option value="<%= colores.id %>">
+                        <%= colores.name %>
+                      </option>
+                      <% }) %>
+                    </select>
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.categoria ?
+                      errors.categoria.msg : null %></small
+                    >
+                    <label for="categoria">Categoria</label>
+                  </div>
+                  <div class="form-floating">
+                    <select
+                      name="colores"
+                      class="form-select"
+                      id="categoria"
+                      aria-label="Floating label select example"
+                    >
+                      <option value="" selected hidden></option>
+                      <% colores.forEach(colores => { %>
+                      <option value="<%= colores.id %>">
+                        <%= colores.name %>
+                      </option>
+                      <% }) %>
+                    </select>
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.colores ?
+                      errors.colores.msg : null %></small
+                    >
+                    <label for="colores">Colores</label>
+                  </div>
+                </div>
+
+                <div class="col-12 mb-3">
+                  <div class="form-floating">
+                    <textarea
+                      name="detalleProducto"
+                      class="form-control"
+                      id="detalleProducto"
+                      style="height: 150px"
+                    ></textarea>
+                    <small class="text-danger"
+                      ><%=locals.errors && errors.detalleProducto ?
+                      errors.detalleProducto.msg : null %></small
+                    >
                     <label for="detalleProducto">Descripción</label>
-                  </div> 
-              </div>
+                  </div>
+                </div>
 
-             
-
-            <div class="col-12 d-flex justify-content-end">
-              <button type="submit" class="btn btn-lg btn-primary" >Guardar</button>
-          
-          </div>
-              
-            </form>
-            
-            
-
+                <div class="col-12 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-lg btn-primary">
+                    Guardar
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-
-    </section>
-  </main>
-
-  
- 
-  
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
-
-
-
-
-
-

@@ -13,13 +13,13 @@
         <article class="home__article">
           <a href="/products/detail/<%= product.id %>">
             <img
-              src="/images/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
-              alt="<%= product.nombre %>"
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
             />
             <div class="home__article__info">
-              <h2><%= product.nombre %></h2>
-              <p>$<%= product.precio %></p>
-              <p><%= product.descripcion %></p>
+              <h2><%= product.name %></h2>
+              <p>$<%= product.price %></p>
+              <p><%= product.descrption %></p>
             </div>
           </a>
         </article>
