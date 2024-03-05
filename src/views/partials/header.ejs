@@ -60,8 +60,8 @@
     <nav class="header__nav--categoria">
       <ul class="header__nav__ul--categoria">
         <li><a href="/products">Productos</a></li>
-        <li><a href="">Hombre</a></li>
-        <li><a href="">Mujer</a></li>
+        <li><a href="/products?categorie=1">Hombre</a></li>
+        <li><a href="/products?categorie=2">Mujer</a></li>
         <% if (locals.user && user.role === 1) { %>
         <li><a href="/admin">Dashboard</a></li>
         <% } %>
