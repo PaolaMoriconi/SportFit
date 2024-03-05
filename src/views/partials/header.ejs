@@ -43,7 +43,13 @@
                 <div class="accordion-body">
                   <a href="/admin"><strong style="color: rgb(65, 65, 77);">Dashboard</strong></a> 
                  </div>
-              <% } %>
+                <% } %>
+              </div>
+              <% if (locals.user && user.rol == "user") { %>
+                <div class="accordion-body">
+                  <a href="/cart"><strong style="color: rgb(65, 65, 77);">Carrito</strong></a> 
+                 </div>
+                <% } %>
               <div class="accordion-body">
                 <a href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
               </div>
