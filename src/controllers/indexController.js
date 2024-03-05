@@ -23,16 +23,17 @@ module.exports = {
       
     })
   },
-  cart: (req, res) => {
-    const list = leerJSON('productos')
-  const products = [list[0],list[1],list[2]]
-
+ 
+cart: (req,res)=>{
+  db.Product.findAll()
+  .then(products =>{
+     
   res.render('products/carritoCompras', {
-    products:products,user:req.session.userLogin
+    products,user:req.session.userLogin
   })
+  }) 
+    },
 
-
-  },
 
   searchAdmin: (req, res) => {
     const { keyword } = req.query
