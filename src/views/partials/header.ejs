@@ -25,16 +25,8 @@
     </ul>
 
     <ul class="header__nav--right">
-      <% if (locals.user && user.rol === "user") { %>
-      <li>
-        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-      </li>
-      <% } else { %>
-      <li>
-        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-      </li>
-
-      <% } %> <% if(locals.user && user.name) { %>
+      
+      <% if(locals.user) { %>
       <li>
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
@@ -47,13 +39,22 @@
               <div class="accordion-body">
                <a href="/users/perfil/<%= user.id %>"><strong style="color: rgb(65, 65, 77);">Perfil</strong></a> 
               </div>
+              <% if (locals.user && user.rol == "admin") { %>
+                <div class="accordion-body">
+                  <a href="/admin"><strong style="color: rgb(65, 65, 77);">Dashboard</strong></a> 
+                 </div>
+              <% } %>
               <div class="accordion-body">
                 <a href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
               </div>
             </div>
           </div>
       </li>
-      <%} %>
+      <%}else{%>
+      <li>
+        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+      </li>
+      <% } %>
     </ul>
 
     <nav class="header__nav--categoria">

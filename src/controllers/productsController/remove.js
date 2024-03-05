@@ -1,25 +1,14 @@
-const { leerJSON, escribirJSON } = require("../../data");
-const {existsSync, unlinkSync} = require('fs')
-module.exports = (req,res) => {
-
-    const {id} = req.params;
-    const products = leerJSON('productos');
-
-
-    const {image, imageBack} = products.find(product => product.id == id)
-    existsSync('public/images/' + image) && 
-    unlinkSync('public/images/' + image)
-
-    existsSync('public/images/' + imageBack) &&
-    unlinkSync('public/images/' + imageBack)
-
-    
-
-    const productosFiltrados = products.filter(product => product.id != id);
-
-    escribirJSON(productosFiltrados, 'productos')
-
-    return res.redirect('/admin')
-
-
-}
+const db = require("../../database/models");
+const { existsSync, unlinkSync } = require("fs");
+module.exports = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await db.Product.findByPk(id);
+    existsSync("public/images/" + product.image) && unlinkSync("public/images/" + product.image);
+    await product.destroy();
+    return res.redirect("/admin");
+  } catch (error) {
+    console.log(error.message);
+    return res.redirect("/admin");
+  }
+};
