@@ -36,7 +36,22 @@
 
       <% } %> <% if(locals.user && user.name) { %>
       <li>
-        <a href="/users/perfil/<%= user.id %>"><%= user.name %></a>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+               <%= user.name %>
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+               <a href="/users/perfil/<%= user.id %>"><strong style="color: rgb(65, 65, 77);">Perfil</strong></a> 
+              </div>
+              <div class="accordion-body">
+                <a href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
+              </div>
+            </div>
+          </div>
       </li>
       <%} %>
     </ul>

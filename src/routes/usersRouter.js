@@ -8,6 +8,7 @@ const {
   profile,
   updateProfile,
   test,
+  logout
 } = require("../controllers/usersController");
 
 const usersRegisterValidator = require("../validations/users-register-validator");
@@ -35,6 +36,7 @@ router
     uploadProfile.single("avatar"),
     usersUpdateValidator,
     updateProfile
-  );
+  )
+  .get('/logout',logout)
 
 module.exports = router;
