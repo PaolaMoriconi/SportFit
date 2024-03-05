@@ -179,4 +179,10 @@ module.exports = {
       })
       .catch((err) => console.log(err));
   },
+  logout:(req,res)=>{
+    req.session.destroy();
+    res.clearCookie('user');
+    res.clearCookie('remember');
+    res.redirect('/');
+  }
 };
