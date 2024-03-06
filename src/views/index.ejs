@@ -56,6 +56,14 @@
             <div class="home__article__info">
               <h2><%= product.name %></h2>
               <p>$<%= product.price %></p>
+
+              <% if (product.discount) { %>
+
+                <p>precio con descuento $<%= product.price*product.discount/100 %></p>
+
+              <% } %>
+              
+              
               <p><%= product.description %></p>
             </div>
           </a>
@@ -76,7 +84,7 @@
 
     </main>
 
-    <%- include('./partials/scripts') %>
+    <!--<%- include('./partials/scripts') %> -->
 
     <%- include('./partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

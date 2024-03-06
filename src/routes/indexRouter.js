@@ -6,13 +6,14 @@ const {
   cart,
   searchAdmin,
   search,
-} = require('../controllers/indexController')
-
+} = require('../controllers/indexController');
+const isAdmin = require('../middlewares/isAdmin');
+isAdmin
 
 /* / */
 router
   .get('/', index)
-  .get('/admin', admin)
+  .get('/admin',isAdmin, admin)
   .get('/cart', cart)
   .get('/admin/products/search', searchAdmin)
   .get('/search', search)

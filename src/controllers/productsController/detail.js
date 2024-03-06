@@ -13,12 +13,5 @@ module.exports = (req, res) => {
     
   })
 
-  /*const product = products.find((product) => product.id == id)
-
-
-  res.render('products/productDetail', {
-       product,user:req.session.userLogin
-  
-  })*/
 
 }

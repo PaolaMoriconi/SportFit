@@ -60,11 +60,6 @@ module.exports = {
       });
     });
 
-    /*const user = users.find((elemento) => elemento.id == id);
-    return res.render("users/profile", {
-      usuario: user,
-      user: req.session.userLogin,
-    });*/
   },
   updateProfile: (req, res) => {
     const errores = validationResult(req);
@@ -160,7 +155,7 @@ module.exports = {
           province: "",
         }).then((adress) => {
           console.log(adress);
-          return res.redirect("/users/profile");
+          return res.redirect("/users/login");
         });
       });
     } else {
@@ -179,4 +174,10 @@ module.exports = {
       })
       .catch((err) => console.log(err));
   },
+  logout:(req,res)=>{
+    req.session.destroy();
+    res.clearCookie('user');
+    res.clearCookie('remember');
+    res.redirect('/');
+  }
 };

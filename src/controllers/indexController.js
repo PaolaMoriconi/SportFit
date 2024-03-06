@@ -1,9 +1,13 @@
+
 const db = require("../database/models")
 const { Op } = require("sequelize")
-const { leerJSON } = require('../data')
+
+
 
 module.exports = {
   index: function (req, res) {
+    
+    
     db.Product.findAll()
     .then(products =>{
       return res.render('index', {
@@ -23,16 +27,21 @@ module.exports = {
       
     })
   },
-  cart: (req, res) => {
-    const list = leerJSON('productos')
-  const products = [list[0],list[1],list[2]]
+ 
+cart: (req,res)=>{
+  db.Product.findAll()
+  .then(products =>{
 
+    const total = products.reduce((n1,n2)=> n1 + n2.price,0)
+    
+    const envio = 19999
+    
   res.render('products/carritoCompras', {
-    products:products,user:req.session.userLogin
+    products,user:req.session.userLogin,total,envio
   })
+  }) 
+    },
 
-
-  },
 
   searchAdmin: (req, res) => {
     const { keyword } = req.query

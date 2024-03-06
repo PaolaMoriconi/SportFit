@@ -19,7 +19,14 @@
             <div class="home__article__info">
               <h2><%= product.name %></h2>
               <p>$<%= product.price %></p>
-              <p><%= product.descrption %></p>
+              
+              <% if (product.discount) { %>
+
+                <p>precio con descuento $<%= product.price*product.discount/100 %></p>
+
+              <% } %>
+              
+              <p><%= product.description %></p>
             </div>
           </a>
         </article>

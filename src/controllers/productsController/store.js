@@ -4,7 +4,7 @@ const { Op } = require("sequelize");
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
-  const { image, imageBack } = req.files;
+  const { image} = req.files;
   console.log("files:", req.files);
 
   if (errors.isEmpty()) {
@@ -17,14 +17,12 @@ module.exports = (req, res) => {
       description: detalleProducto,
       image: image[0].filename,
       category_id: categoria,
-    }).then(({ id }) => {
-      db.Image.create({ name: imageBack[0].filename, product_id: id }).then(
+    }).then(
         () => {
           res.redirect(`/products`);
         }
       );
-    });
-  } else {
+    } else {
     console.log("Errores: ", errors.mapped());
     const colores = db.Color.findAll();
     const categorias = db.Category.findAll();

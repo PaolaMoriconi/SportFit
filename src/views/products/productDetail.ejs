@@ -15,22 +15,25 @@
             src="/images/adidas.png"
             alt="icon--adidas"
           />
-          <h3><%= product.nombre %></h3>
+          <h3><%= product.name %></h3>
         </div>
         <article class="main__section__article--productDetail">
           <div class="article--productDetail--img">
-            <div class="article--productDetail--imgBack">
-              <img
-                src="/images/<%= product.imageBack %>"
-                alt="camisetaBocaHombre"
-              />
-            </div>
+           
             <div class="article--productDetail--imgFront">
               <img
                 src="/images/<%= product.image %>"
                 alt="camisetaBocaHombre"
               />
-              <h3> $ <%= product.precio %></h3>
+
+              <h3> $ <%= product.price %></h3>
+              
+              <% if (product.discount) { %>
+
+                <p>precio con descuento $<%= product.price*product.discount/100 %></p>
+
+              <% } %>
+              
             </div>
            
           </div>

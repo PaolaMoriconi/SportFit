@@ -12,6 +12,7 @@
       
         <div class="products">
           <% products.forEach(product => { %>
+          
           <article class="products__article">
             <a href="/products/detail/<%= product.id %>">
               <img
@@ -19,9 +20,14 @@
                 alt="<%= product.nombre %>"
               />
               <div class="products__article__info">
-                <h2><%= product.nombre %></h2>
-                <p> Talle:<%= product.talles %></p>
-                <p>$<%= product.precio %></p>
+                <h2><%= product.name %></h2>
+                
+                <p>$<%= product.price %></p>
+                <% if (product.discount) { %>
+
+                  <p>precio con descuento $<%= product.price*product.discount/100 %></p>
+  
+                <% } %>
                 <div class="icons__products">
                   <i class="fa-solid fa-circle-xmark"></i>
                   <i class="fa-regular fa-heart"></i></div>
@@ -46,13 +52,20 @@
     <h3>DETALLE DEL PEDIDO</h3>
   </div>
   <div class="div__products">
-    <p>3 Productos</p><p>$115.000</p>
+    <p><%= products.length %> Productos</p><p>$<%= total  %></p>
   </div>
-  <div class="div__products">
-        <p>Entrega</p><p>Gratis</p>
-      </div>
+  <% if (total > envio) { %>
+    <div class="div__products">
+      <p>Entrega</p><p>Gratis</p>
+    </div>
+  <% }else{%>
+    <div class="div__products">
+      <p>Entrega</p><p><%= envio %></p>
+    </div>
+  <%} %>
+
         <div class="div__products">
-        <p>TOTAL</p><p>$115.000</p>
+        <p>TOTAL</p><p>$<%= total %></p>
       </div>
     <div class="button">
       <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
