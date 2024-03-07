@@ -37,6 +37,11 @@
 .icon--sportfit img {
   width: 60px;
 }
+.accordion-body{
+  display: flex;
+  flex-direction: column;
+
+}
 
 /* TABLET */
 @media (min-width: 768px) {

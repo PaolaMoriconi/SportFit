@@ -8,7 +8,7 @@
       "category_id": 1
    },
    {
-      "name": "Camiseta Boca Juniors  Mujer",
+      "name": "Camiseta Boca Juniors Mujer",
       "price": 45000,
       "discount": 5,
       "description": "Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
@@ -35,7 +35,7 @@
    },
    {
       "id": 5,
-      "name": "Conjunto Topper Basico New Hombre",
+      "name": "Conjunto Topper Basico New ",
       "price": 30000,
       "discount": 0,
       "description": "Los conjuntos están diseñados para brindar comodidad, libertad, seguridad durante el ejercicio realizado",
@@ -53,7 +53,7 @@
    },
    {
       "id": 7,
-      "name": "Remera de Entrenamiento TechFit",
+      "name": "Remera de Entrenamiento ",
       "price": 25000,
       "discount": 25,
       "description": "Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
