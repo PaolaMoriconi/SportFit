@@ -26,6 +26,11 @@
                 alt="camisetaBocaHombre"
               />
               <h3> $ <%= product.price %></h3>
+              <% if (product.discount) { %>
+
+                <p>precio con descuento $<%= product.price*product.discount/100 %></p>
+
+              <% } %>
             </div>
            
           </div>
