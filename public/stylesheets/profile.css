@@ -2,11 +2,11 @@
     font-family: var(--Texto);
   }
   
-  .profile--title{
+  .profile__main__section--perfildelusuario H2{
+    text-transform: uppercase;
     text-align: center;
-    color: var(--colorOscuro);
-    font-size: 1.5rem; 
-    text-shadow:  2px 2px #00000054;
+    margin: 10px 0;
+    color:#788199 ;
   }
   .profile__form--conteiner{
     display: flex;
@@ -24,14 +24,16 @@
     opacity:  0;
    }
   
-  .password, .password2, .email,.telefono, .barrio{
+  .telefono, .barrio{
     position: absolute;
     right: 50px;
     
   } 
-  .email{
-    bottom: 190px;
-  }
+ 
+  .icons__email__profile{
+    margin-left:170px;
+    margin-bottom: 10px;
+  } 
   .direccion{
     bottom: 88px;
   
@@ -44,13 +46,10 @@
     cursor: pointer;
   }
   
-  .form__input{
-    color: var(--colorOscuro);
-    width: 100%;
-    font-size: 1.5rem;
-    padding: 10px;
-    outline: none;
-   
+  .profile__input{
+    border: none;
+  border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
+  width: 100%;
   }
   .form__botton{
     width: 100%;
@@ -91,13 +90,9 @@
     .profile__form--conteiner{
       width: 70%;
     }
-    .password, .password2, .email{
-      right:165px;
-      
+    .icons__email__profile{
+      margin-left:60vh;
     } 
-    .email{
-      bottom: 167px;
-    }
     .dirrcion {
       bottom: 65px;
   }
@@ -105,12 +100,7 @@
     bottom: -40px;
   }
     
-    
-    
-   
-    
-    
-  }
+}
   
     /* DESKTOP */
     @media (min-width: 1024px){
@@ -133,19 +123,11 @@
     .profile--btn{
       width: 100%;
     }
-  
-    .email, .direccion, .provincia,.barrio.telefono{
-      right:310px;
-  
-    }
-    .email{ 
-      top: 400px;
-    }
-    .dirtrecion{
-  
-      top: 505px;
+    .icons__email__profile{
+      
+      margin-left:58vh;
+    } 
     
-    }
     .provincia {
       top: 610px;
   
@@ -157,6 +139,9 @@
     .email, .dirtrecion, .provincia,.barrio.telefono {
       right: 325px;
   }
-  
+  .icons__email__profile{
+   
+    margin-left:64vh;
+  } 
   
   }

@@ -9,38 +9,26 @@
     <main class="main__home">
       
       <% if (products.length) { %>
-        <div class="swiper mySwiper_1">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide swiper-slide_1">
-              <img src="/images/banner1.jpg" alt="" />
-            </div>
-            <div class="swiper-slide swiper-slide_1">
-              <img src="/images/banner2.jpg" alt="" />
-            </div>
-            <div class="swiper-slide swiper-slide_1">
-              <img src="/images/banner3.jpg" alt="" />
-            </div>
-            <div class="swiper-slide swiper-slide_1">
-              <img src="/images/banner4.jpg" alt="" />
-            </div>
-            <div class="swiper-slide swiper-slide_1">
-              <img src="/images/banner5.jpg" alt="" />
-            </div>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/banner1.jpg" class="d-block w-100" alt="...">
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-  
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev swiper-button-prev_1"></div>
-          <div class="swiper-button-next swiper-button-next_1"></div>
-          <div class="swiper-button-next swiper-button-next_1"></div>
-          <div class="swiper-button-next swiper-button-next_1"></div>
-          <div class="swiper-button-next swiper-button-next_1"></div>
-  
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+          <div class="carousel-item">
+            <img src="/images/banner2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/banner3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/banner4.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/banner5.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+<div class="swiper-scrollbar"></div>
         </div>
        
      
@@ -55,8 +43,12 @@
             />
             <div class="home__article__info">
               <h2><%= product.name %></h2>
-              <p>$<%= product.price %></p>
-              <p><%= product.description %></p>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
             </div>
           </a>
         </article>
@@ -66,12 +58,7 @@
         <div class="alert alert-light" role="alert">
           Producto no encontrado, intente con otra busqueda        
         </div>
-
-
-
-        
-
-      <% }%>
+<% }%>
      
 
     </main>
@@ -80,20 +67,6 @@
 
     <%- include('./partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper_1 = new Swiper(".mySwiper_1", {
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next_1",
-          prevEl: ".swiper-button-prev_1",
-        },
-      });
-    </script>
+    
   </body>
 </html>

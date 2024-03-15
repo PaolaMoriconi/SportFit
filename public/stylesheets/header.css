@@ -1,7 +1,7 @@
 .header {
   height: 65px;
   font-family: var(--Texto);
-  background-color: var(--colorGrisAzuladoClaro);
+  background-color: var(--colorVerdeAgua);
   text-align: center;
 }
 .home__main__header--search {
@@ -37,9 +37,17 @@
 .icon--sportfit img {
   width: 60px;
 }
+.accordion-item:last-of-type .accordion-button.collapsed{
+  padding-top: 3px;
+  padding-bottom: 0px;
+}
 .accordion-body{
   display: flex;
   flex-direction: column;
+}
+.accordion{
+ z-index: 40;
+  position: relative;
 
 }
 
@@ -115,5 +123,9 @@
     justify-content: flex-end;
     gap: 25px;
     font-size: 36px;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed{
+    padding-top: 18px;
+    padding-bottom: 14px;
   }
 }

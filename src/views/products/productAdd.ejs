@@ -67,26 +67,7 @@
                     >Imagen</label
                   >
                 </div>
-
-                <div class="col-6 col-md-3 mb-3">
-                  <input
-                    class="form-control <%= locals.errors && errors.imageBack ? 'is-invalid' : locals.old && old.imageBack ? 'is-valid' : '' %>"
-                    type="file"
-                    name="imageBack"
-                    value="<%= locals.old && old.imageBack ? old.imageBack : null %>"
-                  />
-                  <small class="text-danger"
-                    ><%=locals.errors && errors.imageBack ? errors.imageBack.msg
-                    : null %></small
-                  >
-                  <label
-                    class="btn btn-lg btn-outline-dark w-100"
-                    for="imageBack"
-                    >Imagen posterior</label
-                  >
-                </div>
-
-                <div class="col-6 col-md-3 mb-3">
+              <div class="col-6 col-md-3 mb-3">
                   <div class="form-floating">
                     <input
                       class="form__input <%= locals.errors && errors.precio ? 'form-control is-invalid' : locals.old && old.precio ? 'form-control is-valid' : '' %>"

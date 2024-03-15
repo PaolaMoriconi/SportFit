@@ -37,13 +37,7 @@
                 <input  name="image" type="file" class="form-control" id="image" hidden>
                 <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>       
             </div>   
-
-            <div class="col-6 col-md-3 mb-3">              
-              <input  name="imageBack" type="file" class="form-control" id="imageBack" hidden>
-              <label class="btn btn-lg btn-outline-dark w-100" for="imageBack">Imagen posterior</label>         
-          </div>   
-
-          <div class="col-6  col-md-3 mb-3">
+<div class="col-6  col-md-3 mb-3">
             <div class="form-floating">
               <input name="precio" type="text" class="form-control" id="precio" value="<%= product.price %>">
               <label for="precio">Precio</label>
@@ -66,7 +60,7 @@
                 <option <%= product.talles === "xl" && 'selected' %> value="xl">XL</option>
                 <option <%= product.talles === "xxl" && 'selected' %> value="xxl">XXL</option>               
               </select>
-              <label for="talles ">Talles</label>
+              <label for="talles">Talles</label>
             </div>           
           </div>  
 

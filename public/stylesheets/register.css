@@ -2,12 +2,13 @@
   font-family: var(--Texto);
 }
 
-.register--title{
+.register__main__section--registro H2{
+  text-transform: uppercase;
   text-align: center;
-  color: var(--colorOscuro);
-  font-size: 1.5rem; 
-  text-shadow:  2px 2px #00000054;
+  margin: 10px 0;
+  color:#788199 ;
 }
+
 .register__form--conteiner{
   display: flex;
   flex-wrap: wrap;
@@ -16,44 +17,38 @@
   gap: 20px;
   padding: 20px 40px;
 }
-.form__group{
+.register__group{
   width: 100%;
   text-align: start;
 }
 .icon_remove{
   opacity:  0;
  }
+ 
+.icons__email__register{
+  margin-left: 33vh;
+}
 
-.password, .password2, .email{
-  position: absolute;
-  right: 50px;
+.icons__password__register{
+ margin-left: 33vh;
+}
+.icons__password2__register{
   
-} 
-.email{
-  bottom: 190px;
+  margin-left: 33vh;
 }
-.password{
-  bottom: 88px;
-
-}
-.password2{
-  bottom: -15px;
-}
-.form__label{
+.register__label{
   color: var(--colorgrisOscuro);
   cursor: pointer;
 }
 
-.form__input{
-  color: var(--colorOscuro);
+.register__input{
+  border: none;
+  border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
   width: 100%;
-  font-size: 1.5rem;
-  padding: 10px;
-  outline: none;
- 
 }
 .form__botton{
   width: 100%;
+  padding-top: 16px;
 }
 .register--btn{
   width: 100%;
@@ -91,26 +86,19 @@
   .register__form--conteiner{
     width: 70%;
   }
-  .password, .password2, .email{
-    right:165px;
+  .icons__email__register{
+    margin-left: 67vh;
+    }
     
-  } 
-  .email{
-    bottom: 167px;
+    .icons__password__register{
+      
+      margin-left: 67vh;
+    }
+    .icons__password2__register{
+      
+      margin-left: 67vh;
+    }
   }
-  .password {
-    bottom: 65px;
-}
-.password2 {
-  bottom: -40px;
-}
-  
-  
-  
- 
-  
-  
-}
 
   /* DESKTOP */
   @media (min-width: 1024px){
@@ -123,7 +111,7 @@
   .register__form--conteiner {
     width: 100%;
   }
-   .form__group {
+   .register__group {
     width: 60%;
   }
     
@@ -133,30 +121,36 @@
   .register--btn{
     width: 100%;
   }
-
-  .email, .password, .password2{
-    right:310px;
-
-  }
-  .email{ 
-    top: 400px;
-  }
-  .password{
-
-    top: 505px;
+  .icons__email__register{
+   
+    margin-left: 55vh;
+    }
+    
+    .icons__password__register{
+     
+      margin-left: 50vh;
+    }
+    .icons__password2__register{
+      
+      margin-left: 60vh;
+    }
   
-  }
-  .password2 {
-    top: 610px;
-
-}
 }
 
 /* DESKTOP */
 @media (min-width: 1440px){
-  .email, .password, .password2 {
-    right: 325px;
+  .icons__email__register{
+   margin-left: 64vh;
+    }
+    
+    .icons__password__register{
+     
+      margin-left: 68vh;
+    }
+    .icons__password2__register{
+      
+      margin-left: 68vh;
+    }
+  
 }
 
-
-}

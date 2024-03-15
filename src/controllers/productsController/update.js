@@ -1,30 +1,35 @@
 const db = require("../../database/models");
-
-module.exports = (req, res) => {
+const fs = require("fs");
+module.exports = async (req, res) => {
   const { nombre, precio, descuento, talles, detalleProducto, categoria } =
     req.body;
   const { id } = req.params;
-  const { image, imageBack } = req.files;
+  const { image } = req.files;
 
-  db.Product.update(
+  const product = await db.Product.findByPk(id);
+
+  if (
+    image && image[0].filename != product.image &&
+    fs.existsSync("public/images/" + product.image)
+  ) {
+    fs.unlinkSync("public/images/" + product.image);
+  }
+  console.log("body: ",req.body);
+  console.log("image: ",image[0]);
+
+  await product.update(
     {
       name: nombre.trim(),
       price: precio,
       discount: descuento,
       description: detalleProducto.trim(),
-      category_id: parseInt(categoria)
+      category_id: parseInt(categoria),
+      image: image ? image[0].filename : product.image 
     },
     { where: { id } }
-  ).then((resp) => {
-    console.log(resp);
-    if (image && existsSync("public/images/" + product.image)) {
-      unlinkSync("public/images/" + product.image);
-    }
+  );
 
-    if (imageBack && existsSync("public/images/" + product.imageBack)) {
-      unlinkSync("public/images/" + product.imageBack);
-    }
+  product.save()
 
-    return res.redirect(`/admin`);
-  });
+  return res.redirect(`/admin`);
 };

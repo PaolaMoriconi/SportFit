@@ -7,47 +7,49 @@
     <main class="profile__main">
       <section class ="profile__main__section">
         
-          <h3  class="profile--title">Perfil del usuario</h3>
+        <div class="profile__main__section--perfildelusuario"> 
+          <h2>perfil del usuario</h2>
+        </div>
 
         </div>
         <form action="/users/perfil/<%= user.id %>?_method=PUT" method="POST"  enctype="multipart/form-data"  class="profile__form--conteiner" >
           
           <div class="form__group">
-            <label  class="form__label" for="name" id="name">Nombre</label>
-            <input class="form__input " type="text" name="name" value="<%= locals.usuario && usuario.name ? usuario.name : locals.old ? old.name : null %>">         
+            <label  class="form__label" for="name" >Nombre</label>
+            <input class="profile__input " type="text" name="name" value="<%= locals.usuario && usuario.name ? usuario.name : locals.old ? old.name : null %>">         
             <small class="text-danger"><%=locals.errors && errors.name ? errors.name.msg : null %></small>
           </div>
 
           <div class="form__group">
-            <label class="form__label"  for="surname" id="surname">Apellido</label>
-            <input class="form__input " type="text" name="surname" value="<%= locals.usuario && usuario.surname ? usuario.surname : locals.old ? old.surname : null %>" >
+            <label class="form__label"  for="surname" >Apellido</label>
+            <input class="profile__input " type="text" name="surname" value="<%= locals.usuario && usuario.surname ? usuario.surname : locals.old ? old.surname : null %>" >
             <small class="text-danger"><%=locals.errors && errors.surname ? errors.surname.msg : null %></small>
           </div>
 
           <div class="form__group">
-            <label class="form__label" for="email" id="email">Email <i class="fa-solid fa-envelope email icons "></i></label>
-            <input id = "input_email" class="form__input " type= "email" name="email" value="<%= locals.usuario && usuario.email ? usuario.email : locals.old ? old.email : null %>">
+            <label class="form__label" for="email" >Email <i class="fa-solid fa-envelope email icons icons__email__profile " ></i></label>
+            <input id = "input_email" class="profile__input " type= "email" name="email" value="<%= locals.usuario && usuario.email ? usuario.email : locals.old ? old.email : null %>">
             <small class="text-danger"><%=locals.errors && errors.email ? errors.email.msg : null %></small>
           </div>
           
           <div class="form__group">
-            <label class="form__label"  for="direccion" id="direccion">direccion</label>
-            <input id="input_direccion"  class="form__input " type="direccion"  name="adress" value="<%= locals.usuario && usuario.adress ? usuario.adress : locals.old ? old.adress : null %>">
+            <label class="form__label"  for="direccion"">direccion</label>
+            <input id="input_direccion"  class="profile__input " type="direccion"  name="adress" value="<%= locals.usuario && usuario.adress ? usuario.adress : locals.old ? old.adress : null %>">
             
           </div>
 
           <div class="form__group">
-            <label class="form__label"  for="provincia" id="provincia">Provincia</label>
-            <input id="input_provincia" class="form__input " type="provincia" name="state" value="<%= locals.usuario && usuario.state ? usuario.state : locals.old ? old.state : null %>">
+            <label class="form__label"  for="provincia">Provincia</label>
+            <input id="input_provincia" class="profile__input " type="provincia" name="state" value="<%= locals.usuario && usuario.state ? usuario.state : locals.old ? old.state : null %>">
             
           </div>
           <div class="form__group">
-            <label class="form__label"  for="barrio" id="barrio">Barrio</label>
-            <input id="input_barrio" class="form__input " type="barrio" name="district" value="<%= locals.usuario && usuario.district ? usuario.district : locals.old ? old.district : null %>">
+            <label class="form__label"  for="barrio">Barrio</label>
+            <input id="input_barrio" class="profile__input " type="barrio" name="district" value="<%= locals.usuario && usuario.district ? usuario.district : locals.old ? old.district : null %>">
             </div>
           <div class="form__group">
-            <label class="form__label"  for="telefono" id="telefono">Telefono</label>
-            <input id="input_telefono" class="form__input " type="telefono" name="phone" value="<%= locals.usuario && usuario.phone ? usuario.phone : locals.old ? old.phone : null %>">
+            <label class="form__label"  for="telefono" >Telefono</label>
+            <input id="input_telefono" class="profile__input " type="telefono" name="phone" value="<%= locals.usuario && usuario.phone ? usuario.phone : locals.old ? old.phone : null %>">
             </div>
           <div class="col-12 col-md-7" >
             <label for="avatar" class="form__label">Agregar imagen</label>

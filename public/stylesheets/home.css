@@ -14,8 +14,16 @@ body.home {
   background-color: #FFF;
 }
 .home__article__info {
+  text-align: center;
+  color: #332f2c;
+  text-decoration: none;
+  margin-bottom: 0;
   background-color: var(--colorGrisClaro);
   height: 220px;
+  padding-top:10px ;
+}
+.home__article__info p{
+text-decoration: line-through;
 }
 
 .home__article h2 {
@@ -23,7 +31,7 @@ body.home {
   color: #332f2c;
   font-size: 1.5rem;
 }
-.home__article p {
+.home__article p span {
   text-align: center;
   color: #332f2c;
   text-decoration: none;
