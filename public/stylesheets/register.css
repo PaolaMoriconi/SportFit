@@ -14,8 +14,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px 40px;
+  gap: 30px;
+  padding: 30px 40px;
 }
 .register__group{
   width: 100%;

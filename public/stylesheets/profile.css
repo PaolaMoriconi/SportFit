@@ -13,8 +13,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px 40px;
+  gap: 40px;
+  padding: 30px 40px;
 }
 .form__group {
   width: 100%;
