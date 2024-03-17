@@ -26,7 +26,7 @@
  }
  
 .icons__email__register{
-  margin-left: 33vh;
+  margin-left: 66vw;
 }
 
 .icons__password__register{
@@ -87,16 +87,16 @@
     width: 70%;
   }
   .icons__email__register{
-    margin-left: 67vh;
+    margin-left: 56vw;
     }
     
     .icons__password__register{
       
-      margin-left: 67vh;
+      margin-left: 56vw;
     }
     .icons__password2__register{
       
-      margin-left: 67vh;
+      margin-left: 56vw;
     }
   }
 
@@ -123,16 +123,16 @@
   }
   .icons__email__register{
    
-    margin-left: 55vh;
+    margin-left: 52vw;
     }
     
     .icons__password__register{
      
-      margin-left: 50vh;
+      margin-left: 52vw;
     }
     .icons__password2__register{
       
-      margin-left: 60vh;
+      margin-left: 52vw;
     }
   
 }
@@ -140,17 +140,18 @@
 /* DESKTOP */
 @media (min-width: 1440px){
   .icons__email__register{
-   margin-left: 64vh;
+   margin-left: 53vw;
     }
     
     .icons__password__register{
      
-      margin-left: 68vh;
+      margin-left: 53vw;
     }
     .icons__password2__register{
       
-      margin-left: 68vh;
+      margin-left: 53vw;
     }
   
 }
+
 

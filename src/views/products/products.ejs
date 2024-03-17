@@ -4,19 +4,19 @@
     title : "Todos los productos"
   }) %>
 
-  <body class="">
+  <body class="list_products__body">
     <%- include('../partials/header') %>
-    <main>
+    <main class="list_products__main">
       <% if(products.length > 0){%>
-      <div class="home__products">
+      <div class="list_products">
         <% products.forEach(product => { %>
-        <article class="home__article">
+        <article class="list_products__article">
           <a href="/products/detail/<%= product.id %>">
             <img
               src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
               alt="<%= product.name %>"
             />
-            <div class="home__article__info">
+            <div class="list_products__article__info">
               <h2><%= product.name %></h2>
               <p>$<%= product.price %></p>
               <p><%= product.description %></p>

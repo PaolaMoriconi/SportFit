@@ -1,40 +1,40 @@
-.register{
-    font-family: var(--Texto);
-  }
-  
-  .profile__main__section--perfildelusuario H2{
-    text-transform: uppercase;
-    text-align: center;
-    margin: 10px 0;
-    color:#788199 ;
-  }
-  .profile__form--conteiner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px 40px;
-  }
-  .form__group{
-    width: 100%;
-    text-align: start;
-  }
-  .icon_remove{
-    opacity:  0;
-   }
-  
-  .telefono, .barrio{
+.register {
+  font-family: var(--Texto);
+}
+
+.profile__main__section--perfildelusuario H2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+  color: #788199;
+}
+.profile__form--conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 40px;
+}
+.form__group {
+  width: 100%;
+  text-align: start;
+}
+.icon_remove {
+  opacity: 0;
+}
+
+/*.telefono, .barrio{
     position: absolute;
     right: 50px;
     
-  } 
- 
-  .icons__email__profile{
-    margin-left:170px;
-    margin-bottom: 10px;
-  } 
-  .direccion{
+  } */
+
+.icons__email__profile {
+  margin-left: 73vw;
+  margin-bottom: 10px;
+}
+/* .direccion{
     bottom: 88px;
   
   }
@@ -45,103 +45,101 @@
     color: var(--colorgrisOscuro);
     cursor: pointer;
   }
-  
-  .profile__input{
-    border: none;
+  */
+.profile__input {
+  border: none;
   border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
   width: 100%;
+}
+.form__botton {
+  width: 100%;
+}
+.profile--btn {
+  width: 100%;
+  background-color: var(--colorGrisAzuladoOscuro);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 1px 3px #00000054;
+}
+
+.form__span {
+  text-align: center;
+  font-size: 15px;
+}
+.form__span p {
+  padding: 5px;
+}
+.form__span a {
+  color: #000000;
+  font-weight: 900;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .profile__main__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  .form__botton{
-    width: 100%;
+  .profile__form--conteiner {
+    width: 70%;
   }
-  .profile--btn{
-    width: 100%;
-    background-color:var( --colorGrisAzuladoOscuro);
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-shadow:  1px 3px #00000054;
+  .icons__email__profile {
+    margin-left: 60vh;
   }
-  
-  .form__span{
-    text-align: center;
-    font-size: 15px;
-   
-  }
-  .form__span p{
-    padding: 5px;
-  }
-  .form__span a{
-    color: #000000;
-    font-weight: 900;
-  }
-  
-  /* TABLET */
-  @media (min-width: 768px){
-    .profile__main__section{
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: center;
-    }
-    .profile__form--conteiner{
-      width: 70%;
-    }
-    .icons__email__profile{
-      margin-left:60vh;
-    } 
-    .dirrcion {
+  /*.dirrcion {
       bottom: 65px;
   }
   .provincia{
     bottom: -40px;
-  }
-    
+  }*/
 }
-  
-    /* DESKTOP */
-    @media (min-width: 1024px){
-      .profile__main__section {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column; 
-      }
-  
-    .profile__form--conteiner {
-      width: 100%;
-    }
-     .form__group {
-      width: 60%;
-    }
-      
-  .form__botton{
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .profile__main__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .profile__form--conteiner {
+    width: 100%;
+  }
+  .form__group {
     width: 60%;
   }
-    .profile--btn{
-      width: 100%;
-    }
-    .icons__email__profile{
-      
-      margin-left:58vh;
-    } 
-    
-    .provincia {
+
+  .form__botton {
+    width: 60%;
+  }
+  .profile--btn {
+    width: 100%;
+  }
+  .icons__email__profile {
+    margin-left: 58vh;
+  }
+
+  /*.provincia {
       top: 610px;
   
+  }*/
+}
+
+/* DESKTOP */
+@media (min-width: 1440px) {
+  .icons__email__profile {
+    margin-left: 50vw;
   }
+}
+
+@media (min-width: 2200px) {
+  .icons__email__profile {
+    margin-left: 55vw;
   }
-  
-  /* DESKTOP */
-  @media (min-width: 1440px){
-    .email, .dirtrecion, .provincia,.barrio.telefono {
-      right: 325px;
-  }
-  .icons__email__profile{
-   
-    margin-left:64vh;
-  } 
-  
-  }
+}

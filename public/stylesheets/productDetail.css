@@ -1,48 +1,67 @@
-
+  body.productDetail__body{
+    background-color: var(--colorGrisAzuladoClaro);
+  }
+  
 .productDetail{
   font-family: var(--TextoGeneral);
 
 }
-.main__section__article--productDetail{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;  
-    justify-content: center;
-    text-align: center;
-    
-
-    
+.main__section--productDetail {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  margin:  30px auto;
+ border-radius: 12px;
+  box-shadow: -1px 2px 9px 0px #495057;
+  color: #fff;
+  background-color: var(--colorGrisClaro);
+ 
 }
 .title--productDetail{
   display: flex;
   justify-content: center;
   margin-right: 1rem ;
   margin-top: 20px;
+  
  
 }
 .icon--adidas{
   width: 20px;
+  padding-bottom: 7px;
 }
 .title--productDetail h3{
   color: rgba(0, 0, 0, 0.932);
- }
-
-
-
-
+  font-size: 18px;
+}
 .article--productDetail--imgFront {
   position: relative;
-  
  
 }
- .main__section__article--productDetail--detail h3{
-  font-weight: 800;
+.price {
+  font-weight: 600;
   font-size: 1.2rem;
   padding: 12px;
+  color: #000000;
+  text-align: center;
+
+}
+.article--productDetail--talles span{
+  font-size: .9rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 139px
 }
 .main__section__article--productDetail--detail p{
   font-size: .9rem;
   font-weight: 600;
+  color: #000000;
+  text-align: center;
 
 }
 
@@ -51,7 +70,7 @@
   justify-content: center;
   align-self: center;
   margin: 15px;
-  gap: 20px; 
+  gap: 10px; 
   
 }
 
@@ -59,6 +78,7 @@
   font-size: 1.2rem;
   border: 1px solid #000000;
   padding: 8px 10px;
+  color: black;
 }
 
 
@@ -86,25 +106,22 @@
    margin: 0 15px;
    text-align: center;
    border: 1px solid #000000;
+   color: #000000;
  }
  .main__section--productDetail--description{
   text-align: center;
   padding: 8px;
- 
+  margin: 10px 20px 10px 20px;
+  color: #000000;
+}
   
- }
  .main__section--productDetail--description h3{
   text-transform: uppercase;
   font-size: 1rem;
   padding-bottom: 8px;
   color: rgba(0, 0, 0, 0.932);
+  text-decoration: underline;
  }
- 
- 
- 
-
-
-
  /*TABLET*/
 
  @media (min-width: 768px){
@@ -121,37 +138,43 @@
     box-shadow: -1px 2px 9px 0px #495057;
    
 }
+.price{
+  font-size: 2rem;
+  padding-right: 35px;
+}
 
+.title--productDetail{
+  padding-left: 20px;
+}
   .icon--adidas {
     width: 32px;
 }
-  .title--productDetail h3 {
+.title--productDetail h3 {
     font-size: 1.5rem;
   }
-  .title--productDetail {
-   
-    margin-right: 6rem ;
-}
-
-
-
-    .article--productDetail--sizes{
-      flex-direction: column;
-    }
-    .article--productDetail--talles{
-      top: 89px;
-      position: relative;
-      left: 87px;
+ 
+.article--productDetail--sizes{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 15px;
+  gap: 10px;
+ } 
+ .article--productDetail--talles span{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 295px
+ }
   
-    }
-    
-
-    .main__section__article--productDetail h3 {
+.main__section__article--productDetail h3 {
       font-size: 1.4rem;
-      
-
-    }
-
+      }
+      .botton{
+        padding-left: 51px;
+      }
 
     .car--btn {
       margin-left: 68px;
@@ -166,28 +189,47 @@
 
  @media (min-width: 1024px) {
 
- .article--productDetail--talles {
-    top: 65px;
-    position: relative;
-    left: 114px;
-
-}
+  
+.article--productDetail--sizes{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 15px;
+  gap: 10px;
+ } 
 
 .article--productDetail--img{
   height: 477px;
 
-}.car--btn {
+}
+.price{
+  font-size: 2rem;
+  padding-right: 35px;
+}
+
+.article--productDetail--talles span{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 400px
+ }
+.car--btn {
   font-size: 1.2rem;
   height: 53px;
   width: 265px;
 }
 
 .title--productDetail h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .icon--adidas {
   width: 40px;
+}
+ .botton{
+  padding-left: 188px;
 }
 
 
@@ -196,14 +238,33 @@
     width: 50%;
     text-align: center;
     padding: 8px;
+    font-size: 25px;
 }
 .description__product{
   padding-right: 4rem;
  }
+ .description__product p{
+text-decoration: none;
+ }
  .main__section--productDetail--description h3{
+  font-size: 30px;
   padding-right: 50px;
  }
 }
+@media (min-width: 1440px) {
+  .botton{
+   padding-left:350px ;
+  }
+  
+  .article--productDetail--talles span{
+    padding-left: 567px
+   }
+   .article--productDetail--sizes{
+  gap: 40px;
+   }
+}
+
+
 
 
  
