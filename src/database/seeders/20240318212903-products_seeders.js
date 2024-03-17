@@ -1,7 +1,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const products = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/products.json'),'utf-8'));
+const products = JSON.parse(fs.readFileSync(path.join(__dirname,'../../data/MOCK_DATA.json'),'utf-8'));
 const data = products.map(product => {
   product.createdAt = new Date;
   product.updatedAt = new Date;

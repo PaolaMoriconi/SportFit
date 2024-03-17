@@ -23,7 +23,6 @@ module.exports = {
       
     })
   },
- 
   cart: (req,res)=>{
     db.Product.findAll()
     .then(products =>{
@@ -37,8 +36,6 @@ module.exports = {
     })
     }) 
       },
-
-
   searchAdmin: (req, res) => {
     const { keyword } = req.query
 

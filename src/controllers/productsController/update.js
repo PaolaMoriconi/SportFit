@@ -4,7 +4,7 @@ module.exports = (req, res) => {
   const { nombre, precio, descuento, talles, detalleProducto, categoria } =
     req.body;
   const { id } = req.params;
-  const { image, imageBack } = req.files;
+  const { images } = req.files;
 
   db.Product.update(
     {

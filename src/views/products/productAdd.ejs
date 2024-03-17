@@ -56,33 +56,15 @@
                   <input
                     class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? ' is-valid' : '' %>"
                     type="file"
-                    name="image"
+                    name="images"
                     value="<%= locals.old && old.image ? old.image : null %>"
-                  />
+                    multiple/>
                   <small class="text-danger"
                     ><%=locals.errors && errors.image ? errors.image.msg : null
                     %></small
                   >
                   <label class="btn btn-lg btn-outline-dark w-100" for="image"
                     >Imagen</label
-                  >
-                </div>
-
-                <div class="col-6 col-md-3 mb-3">
-                  <input
-                    class="form-control <%= locals.errors && errors.imageBack ? 'is-invalid' : locals.old && old.imageBack ? 'is-valid' : '' %>"
-                    type="file"
-                    name="imageBack"
-                    value="<%= locals.old && old.imageBack ? old.imageBack : null %>"
-                  />
-                  <small class="text-danger"
-                    ><%=locals.errors && errors.imageBack ? errors.imageBack.msg
-                    : null %></small
-                  >
-                  <label
-                    class="btn btn-lg btn-outline-dark w-100"
-                    for="imageBack"
-                    >Imagen posterior</label
                   >
                 </div>
 
@@ -118,7 +100,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 mb-3">
+                <div class="col-12 col-md-6 mb-3">
                   <div class="form-floating">
                     <select
                       name="talles"
@@ -127,19 +109,18 @@
                       aria-label="Floating label select example"
                     >
                       <option value="" selected hidden></option>
-                      <option value="s">S</option>
-                      <option value="m">M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                      <option value="xxl">XXL</option>
+                      <% talles.forEach(talles => { %>
+                      <option value="<%= talles.id %>">
+                        <%= talles.name %>
+                      </option>
+                      <% }) %>
                     </select>
                     <small class="text-danger"
                       ><%=locals.errors && errors.talles ?
                       errors.talles.msg : null %></small
                     >
-                    <label for="talles">talles</label>
+                    <label for="categoria">Talles</label>
                   </div>
-                </div>
 
                 <div class="col-12 col-md-6 mb-3">
                   <div class="form-floating">
@@ -150,9 +131,9 @@
                       aria-label="Floating label select example"
                     >
                       <option value="" selected hidden></option>
-                      <% categorias.forEach(colores => { %>
-                      <option value="<%= colores.id %>">
-                        <%= colores.name %>
+                      <% categorias.forEach(categorie => { %>
+                      <option value="<%= categorie.id %>">
+                        <%= categorie.name %>
                       </option>
                       <% }) %>
                     </select>
@@ -183,6 +164,27 @@
                     <label for="colores">Colores</label>
                   </div>
                 </div>
+                <div class="form-floating">
+                  <select
+                    name="marca"
+                    class="form-select"
+                    id="marca"
+                    aria-label="Floating label select example"
+                  >
+                    <option value="" selected hidden></option>
+                    <% marcas.forEach(marca => { %>
+                    <option value="<%= marca.id %>">
+                      <%= marca.name %>
+                    </option>
+                    <% }) %>
+                  </select>
+                  <small class="text-danger"
+                    ><%=locals.errors && errors.marca ?
+                    errors.marca.msg : null %></small
+                  >
+                  <label for="colores">Marca</label>
+                </div>
+              </div>
 
                 <div class="col-12 mb-3">
                   <div class="form-floating">
