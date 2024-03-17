@@ -5,7 +5,8 @@
       "discount": 0,
       "description": "Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
       "image": "camisetaBoca.png",
-      "category_id": 1
+      "category_id": 1,
+      "stock": 10
    },
    {
       "name": "Camiseta Boca Juniors Mujer",
@@ -13,7 +14,8 @@
       "discount": 5,
       "description": "Lleva a tu equipo a todos lados con la Camiseta adidas Boca Juniors .",
       "image": "camisetaBocaMujer.png",
-      "category_id": 2
+      "category_id": 2,
+      "stock": 10
    },
    {
       "id": 3,
@@ -22,7 +24,8 @@
       "discount": 15,
       "description": "Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortHombreNegro.jpeg",
-      "category_id": 1
+      "category_id": 1,
+      "stock": 10
    },
    {
       "id": 4,
@@ -31,7 +34,8 @@
       "discount": 25,
       "description": "Diseñados para permitir un amplio movimiento. Para esos deportes que requieren mayor libertad movimiento.",
       "image": "shortMujerRosa.jpg",
-      "category_id": 2
+      "category_id": 2,
+      "stock": 10
    },
    {
       "id": 5,
@@ -40,7 +44,8 @@
       "discount": 0,
       "description": "Los conjuntos están diseñados para brindar comodidad, libertad, seguridad durante el ejercicio realizado",
       "image": "conjuntoDeportivoHombre.jpg",
-      "category_id": 1
+      "category_id": 1,
+      "stock": 10
    },
    {
       "id": 6,
@@ -49,7 +54,8 @@
       "discount": 0,
       "description": "Los conjuntos están diseñados para brindar comodidad, libertad , seguridad durante el ejercicio realizado",
       "image": "conjuntoDeportivoMujer.jpg",
-      "category_id": 2
+      "category_id": 2,
+      "stock": 10
    },
    {
       "id": 7,
@@ -58,7 +64,8 @@
       "discount": 25,
       "description": "Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
       "image": "remeraNegraHombre.jpeg",
-      "category_id": 1
+      "category_id": 1,
+      "stock": 10
    },
    {
       "id": 8,
@@ -67,6 +74,7 @@
       "discount": 50,
       "description": "Fabricado con tejidos transpirables que absorben la humedad para mantener el cuerpo secado.",
       "image": "remeraMujer.jpg",
-      "category_id": 2
+      "category_id": 2,
+      "stock": 10
    }
 ]

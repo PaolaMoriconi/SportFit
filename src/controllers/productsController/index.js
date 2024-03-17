@@ -16,6 +16,5 @@ module.exports = {
   edit,
   update,
   remove,
-  list,
-  
+  list
 }
