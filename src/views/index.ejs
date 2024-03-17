@@ -35,13 +35,13 @@
 
       <div class="home__products">
         <% products.forEach(product => { %>
-        <article class="home__article">
+        <article class="home__article ">
           <a href="/products/detail/<%= product.id %>">
             <img
               src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
               alt="<%= product.name %>"
             />
-            <div class="home__article__info">
+            <div class="home__article__info box">
               <h2><%= product.name %></h2>
              <p>$<%= product.price %></p>
               <% if (product.discount) { %>
