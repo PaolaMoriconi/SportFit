@@ -17,12 +17,10 @@
           <div class="col-14 col-lg-4 mb-3 align-items-center" >
             <div class="row  d-flex align-items-center justify-content-center">
               <div class="col-8">
-                <img src="images/<%= image || 'Imagen_por_defecto.jpg' %>" class="img-fluid" alt="">
+                <img src="/images/products/<%= images && images[0] ? images[0].name : 'Imagen_por_defecto.jpg' %>" class="img-fluid" alt="">
               </div>
               <hr>
-              <div class="col-8">
-                <img src="images/<%= imageBack || 'Imagen_por_defecto.jpg' %>" class="img-fluid" alt="">
-              </div>
+              
             </div>     
           </div>
           

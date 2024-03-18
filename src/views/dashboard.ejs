@@ -6,6 +6,7 @@
 }) %>
 
 <body>
+  
   <%- include('./partials/headerAdmin') %>
   
   <main class="container">  
@@ -20,8 +21,6 @@
                 <% if (locals.keyword) { %>
                   <li class="breadcrumb-item active" aria-current="page">Productos de: <%= keyword %></li>
                   <h4 class="card-title"></h4>
-    
-                 
                 <% }%>
                 </ol>
             </nav>
@@ -44,7 +43,7 @@
                 </thead>
                 <tbody>
   
-                  <%products.forEach(({id, name, category_id,categories, price,talles, discount, image, imageBack, description }, index) => { %>
+                  <%products.forEach(({id, name, category_id,categories, price,talles, discount, images, description }, index) => { %>
                     <tr>
                      <th scope="row"><%= index + 1 %></th>
                      <td><%= name %></td>
@@ -69,8 +68,7 @@
                     <%- include('./partials/modalProductAdmin',{
                       id,
                       name,
-                      image,
-                      imageBack,
+                      images,
                       price,
                       talles,
                       discount,

@@ -1,0 +1,113 @@
+ <!-- Swiper2 -->
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article ">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
+            />
+            <div class="home__article__info box">
+              <h2><%= product.name %></h2>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div></div>
+      <div class="swiper-slide"><div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article ">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
+            />
+            <div class="home__article__info box">
+              <h2><%= product.name %></h2>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div></div>
+      <div class="swiper-slide"><div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article ">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
+            />
+            <div class="home__article__info box">
+              <h2><%= product.name %></h2>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div></div>
+      <div class="swiper-slide"><div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article ">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
+            />
+            <div class="home__article__info box">
+              <h2><%= product.name %></h2>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div></div>
+      <div class="swiper-slide"><div class="home__products">
+        <% products.forEach(product => { %>
+        <article class="home__article ">
+          <a href="/products/detail/<%= product.id %>">
+            <img
+              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              alt="<%= product.name %>"
+            />
+            <div class="home__article__info box">
+              <h2><%= product.name %></h2>
+             <p>$<%= product.price %></p>
+              <% if (product.discount) { %>
+
+                <span>$<%= product.price*product.discount/100 %></span>
+
+              <% } %>
+            </div>
+          </a>
+        </article>
+        <% }) %>
+      </div>
+    </div>
+     
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>

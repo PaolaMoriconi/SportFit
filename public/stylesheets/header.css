@@ -1,7 +1,7 @@
 .header {
   height: 65px;
   font-family: var(--Texto);
-  background-color: var(--colorGrisAzuladoClaro);
+  background-color: var(--colorVerdeAgua);
   text-align: center;
 }
 .home__main__header--search {
@@ -37,16 +37,24 @@
 .icon--sportfit img {
   width: 60px;
 }
+.accordion-item:last-of-type .accordion-button.collapsed{
+  padding-top: 3px;
+  padding-bottom: 0px;
+}
 .accordion-body{
   display: flex;
   flex-direction: column;
+}
+.accordion{
+ z-index: 40;
+  position: relative;
 
 }
 
 /* TABLET */
 @media (min-width: 768px) {
   .header {
-    height: 90px;
+    height: 100px;
   }
   .burguer-menu {
     display: none;
@@ -88,7 +96,7 @@
   .header__nav--categoria {
     display: flex;
     position: absolute;
-    left: 62px;
+    left: 40px;
     top: 68px;
   }
   .header__nav__ul--categoria {
@@ -102,7 +110,7 @@
     text-decoration: none;
   }
   .header__nav__ul--categoria a{
-    font-size: 13px;
+    font-size: 10px;
     position: relative;
     right: 35px;
   }
@@ -115,5 +123,14 @@
     justify-content: flex-end;
     gap: 25px;
     font-size: 36px;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed{
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .header__nav__ul--categoria a{
+    font-size: 13px;
   }
 }

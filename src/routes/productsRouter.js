@@ -15,9 +15,9 @@ router
   .get("/", list)
   .get("/detail/:id", detail)
   .get("/editar/:id?", edit)
-  .post("/crear",upload.fields([{ name: "image" }, { name: "imageBack" }]),productValidator,store)
+  .post("/crear",upload.array("images",4),productValidator,store)
   .get("/agregar", add)
-  .put("/update/:id",upload.fields([{ name: "image" }, { name: "imageBack" }]),update)
-  .delete("/remove/:id", remove);
+  .put("/update/:id",upload.array("images",4),update)
+  .delete("/remove/:id", remove)
 
 module.exports = router;

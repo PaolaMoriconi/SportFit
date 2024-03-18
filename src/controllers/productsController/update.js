@@ -1,30 +1,61 @@
 const db = require("../../database/models");
-
-module.exports = (req, res) => {
-  const { nombre, precio, descuento, talles, detalleProducto, categoria } =
-    req.body;
+const fs = require("fs");
+module.exports = async (req, res) => {
+  const {
+    nombre,
+    precio,
+    descuento,
+    talle,
+    marca,
+    color,
+    categoria,
+    detalleProducto,
+  } = req.body;
   const { id } = req.params;
-  const { image, imageBack } = req.files;
+  const images = req.files;
+  console.log("images: ",images);
+  const product = await db.Product.findByPk(id,{include:{association:"images"}});
+  console.log("product: ", product);
+  //Verifico si se subieron imagenes para el producto, si es asi elimino las imagenes anteriores y sus registros;
+  if (images.length > 0) {
+    //Busco las imagenes del producto
+    const oldImages = await db.Image.findAll({
+      where: { product_id: product.id },
+    });
 
-  db.Product.update(
+    //Elimino los archivos y los registros
+    oldImages.forEach((image) => {
+      fs.existsSync("public/images/" + image.name) &&
+        fs.unlinkSync("public/images/" + product.image, (err) => {
+          console.log("Se borro la imagen " + image.name);
+        });
+      image.destroy();
+    });
+
+    //Creo los nuevos registros
+
+    const grupoImagenes = images.map((element) => {
+      return { name: element.filename, product_id: product.id };
+    });
+
+    await db.Image.bulkCreate(grupoImagenes);
+  }
+  //Actualizo el producto y lo redirecciono al detalle
+  await product.update(
     {
       name: nombre.trim(),
       price: precio,
       discount: descuento,
       description: detalleProducto.trim(),
-      category_id: parseInt(categoria)
+      category_id: parseInt(categoria),
+      brand_id: parseInt(marca),
+      color_id: parseInt(color),
+      size_id: parseInt(talle),
     },
     { where: { id } }
-  ).then((resp) => {
-    console.log(resp);
-    if (image && existsSync("public/images/" + product.image)) {
-      unlinkSync("public/images/" + product.image);
-    }
+  );
 
-    if (imageBack && existsSync("public/images/" + product.imageBack)) {
-      unlinkSync("public/images/" + product.imageBack);
-    }
+  product.save();
 
-    return res.redirect(`/admin`);
-  });
+  return res.redirect(`/products/detail/${product.id}`);
 };
