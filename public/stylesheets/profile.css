@@ -24,28 +24,12 @@
   opacity: 0;
 }
 
-/*.telefono, .barrio{
-    position: absolute;
-    right: 50px;
-    
-  } */
 
 .icons__email__profile {
   margin-left: 73vw;
   margin-bottom: 10px;
 }
-/* .direccion{
-    bottom: 88px;
-  
-  }
-  .provincia{
-    bottom: -15px;
-  }
-  .form__label{
-    color: var(--colorgrisOscuro);
-    cursor: pointer;
-  }
-  */
+
 .profile__input {
   border: none;
   border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
@@ -92,12 +76,7 @@
   .icons__email__profile {
     margin-left: 60vh;
   }
-  /*.dirrcion {
-      bottom: 65px;
-  }
-  .provincia{
-    bottom: -40px;
-  }*/
+ 
 }
 
 /* DESKTOP */
@@ -124,11 +103,6 @@
   .icons__email__profile {
     margin-left: 58vh;
   }
-
-  /*.provincia {
-      top: 610px;
-  
-  }*/
 }
 
 /* DESKTOP */

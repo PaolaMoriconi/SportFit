@@ -34,10 +34,14 @@
               </div>
              
               <div class="col-6 col-md-3 mb-3">              
-                <input  name="image" type="file" class="form-control" id="image" hidden>
+                <input  name="images" type="file" class="form-control" id="image" hidden multiple>
                 <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>       
-            </div>   
-<div class="col-6  col-md-3 mb-3">
+            </div>
+            <% product.images.forEach(elemento => { %>
+              <img src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
+            <% }) %>
+            
+            <div class="col-6  col-md-3 mb-3">
             <div class="form-floating">
               <input name="precio" type="text" class="form-control" id="precio" value="<%= product.price %>">
               <label for="precio">Precio</label>
@@ -51,29 +55,92 @@
             </div>
           </div> 
 
-          <div class="col-6  col-md-3 mb-3">
+          <div class="col-12 col-md-6 mb-3">
             <div class="form-floating">
-              <select  name ="talles" class="form-select" id="talles" aria-label="Floating label select example">              
-                <option <%= product.talles === "s" && 'selected' %> value="s">S</option>
-                <option <%= product.talles === "m" && 'selected' %> value="m">M</option>
-                <option <%= product.talles === "l" && 'selected' %> value="l">L</option>
-                <option <%= product.talles === "xl" && 'selected' %> value="xl">XL</option>
-                <option <%= product.talles === "xxl" && 'selected' %> value="xxl">XXL</option>               
+              <select
+                name="talle"
+                class="form-select"
+                id="talle"
+                aria-label="Floating label select example"
+              >
+                <option value="" selected hidden></option>
+                <% talles.forEach(talle => { %>
+                <option value="<%= talle.id %>" <%= talle.id == product.size_id ? "selected" : null %>>
+                  <%= talle.name %>
+                </option>
+                <% }) %>
               </select>
-              <label for="talles">Talles</label>
-            </div>           
-          </div>  
+              <small class="text-danger"
+                ><%=locals.errors && errors.talles ?
+                errors.talles.msg : null %></small
+              >
+              <label for="categoria">Talles</label>
+            </div>
 
-              <div class="col-12 col-md-6 mb-3">
-                <div class="form-floating">
-                  <select  name ="categoria" class="form-select" id="categoria" aria-label="Floating label select example">
-                    <option <%= product.categories.name === "hombre" && 'selected' %> value="1">Hombre</option>
-                    <option <%= product.categories.name === "mujer" && 'selected' %> value="2">Mujer</option>
-                    
-                  </select>
-                  <label for="categoria">Categoria</label>
-                </div>
-               </div> 
+          <div class="col-12 col-md-6 mb-3">
+            <div class="form-floating">
+              <select
+                name="marca"
+                class="form-select"
+                id="marca"
+                aria-label="Floating label select example"
+              >
+                <option value="" selected hidden></option>
+                <% marcas.forEach(marca => { %>
+                <option value="<%= marca.id %>"  <%= marca.id == product.brand_id ? "selected" : null %>>
+                  <%= marca.name %>
+                </option>
+                <% }) %>
+              </select>
+              <small class="text-danger"
+                ><%=locals.errors && errors.marcas ?
+                errors.marcas.msg : null %></small
+              >
+              <label for="categoria">Marcas</label>
+            </div>
+            <div class="form-floating">
+              <select
+                name="color"
+                class="form-select"
+                id="color"
+                aria-label="Floating label select example"
+              >
+                <option value="" selected hidden></option>
+                <% colores.forEach(colores => { %>
+                <option value="<%= colores.id %>"  <%= colores.id == product.color_id ? "selected" : null %>>
+                  <%= colores.name %>
+                </option>
+                <% }) %>
+              </select>
+              <small class="text-danger"
+                ><%=locals.errors && errors.colores ?
+                errors.colores.msg : null %></small
+              >
+              <label for="colores">Colores</label>
+            </div>
+          </div>
+          <div class="form-floating">
+            <select
+              name="categoria"
+              class="form-select"
+              id="categoria"
+              aria-label="Floating label select example"
+            >
+              <option value="" selected hidden></option>
+              <% categorias.forEach(categoria => { %>
+              <option value="<%= categoria.id %>"  <%= categoria.id == product.category_id ? "selected" : null %>>
+                <%= categoria.name %>
+              </option>
+              <% }) %>
+            </select>
+            <small class="text-danger"
+              ><%=locals.errors && errors.categorias ?
+              errors.categorias.msg : null %></small
+            >
+            <label for="colores">categorias</label>
+          </div>
+        </div>
+
               <div class="col-12 mb-3">
                   <div class="form-floating">
                     <textarea name="detalleProducto" class="form-control"  id="detalleProducto" style="height: 150px;"> <%= product.description %> </textarea>

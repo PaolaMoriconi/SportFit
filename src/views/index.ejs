@@ -30,10 +30,26 @@
       </div>
 <div class="swiper-scrollbar"></div>
         </div>
-       
-     
+ <!-- Swiper -->
+ <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="/images/marcas/adidas.png" alt="adidas"></div>
+    <div class="swiper-slide"> <img src="/images/marcas/converse.png" alt="converse"> </div>
+    <div class="swiper-slide"> <img src="/images/marcas/fila.png" alt="fila"></div>
+    <div class="swiper-slide">  <img src="/images/marcas/footy-favicon.png" alt="footy"></div>
+    <div class="swiper-slide"> <img src="/images/marcas/john_foos.png" alt="john_foos"></div>
+    <div class="swiper-slide"><img src="/images/marcas/nike.png" alt="nike"></div>
+    <div class="swiper-slide"><img src="/images/marcas/olympikus.png" alt="olympikus"></div>
+    <div class="swiper-slide"><img src="/images/marcas/puma.png" alt="puma"></div>
+    <div class="swiper-slide"><img src="/images/marcas/reebok.png" alt="reebok"></div>
+    <div class="swiper-slide"><img src="/images/marcas/topper.png" alt="topper"></div>
+  </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
 
-      <div class="home__products">
+       <div class="home__products">
         <% products.forEach(product => { %>
         <article class="home__article ">
           <a href="/products/detail/<%= product.id %>">
@@ -67,6 +83,14 @@
 
     <%- include('./partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

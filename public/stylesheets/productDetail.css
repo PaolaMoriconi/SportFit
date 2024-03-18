@@ -39,6 +39,7 @@
 }
 .article--productDetail--imgFront {
   position: relative;
+  background-color: white;
  
 }
 .price {

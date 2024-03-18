@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
 const { Op } = require("sequelize");
+const {existsSync} = require('fs');
 /*
 const { leerJSON, escribirJSON } = require("../data");
 const User = require("../data/User");

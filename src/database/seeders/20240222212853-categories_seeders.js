@@ -12,6 +12,16 @@ module.exports = {
         name: 'Mujer',
         createdAt: new Date,
         updatedAt: new Date
+      },
+      {
+        name: 'Niños',
+        createdAt: new Date,
+        updatedAt: new Date
+      },
+      {
+        name: 'Accesorios',
+        createdAt: new Date,
+        updatedAt: new Date
       }], {});
   },
 
