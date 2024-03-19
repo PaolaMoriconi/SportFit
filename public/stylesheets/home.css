@@ -27,7 +27,12 @@ body.home {
  
 }
 .home__article__info p{
-text-decoration: line-through;
+  text-decoration: line-through;
+  color: black;
+}
+
+.home__article__info span{
+  color: darkgreen;
 }
 
 .home__article h2 {

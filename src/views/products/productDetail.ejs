@@ -15,14 +15,30 @@
         </div>
       </article>
         <article class="main__section__article--productDetail">
-          <div class="article--productDetail--img">
+          
            
             <div class="article--productDetail--imgFront">
-              <img
-                src="/images/products/<%=product.images.length > 0 ? product.images[0].name : 'Imagen_por_defecto.jpg'  %>"
-                alt=""
-              />
+             <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <% if(product.images.length > 0){ %>
+        <% product.images.forEach(imagen => {%>
+          <div class="swiper-slide">
+            <img
+                      src="/images/products/<%=imagen.name%>"
+                      alt=""
+                    />
             </div>
+      
+        <% }) %>
+      <% }else{ %>
+        <div class="swiper-slide">
+          <img
+                    src="/images/products/Imagen_por_defecto.jpg"
+                    alt=""
+                  />
+          </div>  
+      <% } %>
           </article>
 <article class="productDetail__info" >
                 
@@ -57,5 +73,29 @@
       </section>  
     </main>
     <%- include('../partials/footer') %>
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+     var swiper = new Swiper(".mySwiper", {
+       effect: "coverflow",
+       grabCursor: true,
+       centeredSlides: true,
+       slidesPerView: "auto",
+       coverflowEffect: {
+         rotate: 50,
+         stretch: 0,
+         depth: 100,
+         modifier: 1,
+         slideShadows: true,
+       },
+       pagination: {
+         el: ".swiper-pagination",
+       },
+     });
+   </script>
+  
+  
   </body>
 </html>

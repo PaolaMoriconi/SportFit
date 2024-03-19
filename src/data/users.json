@@ -25,5 +25,23 @@
       "password": "123456",
       "rol_id": 1,
       "image": "HUESO-1705735366835-327121706.png"
+   },
+   {
+      "name": "admin",
+      "surname": "uno",
+      "email": "admin@gmail.com",
+      "phone": 123456789,
+      "password": "123456",
+      "rol_id": 1,
+      "image": "HUESO-1705735366835-327121706.png"
+   },
+   {
+      "name": "user",
+      "surname": "uno",
+      "email": "user@gmail.com",
+      "phone": 987654321,
+      "password": "123456",
+      "rol_id": 2,
+      "image": "HUESO-1705735366835-327121706.png"
    }
 ]
