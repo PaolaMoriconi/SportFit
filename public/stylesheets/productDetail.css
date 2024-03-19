@@ -108,6 +108,16 @@
    text-align: center;
    border: 1px solid #000000;
    color: #000000;
+   display: flex;
+  flex-wrap: wrap;
+ }
+ .box--total small{
+  width: 100%;
+ }
+ .box--cantidad{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
  }
  .main__section--productDetail--description{
   text-align: center;

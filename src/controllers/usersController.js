@@ -67,11 +67,6 @@ module.exports = {
       });
     });
 
-    /*const user = users.find((elemento) => elemento.id == id);
-    return res.render("users/profile", {
-      usuario: user,
-      user: req.session.userLogin,
-    });*/
   },
   updateProfile: async (req, res) => {
     const errores = validationResult(req);
