@@ -25,7 +25,7 @@ module.exports = {
     updatedAt : new Date,
   },
   {
-    name: 'Vans',
+    name: 'Atomik',
     createdAt : new Date,
     updatedAt : new Date,
   },
@@ -33,7 +33,38 @@ module.exports = {
     name: 'Umbro',
     createdAt : new Date,
     updatedAt : new Date,
-  }], {});
+  },
+  {
+    name: 'Converse',
+    createdAt : new Date,
+    updatedAt : new Date,
+  },
+  {
+    name: 'Fila',
+    createdAt : new Date,
+    updatedAt : new Date,
+  },
+  {
+    name: 'Footy',
+    createdAt : new Date,
+    updatedAt : new Date,
+  },
+  {
+    name: 'John Foos',
+    createdAt : new Date,
+    updatedAt : new Date,
+  },
+  {
+    name: 'Olympikus',
+    createdAt : new Date,
+    updatedAt : new Date,
+  },
+  {
+    name: 'Rebook',
+    createdAt : new Date,
+    updatedAt : new Date,
+  }
+], {});
   
 },
 

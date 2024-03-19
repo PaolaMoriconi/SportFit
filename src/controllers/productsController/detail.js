@@ -7,19 +7,10 @@ module.exports = (req, res) => {
 
   db.Product.findByPk(id,{include:{association:"images"}})
   .then(product =>{
-    console.log(product.images);
     return res.render('products/productDetail', {
       product,user:req.session.userLogin
     })
     
   })
-
-  /*const product = products.find((product) => product.id == id)
-
-
-  res.render('products/productDetail', {
-       product,user:req.session.userLogin
-  
-  })*/
 
 }

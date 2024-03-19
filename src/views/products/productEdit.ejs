@@ -34,28 +34,29 @@
               </div>
              
               <div class="col-6 col-md-3 mb-3">              
-                <input  name="images" type="file" class="form-control" id="image" hidden multiple>
+                <input  name="images" type="file" class="form-control" id="image" hidden multiple >
                 <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>       
             </div>
+            <div class="productEdit__image">
             <% product.images.forEach(elemento => { %>
               <img src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
             <% }) %>
-            
-            <div class="col-6  col-md-3 mb-3">
+            </div>
+            <div class="col-6  col-md-3 mb-3 productEdit__cajas ">
             <div class="form-floating">
-              <input name="precio" type="text" class="form-control" id="precio" value="<%= product.price %>">
+              <input name="precio" type="text" class="form-control product__Edit__cajas2" id="precio" value="<%= product.price %>">
               <label for="precio">Precio</label>
             </div>
           </div>  
 
-          <div class="col-6  col-md-3 mb-3">
+          <div class="col-6  col-md-3 mb-3 productEdit__cajas">
             <div class="form-floating">
-              <input name="descuento" type="text" class="form-control" id="descuento" value="<%= product.discount %>">
+              <input name="descuento" type="text" class="form-control product__Edit__cajas2" id="descuento" value="<%= product.discount %>">
               <label for="descuento">Descuento</label>
             </div>
           </div> 
 
-          <div class="col-12 col-md-6 mb-3">
+          <div class="col-12 col-md-6 mb-3 productEdit__cajas" >
             <div class="form-floating">
               <select
                 name="talle"
@@ -77,7 +78,7 @@
               <label for="categoria">Talles</label>
             </div>
 
-          <div class="col-12 col-md-6 mb-3">
+          <div class="col-12 col-md-6 mb-3 productEdit__cajas">
             <div class="form-floating">
               <select
                 name="marca"
@@ -98,7 +99,7 @@
               >
               <label for="categoria">Marcas</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating productEdit__cajas">
               <select
                 name="color"
                 class="form-select"

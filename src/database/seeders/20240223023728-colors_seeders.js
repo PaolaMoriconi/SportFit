@@ -32,7 +32,32 @@ module.exports = {
         name: 'Rosa',
         createdAt : new Date,
         updatedAt : new Date,
-      }], {});
+      },
+      {
+        name: 'Negro',
+        createdAt : new Date,
+        updatedAt : new Date,
+      },
+      {
+        name: 'Celeste',
+        createdAt : new Date,
+        updatedAt : new Date,
+      },{
+        name: 'Naranja',
+        createdAt : new Date,
+        updatedAt : new Date,
+      },
+      {
+        name: 'Blanco',
+        createdAt : new Date,
+        updatedAt : new Date,
+      },
+      {
+        name: 'Gris',
+        createdAt : new Date,
+        updatedAt : new Date,
+      },
+    ], {});
     
   },
 
