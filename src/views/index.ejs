@@ -43,6 +43,8 @@
     <div class="swiper-slide"><img src="/images/marcas/puma.png" alt="puma"></div>
     <div class="swiper-slide"><img src="/images/marcas/reebok.png" alt="reebok"></div>
     <div class="swiper-slide"><img src="/images/marcas/topper.png" alt="topper"></div>
+    <div class="swiper-slide"><img src="/images/marcas/atomik.png" alt="reebok"></div>
+    <div class="swiper-slide"><img src="/images/marcas/umbro.png" alt="topper"></div>
   </div>
   </div>
   <div class="swiper-button-next"></div>
@@ -54,7 +56,7 @@
         <article class="home__article ">
           <a href="/products/detail/<%= product.id %>">
             <img
-              src="/images/products/<%= product.image || 'Imagen_por_defecto.jpg'  %>"
+              src="/images/products/<%= product.images.length > 0 ? product.images[0].name : 'Imagen_por_defecto.jpg'  %>"
               alt="<%= product.name %>"
             />
             <div class="home__article__info box">

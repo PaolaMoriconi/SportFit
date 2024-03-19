@@ -3,16 +3,16 @@ const { Op } = require("sequelize");
 module.exports = async (req, res) => {
   try {
     const { categorie } = req.query;
-    let products;
+    
+    let query = {include:{association:'images'}};
+
     if (categorie) {
-      products = await db.Product.findAll({
-        where: {
+      query.where = {
           category_id: categorie,
-        },
-      });
-    } else {
-      products = await db.Product.findAll();
-    }
+        }
+      }
+
+    const products = await db.Product.findAll(query);
     
     return res.render("products/products", {
       products,

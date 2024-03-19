@@ -19,8 +19,8 @@
            
             <div class="article--productDetail--imgFront">
               <img
-                src="/images/products/<%=product.images[0].name %>"
-                alt="camisetaBocaHombre"
+                src="/images/products/<%=product.images.length > 0 ? product.images[0].name : 'Imagen_por_defecto.jpg'  %>"
+                alt=""
               />
             </div>
           </article>
@@ -31,11 +31,11 @@
             <div class="article--productDetail--talles">
               <span>Talles</span>
               <div class="article--productDetail--sizes">
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
-                <p>XXL</p>
+                <a>S</a>
+                <a>M</a>
+                <a>L</a>
+                <a>XL</>
+                <a>XXL</a>
               </div>
             </div>
           </div>
