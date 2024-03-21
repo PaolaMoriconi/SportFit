@@ -25,8 +25,12 @@ body.list_products__body
   padding-top:10px ;
 }
 .list_products__article__info p{
-text-decoration: none;
+text-decoration: line-through;
+color: black;
 }
+.list_products__article__info span{
+  color: darkgreen;
+  }
 
 .list_products__article h2 {
   text-align: center;

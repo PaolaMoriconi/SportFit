@@ -34,18 +34,18 @@
           
           <div class="form__group">
             <label class="form__label"  for="direccion">direccion</label>
-            <input id="input_direccion"  class="profile__input " type="direccion"  name="adress" value="<%= locals.usuario && usuario.address ? usuario.address[0].address : locals.old ? old.address : null %>">
+            <input id="input_direccion"  class="profile__input " type="direccion"  name="adress" value="<%= locals.usuario && usuario.address.length > 1 ? usuario.address[0].address : locals.old ? old.address : null %>">
             
           </div>
 
           <div class="form__group">
             <label class="form__label"  for="provincia">Provincia</label>
-            <input id="input_provincia" class="profile__input " type="provincia" name="state" value="<%= locals.usuario && usuario.address ? usuario.address[0].city : locals.old ? old.state : null %>">
+            <input id="input_provincia" class="profile__input " type="provincia" name="state" value="<%= locals.usuario && usuario.address.length > 1 ? usuario.address[0].city : locals.old ? old.state : null %>">
             
           </div>
           <div class="form__group">
             <label class="form__label"  for="barrio">Barrio</label>
-            <input id="input_barrio" class="profile__input " type="barrio" name="district" value="<%= locals.usuario && usuario.address ? usuario.address[0].province : locals.old ? old.district : null %>">
+            <input id="input_barrio" class="profile__input " type="barrio" name="district" value="<%= locals.usuario && usuario.address.length > 1 ? usuario.address[0].province : locals.old ? old.district : null %>">
             </div>
           <div class="form__group">
             <label class="form__label"  for="telefono" >Telefono</label>

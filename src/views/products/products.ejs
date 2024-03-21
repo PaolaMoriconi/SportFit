@@ -17,14 +17,13 @@
               alt="<%= product.name %>"
             />
             <div class="list_products__article__info">
-              <h2><%= product.name %></h2>
-              <p>$<%= product.price %></p>
               <% if (product.discount) { %>
-
-                <p>precio con descuento $<%= product.price*product.discount/100 %></p>
-
+                <p>$<%= product.price %></p>
+                <span>$<%= product.price*product.discount/100 %></span>
+              <% }else{ %>
+              <span>$<%= product.price %></span>
               <% } %>
-              <p><%= product.description %></p>
+             
             </div>
           </a>
         </article>
