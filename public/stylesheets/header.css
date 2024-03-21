@@ -35,8 +35,23 @@
 }
 
 .icon--sportfit img {
-  width: 60px;
+  animation: rotar 5s linear infinite
 }
+
+.icon--sportfit img:hover{
+  cursor:pointer
+}
+
+@keyframes rotar{
+  from{
+    transform: rotateY(-180deg)
+  }
+  to{
+    transform: rotateY(180deg)
+  }
+
+}
+
 .accordion-item:last-of-type .accordion-button.collapsed{
   padding-top: 3px;
   padding-bottom: 0px;
