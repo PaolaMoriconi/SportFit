@@ -1,171 +1,164 @@
 <!DOCTYPE html>
 <html lang="ES">
 
-<%- include('../partials/head', {
-  title : 'Editar'
-}) %>
+<%- include('../partials/head', { title : 'Editar' }) %>
 
-<body>
-  <%- include('../partials/headerAdmin') %>
-  
-  <main class="container">  
-    <section class="row my-5">
-      <div class="col-12 col-md-10 mx-auto">
-        <div class="card">
-          <div class="card-header d-flex justify-content-between">
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/admin" class="text-primary">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Editando "<%= product.nombre %>"</li>
-              </ol>
-            </nav>      
-          </div>
-          <div class="card-body">
-            
-            <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
-              <h4> Editando <%= product.name %> </h4>
-              <hr>
+  <body class="bg-light">
 
-              <div class="col-12 col-md-6 mb-3">
-                <div class="form-floating">
-                  <input name="nombre" type="text" class="form-control" id="nombre" value="<%= product.name %>">
-                  <label for="nombre">Nombre</label>
-                </div>               
+    <%- include('../partials/headerAdmin') %>
+
+      <main class="container">
+        <section class="row my-5">
+          <div class="col-12 col-md-10 mx-auto">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <nav
+                  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+                  aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/admin" class="text-primary">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Editando "<%= product.nombre %>"</li>
+                  </ol>
+                </nav>
               </div>
-             
-              <div class="col-6 col-md-3 mb-3">              
-                <input  name="images" type="file" class="form-control" id="image" hidden multiple >
-                <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>       
-            </div>
-            <div class="productEdit__image">
-            <% product.images.forEach(elemento => { %>
-              <img src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
-            <% }) %>
-            </div>
-            <div class="col-6  col-md-3 mb-3 productEdit__cajas ">
-            <div class="form-floating">
-              <input name="precio" type="text" class="form-control product__Edit__cajas2" id="precio" value="<%= product.price %>">
-              <label for="precio">Precio</label>
-            </div>
-          </div>  
+              <div class="card-body">
 
-          <div class="col-6  col-md-3 mb-3 productEdit__cajas">
-            <div class="form-floating">
-              <input name="descuento" type="text" class="form-control product__Edit__cajas2" id="descuento" value="<%= product.discount %>">
-              <label for="descuento">Descuento</label>
-            </div>
-          </div> 
+                <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST"
+                  enctype="multipart/form-data">
+                  <h4> Editando <%= product.name %>
+                  </h4>
+                  <hr>
 
-          <div class="col-12 col-md-6 mb-3 productEdit__cajas" >
-            <div class="form-floating">
-              <select
-                name="talle"
-                class="form-select"
-                id="talle"
-                aria-label="Floating label select example"
-              >
-                <option value="" selected hidden></option>
-                <% talles.forEach(talle => { %>
-                <option value="<%= talle.id %>" <%= talle.id == product.size_id ? "selected" : null %>>
-                  <%= talle.name %>
-                </option>
-                <% }) %>
-              </select>
-              <small class="text-danger"
-                ><%=locals.errors && errors.talles ?
-                errors.talles.msg : null %></small
-              >
-              <label for="categoria">Talles</label>
-            </div>
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <input name="nombre" type="text" class="form-control" id="nombre" value="<%= product.name %>">
+                      <label for="nombre">Nombre</label>
+                    </div>
+                  </div>
 
-          <div class="col-12 col-md-6 mb-3 productEdit__cajas">
-            <div class="form-floating">
-              <select
-                name="marca"
-                class="form-select"
-                id="marca"
-                aria-label="Floating label select example"
-              >
-                <option value="" selected hidden></option>
-                <% marcas.forEach(marca => { %>
-                <option value="<%= marca.id %>"  <%= marca.id == product.brand_id ? "selected" : null %>>
-                  <%= marca.name %>
-                </option>
-                <% }) %>
-              </select>
-              <small class="text-danger"
-                ><%=locals.errors && errors.marcas ?
-                errors.marcas.msg : null %></small
-              >
-              <label for="categoria">Marcas</label>
-            </div>
-            <div class="form-floating productEdit__cajas">
-              <select
-                name="color"
-                class="form-select"
-                id="color"
-                aria-label="Floating label select example"
-              >
-                <option value="" selected hidden></option>
-                <% colores.forEach(colores => { %>
-                <option value="<%= colores.id %>"  <%= colores.id == product.color_id ? "selected" : null %>>
-                  <%= colores.name %>
-                </option>
-                <% }) %>
-              </select>
-              <small class="text-danger"
-                ><%=locals.errors && errors.colores ?
-                errors.colores.msg : null %></small
-              >
-              <label for="colores">Colores</label>
-            </div>
-          </div>
-          <div class="form-floating">
-            <select
-              name="categoria"
-              class="form-select"
-              id="categoria"
-              aria-label="Floating label select example"
-            >
-              <option value="" selected hidden></option>
-              <% categorias.forEach(categoria => { %>
-              <option value="<%= categoria.id %>"  <%= categoria.id == product.category_id ? "selected" : null %>>
-                <%= categoria.name %>
-              </option>
-              <% }) %>
-            </select>
-            <small class="text-danger"
-              ><%=locals.errors && errors.categorias ?
-              errors.categorias.msg : null %></small
-            >
-            <label for="colores">categorias</label>
-          </div>
-        </div>
+                  <div class="col-6  col-md-3 mb-3 ">
+                    <div class="form-floating">
+                      <input name="precio" type="text" class="form-control " id="precio"
+                        value="<%= product.price %>">
+                      <label for="precio">Precio</label>
+                    </div>
+                  </div>
 
-              <div class="col-12 mb-3">
-                  <div class="form-floating">
-                    <textarea name="detalleProducto" class="form-control"  id="detalleProducto" style="height: 150px;"> <%= product.description %> </textarea>
-                    <label for="detalleProducto">Descripción</label>
-                  </div> 
+                  <div class="col-6  col-md-3 mb-3">
+                    <div class="form-floating">
+                      <input name="descuento" type="text" class="form-control " id="descuento"
+                        value="<%= product.discount %>">
+                      <label for="descuento">Descuento</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select name="talle" class="form-select" id="talle" aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% talles.forEach(talle=> { %>
+                          <option value="<%= talle.id %>" <%=talle.id==product.size_id ? "selected" : null %>>
+                            <%= talle.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <label for="categoria">Talles</label>
+                    </div>
+
+                    <small class="text-danger">
+                      <%=locals.errors && errors.talles ? errors.talles.msg : null %>
+                    </small>
+                  </div>
+
+
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select name="marca" class="form-select" id="marca" aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% marcas.forEach(marca=> { %>
+                          <option value="<%= marca.id %>" <%=marca.id==product.brand_id ? "selected" : null %>>
+                            <%= marca.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+
+                      <label for="categoria">Marcas</label>
+                    </div>
+                    <small class="text-danger">
+                      <%=locals.errors && errors.marcas ? errors.marcas.msg : null %>
+                    </small>
+                  </div>
+
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select name="color" class="form-select" id="color" aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% colores.forEach(colores=> { %>
+                          <option value="<%= colores.id %>" <%=colores.id==product.color_id ? "selected" : null %>>
+                            <%= colores.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.colores ? errors.colores.msg : null %>
+                      </small>
+                      <label for="colores">Colores</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select name="categoria" class="form-select" id="categoria"
+                        aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% categorias.forEach(categoria=> { %>
+                          <option value="<%= categoria.id %>" <%=categoria.id==product.category_id ? "selected" : null
+                            %>>
+                            <%= categoria.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.categorias ? errors.categorias.msg : null %>
+                      </small>
+                      <label for="categoria">categorias</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 mb-3">
+                    <div class="form-floating">
+                      <textarea name="detalleProducto" class="form-control" id="detalleProducto"
+                        style="height: 150px;"> <%= product.description %> </textarea>
+                      <label for="detalleProducto">Descripción</label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 mb-3">
+                    <div class="border" style="height: 300px;">
+                      <% product.images.forEach(elemento=> { %>
+                        <img src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
+                        <% }) %>
+                    </div>
+                  </div>
+
+                  <div class="col-12 d-flex justify-content-between">
+                    <div>
+                      <input name="images" type="file" class="form-control" id="image" hidden multiple>
+                      <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagen</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary">Guardar</l>
+                  </div>
+                </form>
               </div>
-            <div class="col-12 d-flex justify-content-end">
-              <button class="btn btn-lg btn-primary" >Guardar</l>      
+            </div>
           </div>
-              
-       </form>
-            
-            
 
-          </div>
-        </div>
-      </div>
+        </section>
+      </main>
 
-    </section>
-  </main>
 
-  
- 
-  
-</body>
+
+
+  </body>
 
 </html>
