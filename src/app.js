@@ -12,6 +12,7 @@ const transferLocals=require("./middlewares/transferLocals")
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
+const apiRouter = require("./routes/api/apiRouter")
 const { constants } = require('buffer');
 
 const app = express();
@@ -39,6 +40,7 @@ app.use(session( {
 app.use(cookieValidator);
 app.use(transferLocals)
 
+app.use('/apis', apiRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);

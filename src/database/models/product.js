@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     color_id: DataTypes.INTEGER,
     size_id: DataTypes.INTEGER,
     brand_id:DataTypes.INTEGER
-  }, {
+  }, 
+  {
     sequelize,
     modelName: 'Product',
   });
