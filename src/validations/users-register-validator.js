@@ -10,9 +10,8 @@ module.exports = [
       min: 3,
     })
     .withMessage('Minimo tres caracteres')
-    .bail()
-    .isAlpha('es-ES', { ignore: ' ' })
-    .withMessage('Solo caracteres alfabéticos'),
+    .bail(),
+
 
   check('surname')
     .notEmpty()
@@ -22,9 +21,8 @@ module.exports = [
       min: 3,
     })
     .withMessage('Minimo tres caracteres')
-    .bail()
-    .isAlpha('es-ES', { ignore: ' ' })
-    .withMessage('Solo caracteres alfabéticos'),
+    .bail(),
+
 
   body('email')
     .notEmpty()

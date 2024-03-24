@@ -13,7 +13,7 @@ isAdmin
 /* / */
 router
   .get('/', index)
-  .get('/admin',isAdmin, admin)
+  .get('/admin', admin)
   .get('/cart', cart)
   .get('/admin/products/search', searchAdmin)
   .get('/search', search)

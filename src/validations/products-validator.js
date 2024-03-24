@@ -8,9 +8,13 @@ module.exports = [
     }
     return true
      }).withMessage("Debe seleccionar una imagen para la portada del producto"),
-  body("precio").notEmpty().withMessage("Este campo es obligario").bail(),
-
-  body("talles").notEmpty().withMessage("Este campo es obligario").bail(),
+     
+  body("precio").notEmpty().withMessage("Este campo es obligario").bail()
+  .isNumeric().withMessage("Debe ser un valor numerico"),
+  body("descuento").notEmpty().withMessage("Este campo es obligario").bail()
+  .isNumeric().withMessage("Debe ser un valor numerico"),
+  
+  body("marca").notEmpty().withMessage("Este campo es obligario").bail(),
   body("categoria").notEmpty().withMessage("Este campo es obligario").bail(),
   body("colores").notEmpty().withMessage("Este campo es obligario").bail(),
   body("detalleProducto").notEmpty().withMessage("Este campo es obligario").bail(),

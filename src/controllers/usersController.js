@@ -160,7 +160,7 @@ module.exports = {
           province: "",
         }).then((adress) => {
           console.log(adress);
-          return res.redirect("/users/profile");
+          return res.redirect("/");
         });
       });
     } else {
