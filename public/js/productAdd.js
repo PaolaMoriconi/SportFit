@@ -50,7 +50,11 @@ form.elements[i].addEventListener("blur",(e)=>{
     form.addEventListener("submit", (e) =>{
         let error =  0
          for (let i = 0; i < form.elements.length -1; i++) {
-            
+            if (form.elements[i].value === "") {
+                alerta[i].textContent="Formulario vacio"
+                form.elements[i].className="form-control is-invalid"
+            }
+    
             if (!imagen.files.length) {
                 alerta[8].textContent="Debes subir al menos una imagen"
             }else{

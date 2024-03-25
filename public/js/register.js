@@ -59,7 +59,7 @@ form.elements[i].addEventListener("blur",async (e)=>{
             form.elements[4].className="form-control is-invalid"
             }
             //SI LA CONTRASEÑA TIENE MENOS DE 5 CARACTERES
-            if (form.elements[3].value.length>5) {
+            if (form.elements[3].value.length < 5) {
                 alerta[3].textContent="La contraseña debe tener mas de 5 caracteres"
                 form.elements[3].className="form-control is-invalid"
             }
@@ -87,12 +87,18 @@ form.elements[i].addEventListener("blur",async (e)=>{
     form.addEventListener("submit", (e) =>{
         let error = 0
     for (let i = 0; i < form.elements.length -3; i++) {
-
+        if (form.elements[i].value === "") {
+            alerta[i].textContent="Formulario vacio"
+            form.elements[i].className="form-control is-invalid"
+    
+        }
         if(form.elements[i].classList.value== "form-control is-valid" ){
             error++
         }
-       
-        if (error === 5 && checkBox.checked) {
+        console.log(alerta[i])
+  checkBox.checked? alerta[7].textContent="": alerta[5].textContent="Debes aceptar terminos y donciciones" 
+
+        if(error === 5 && checkBox.checked) {
             form.submit()
         }  
     }
