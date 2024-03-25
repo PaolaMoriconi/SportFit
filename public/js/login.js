@@ -31,36 +31,30 @@ const checkEmail = async (email)  =>{
 //////////////////////////////////////////////////
     for (let i = 0; i < form.elements.length-2; i++) {
 
-    form.elements[i].addEventListener("blur", async(e)=>{
+    form.addEventListener("submit", async(e)=>{
+        e.preventDefault()
+        if ( form[i].value !== "") {
+            alerta[i].textContent=""
+        }
 
-            if ( form[i].value == "") {
-                alerta[i].textContent="formulario vacio"
-            }
-            if ( form[i].value !== "") {
-                alerta[i].textContent=""
-            }
+            switch (true) {
+                case await checkPassword(email.value,password.value):
+                    form.submit()
+                    break;
+    
+                case await checkEmail(email.value):
+                    alerta[1].textContent="contraseña incorrecta"
+                    break;
+                default:
+                    alerta[1].textContent="este usuario no esta registrado"
+                    break;
+                }
+
+                if ( form[i].value == "") {
+                    alerta[i].textContent="Campo vacio"
+                }
+               
    })    
     }
 
 
-
-
-    form.addEventListener("submit",async(e) =>{
-        e.preventDefault()
-        switch (true) {
-            case await checkPassword(email.value,password.value):
-                form.submit()
-                break;
-            case await checkPassword(email.value,password.value):
-                alerta[1].textContent="contraseña incorrecta"
-                break;
-            default:
-                alerta[1].textContent="este usuario no esta registrado"
-                break;
-        }
-      
-
-    }
-   
-    
-    )  
