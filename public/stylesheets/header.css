@@ -35,6 +35,8 @@
 }
 
 .icon--sportfit img {
+  width:15%;
+  padding-top: 10px;
   animation: rotar 5s linear infinite
 }
 
@@ -59,6 +61,16 @@
 .accordion-body{
   display: flex;
   flex-direction: column;
+  }
+
+.mouse{
+  transition: background 0.5s linear;
+ 
+}
+.mouse:hover{
+  
+  background: rgba(0, 255, 255, 0.661);
+transition: background 2s linear;
 }
 .accordion{
  z-index: 40;

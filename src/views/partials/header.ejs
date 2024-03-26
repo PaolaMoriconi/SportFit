@@ -37,21 +37,21 @@
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
               <div class="accordion-body">
-               <a href="/users/perfil/<%= user.id %>"><strong style="color: rgb(65, 65, 77);">Perfil</strong></a> 
+               <a class="mouse" href="/users/perfil/<%= user.id %>"><strong style="color: rgb(65, 65, 77);">Perfil</strong></a> 
               
               <% if (locals.user && user.rol == "admin") { %>
                 
-                  <a href="/admin"><strong style="color: rgb(65, 65, 77);">Dashboard</strong></a> 
+                  <a  class="mouse" href="/admin"><strong class="mouse" style="color: rgb(65, 65, 77);">Dashboard</strong></a> 
                  
                 <% } %>
              
               <% if (locals.user && user.rol == "user") { %>
                 
-                  <a href="/cart"><strong style="color: rgb(65, 65, 77);">Carrito</strong></a> 
+                  <a  class="mouse" href="/cart"><strong style="color: rgb(65, 65, 77);">Carrito</strong></a> 
                  
                 <% } %>
               
-                <a href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
+                <a  class="mouse" href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
               
             </div>
           </div>
