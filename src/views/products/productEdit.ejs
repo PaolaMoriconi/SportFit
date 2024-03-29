@@ -145,9 +145,11 @@
                   </div>
 
                   <div class="col-12 mb-3">
-                    <div class="border" style="height: 300px;">
+                    <div class="border rounded p-3" >
                       <% product.images.forEach(elemento=> { %>
-                        <img src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
+                      <div class="col-12 col-md-3 col-lg-4">
+                        <img class="img-fluid"  src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
+                      </div>
                         <% }) %>
                     </div>
                   </div>

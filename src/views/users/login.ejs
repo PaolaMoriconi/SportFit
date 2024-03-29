@@ -7,6 +7,7 @@
       <section class="login__body__main__section">
         <div class="login__body__main__section--bienvenido">
           <h2>bienvenido</h2>
+          <hr>
         </div>
         <form id="loginForm" action="" method="POST">
           <div class="login__box">
@@ -31,26 +32,29 @@
                 class="login__input"
                 id="password"
                 type="password"
-                placeholder="Contraseña"
+                placeholder="Escribe tu contraseña"
                 name="password"
               /><i class="fa-solid fa-lock"></i>
+              <a href="" class="opciones__login">
+                ¿Olvidaste la contraseña?
+              </a>
               <small class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null %></small>
             </div>
           </div>
-          <div class="opciones__login">
+          <div class="">
             <input type="checkbox" id="remember" name="remember" />
             <label for="remember" id="remember-check">Recuerdame</label>
-            <a href="" class="link">
-              <p>¿Olvidaste la contraseña?</p>
-            </a>
-          </div>
-          <div class="opciones__login--register">
-            <p>¿No tienes cuenta?</p>
-            <a href="register"><p>Registrate</p></a>
+           
           </div>
           <div class="container--boton">
             <button class="boton" type="submit">Iniciar Sesion</button>
           </div>
+         
+          <div class="opciones__login--register">
+            <p>¿No tienes cuenta?</p>
+            <a href="register"><p>Registrate</p></a>
+          </div>
+        
         </form>
       </section>
     </main>

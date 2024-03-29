@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-     this.hasMany(models.Product,{as:"products",foreignKey:"size_id"})
+      this.belongsToMany(models.Product, {
+        as : 'sizes',
+        otherKey : 'product_id',
+        foreignKey : 'size_id',
+        through : 'products_sizes'
+      })
     }
   }
   Size.init({
