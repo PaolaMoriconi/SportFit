@@ -272,6 +272,8 @@ CREATE TABLE `products_sizes` (
   `product_id` int DEFAULT NULL,
   `size_id` int DEFAULT NULL,
   `quantity` int DEFAULT NULL,
+	`createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_product_size_idx` (`product_id`),
   KEY `fk_size_product_idx` (`size_id`),

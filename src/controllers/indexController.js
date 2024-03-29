@@ -14,7 +14,8 @@ module.exports = {
       });
   },
   admin: (req, res) => {
-    db.Product.findAll({
+
+    const products = db.Product.findAll({
       include: [
         {
           association: "images",
@@ -22,10 +23,19 @@ module.exports = {
         {
           association: "categories",
         },
+        {
+          association : 'sizes'
+        }
       ],
-    }).then((products) => {
+    })
+    
+    const sizes = db.Size.findAll()
+    
+    Promise.all([products,sizes])
+    .then(([products, sizes]) => {
       return res.render("dashboard", {
         products,
+        sizesList : sizes,
         user: req.session.userLogin,
       });
     });
