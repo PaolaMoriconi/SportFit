@@ -1,14 +1,15 @@
 const db = require("../database/models");
 const { Op } = require("sequelize");
-const { leerJSON } = require("../data");
 
 module.exports = {
   index: async function (req, res) {
     
     const products = await db.Product.findAll({ include: [{association: "images"}]})
+    const brands = await db.Brand.findAll()
 
     return res.render("index", {
         products,
+        brands,
         user: req.session.userLogin,
       });
   },

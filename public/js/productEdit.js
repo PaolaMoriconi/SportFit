@@ -60,7 +60,7 @@ form.elements[i].addEventListener("blur",(e)=>{
             if (form.elements[i].className=="form-control is-valid") {
                 error ++
             }}
-            if (error == 9) {
+            if (error !== 9) {
                 form.submit()
             }
        

@@ -6,20 +6,39 @@ const fs = require('fs');
 module.exports = async (req, res) => {
   const errors = validationResult(req);
   const images = req.files;
+
+  let { nombre, precio, descuento, talles, section, descripcion, categoria, color, marca } = req.body;
+    
+
+
   if (errors.isEmpty()) {
     try {
-      const { nombre, precio, descuento, talles, detalleProducto, categoria, colores, marca } = req.body;
     
       const product = await db.Product.create({
         name: nombre,
         price: precio,
         discount: descuento,
-        description: detalleProducto,
+        description: descripcion,
         category_id: categoria,
-        size_id: talles,
-        color_id: colores,
+        section_id: section,
+        color_id: color,
         brand_id: marca 
       })
+
+      if(talles){
+        if(typeof talles == "string"){
+          talles = [talles]
+        }
+
+        talles.forEach( async t => {
+
+          await db.ProductSize.create({
+            product_id : product.id,
+            size_id : t
+          })
+        
+        });
+      }
 
       const grupoImagenes = images.map(element => {
           return {name:element.filename,product_id:product.id}
@@ -42,10 +61,21 @@ module.exports = async (req, res) => {
 
     } else {
     
-      const colores = db.Color.findAll();
-      const categorias = db.Category.findAll();
-      const talles = db.Size.findAll();
-      const marcas = db.Brand.findAll();
+      const colores = db.Color.findAll({
+        order : ['name']
+    })
+    const categorias = db.Category.findAll({
+        order : ['name']
+    })
+    const marcas = db.Brand.findAll({
+        order : ['name']
+    })
+    const sections = db.Section.findAll({
+        order : ['name']
+    })
+
+    const talles = db.Size.findAll()
+
     
     //Borro las imagenes que se subieron
     images.forEach(image => {
@@ -58,7 +88,9 @@ module.exports = async (req, res) => {
       }
     })
 
-    Promise.all([colores, categorias, talles,marcas]).then(([colores, categorias,talles,marcas]) => {
+    Promise.all([colores, categorias, sections,marcas, talles])
+    
+    .then(([colores, categorias,sections,marcas, talles]) => {
       
       res.render("products/productAdd", {
         user: req.session.userLogin,
@@ -67,7 +99,8 @@ module.exports = async (req, res) => {
         colores,
         categorias,
         talles,
-        marcas
+        marcas,
+        sections
       });
     });
   }

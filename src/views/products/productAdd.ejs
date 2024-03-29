@@ -40,6 +40,85 @@
                         <%=locals.errors && errors.nombre ? errors.nombre.msg : null %>
                       </small>
                     </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating">
+                        <select name="categoria" class="form-select" id="categoria"
+                          aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% categorias.forEach(categorie=> { %>
+                            <option value="<%= categorie.id %>">
+                              <%= categorie.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+
+                        <label for="categoria">Categoria</label>
+
+                      </div>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.categoria ? errors.categoria.msg : null %>
+                      </small>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating">
+                        <select name="section" class="form-select" id="section"
+                          aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% sections.forEach(section=> { %>
+                            <option value="<%= section.id %>">
+                              <%= section.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+
+                        <label for="section">Sección</label>
+
+                      </div>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.section ? errors.section.msg : null %>
+                      </small>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                      <div class="form-floating">
+                        <select name="marca" class="form-select" id="marca" aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% marcas.forEach(marca=> { %>
+                            <option value="<%= marca.id %>">
+                              <%= marca.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+
+                        <label for="marcas">Marca</label>
+                      </div>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.marca ? errors.marca.msg : null %>
+                      </small>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                      <div class="form-floating">
+                        <select name="color" class="form-select" id="color"
+                          aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% colores.forEach(color=> { %>
+                            <option value="<%= color.id %>">
+                              <%= color.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+
+                        <label for="color">Color</label>
+                      </div>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.color ? errors.color.msg : null %>
+                      </small>
+                    </div>
+               
+
 
 
                     <div class="col-6 col-md-3 mb-3">
@@ -68,95 +147,32 @@
                         <%=locals.errors && errors.descuento ? errors.descuento.msg : null %>
                       </small>
                     </div>
-
-                    <div class="col-12 col-md-6 mb-3">
+                    <div class="col-12 mb-3">
                       <div class="form-floating">
-                        <select name="talles" class="form-select" id="talles"
-                          aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% talles.forEach(talles=> { %>
-                            <option value="<%= talles.id %>">
-                              <%= talles.name %>
-                            </option>
-                            <% }) %>
-                        </select>
+                        <textarea name="descripcion" class="form-control" id="descripcion"
+                          style="height: 150px"></textarea>
 
-                        <label for="categoria">Talles</label>
+                        <label for="descripcion">Descripción</label>
                       </div>
                       <small class="text-danger">
-                        <%=locals.errors && errors.talles ? errors.talles.msg : null %>
-                      </small>
-                    </div>
-
-                    <div class="col-12 col-md-6 mb-3">
-                      <div class="form-floating">
-                        <select name="categoria" class="form-select" id="categoria"
-                          aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% categorias.forEach(categorie=> { %>
-                            <option value="<%= categorie.id %>">
-                              <%= categorie.name %>
-                            </option>
-                            <% }) %>
-                        </select>
-
-                        <label for="categoria">Categoria</label>
-
-                      </div>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.categoria ? errors.categoria.msg : null %>
-                      </small>
-                    </div>
-                    <div class="col-12 col-md-6 mb-3">
-
-                      <div class="form-floating">
-                        <select name="colores" class="form-select" id="categoria"
-                          aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% colores.forEach(colores=> { %>
-                            <option value="<%= colores.id %>">
-                              <%= colores.name %>
-                            </option>
-                            <% }) %>
-                        </select>
-
-                        <label for="colores">Colores</label>
-                      </div>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.colores ? errors.colores.msg : null %>
-                      </small>
-                    </div>
-                    <div class="col-12 col-md-6 mb-3">
-
-                      <div class="form-floating">
-                        <select name="marca" class="form-select" id="marca" aria-label="Floating label select example">
-                          <option value="" selected hidden></option>
-                          <% marcas.forEach(marca=> { %>
-                            <option value="<%= marca.id %>">
-                              <%= marca.name %>
-                            </option>
-                            <% }) %>
-                        </select>
-
-                        <label for="colores">Marca</label>
-                      </div>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.marca ? errors.marca.msg : null %>
+                        <%=locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
                       </small>
                     </div>
 
                     <div class="col-12 mb-3">
-                      <div class="form-floating">
-                        <textarea name="detalleProducto" class="form-control" id="detalleProducto"
-                          style="height: 150px"></textarea>
+                      <label class="form-label">Talles</label>
 
-                        <label for="detalleProducto">Descripción</label>
-                      </div>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.detalleProducto ? errors.detalleProducto.msg : null %>
-                      </small>
+                      <div class="d-flex">
+                        <% talles.forEach(t => { %>
+                          <div class="form-check" >
+                            <input class="form-check-input-lg" name="talles" type="checkbox" value="<%= t.id %>" id="<%= t.id + t.name %>">
+                            <label class="form-check-label" for="<%= t.id + t.name %>">
+                              <%= t.name %>
+                            </label>
+                          </div>
+                        <% }) %>
+                      </div>                      
                     </div>
-                    
                     <div class="col-12 d-flex justify-content-between">
                       <div>
                         <input
@@ -164,7 +180,7 @@
                           type="file" name="images" id="images" value="<%= locals.old && old.image ? old.image : null %>"
                           multiple hidden />
 
-                        <label class="btn btn-lg btn-outline-dark w-100" for="images">Imagen</label>
+                        <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
                       </div>
                       <small class="text-danger">
                         <%=locals.errors && errors.image ? errors.image.msg : null %>
@@ -179,7 +195,7 @@
             </div>
           </section>
         </main>
-        <script src="/js/productAdd.js"></script>
+        <!-- <script src="/js/productAdd.js"></script> -->
   </body>
 
 </html>
