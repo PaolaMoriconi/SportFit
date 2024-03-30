@@ -54,8 +54,8 @@
                       <div class="d-flex">
                         <% sizesList.forEach(s => { %>
                           <div class="form-check" >
-                            <input class="form-check-input-lg" name="sizes" type="checkbox" <%= sizes.map(s => s.id).includes(s.id) && 'checked' %> value="<%= s.id %>" id="<%= s.id + s.name %>">
-                            <label class="form-check-label" for="<%= s.id + s.name %>">
+                            <input onchange="updateSizes('<%=id%>','<%=s.id%>' )" class="form-check-input-lg" name="sizes" type="checkbox" <%= sizes.map(s => s.id).includes(s.id) && 'checked' %> value="<%= s.id %>" id="<%= id + s.name %>">
+                            <label class="form-check-label" for="<%= id + s.name %>">
                               <%= s.name %>
                             </label>
                           </div>
@@ -119,6 +119,32 @@
   </main>
 
   <%- include('./partials/scripts') %>
+
+  <script>
+
+    const updateSizes = async (idProduct, idSize) => {
+      try {
+
+        const response = await fetch('apis/products/update-sizes',{
+          method : 'POST',
+          headers : {
+            'Content-Type' : 'application/json'
+          },
+          body : JSON.stringify({
+            idProduct: idProduct,
+            idSize: idSize
+          })
+        });
+
+        const result = await response.json()
+
+        console.log(result)
+        
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  </script>
   
  
   
