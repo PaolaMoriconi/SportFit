@@ -27,7 +27,7 @@
       <div class="swiper home__swiper">
         <div class="swiper-wrapper">
           <% brands.forEach(b => { %>
-            <div class="swiper-slide">
+            <div class="swiper-slide home__swiper-slide">
               <a href="#">
                 <img src="/images/marcas/<%= b.image %>"  alt="...">
               </a>
@@ -35,9 +35,56 @@
           <% }) %>
         </div>
       </div>
+      <div class="mt-5 text-white text-uppercase container">
+        <h3 >Ultimos lanzamientos</h3>
+        <hr>
+      </div>
      
+      <div class="home__products ">
 
-      <%- include('./partials/products') %>
+      <% products.filter(p => p.section_id == 1).forEach(product => { %>
+        <% if (product) { %>
+          <%- include('./partials/product',{
+            product
+          }) %>
+        <% } %>
+      
+
+      <% }) %>
+      </div>
+      <div class="mt-5 text-white text-uppercase container">
+        <h3 >PRODUCTOS DESTACADOS</h3>
+        <hr>
+      </div>
+      <div class="home__products ">
+
+     
+      <% products.filter(p => p.section_id == 2).forEach(product => { %>
+        <% if (product) { %>
+          <%- include('./partials/product',{
+            product
+          }) %>
+        <% } %>
+
+      <% }) %>
+    </div>
+    <div class="mt-5 text-white text-uppercase container">
+      <h3 >ofertas imperdibles</h3>
+      <hr>
+    </div>
+    <div class="home__products ">
+     
+      <% products.filter(p => p.section_id == 2).forEach(product => { %>
+        <% if (product) { %>
+          <%- include('./partials/product',{
+            product
+          }) %>
+        <% } %>
+
+      <% }) %>
+     </div>
+    
+
      
 
     </main>
@@ -71,6 +118,5 @@
     });
   </script>
     
-    </script>
   </body>
 </html>

@@ -10,9 +10,7 @@ console.log("hola")
         tallesP.forEach(t => {
             t.style.backgroundColor="#b5bac9"
         });
-            a.style.backgroundColor="red"         
-
-        
+            a.style.backgroundColor="#3f8880"         
         }) 
     });;  
 

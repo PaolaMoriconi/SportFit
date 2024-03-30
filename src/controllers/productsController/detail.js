@@ -1,16 +1,33 @@
 const db = require("../../database/models")
 const { Op } = require("sequelize")
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 module.exports = (req, res) => {
   
   const { id } = req.params
 
-  db.Product.findByPk(id,{include:{association:"images"}})
-  .then(product =>{
-    return res.render('products/productDetail', {
-      product,user:req.session.userLogin
+  const product =  db.Product.findByPk(id,{include:['images','brand', 'sizes']})
+  const sizes = db.Size.findAll();
+  Promise.all([product,sizes])
+  .then(([product,sizes]) =>{
+    db.Product.findAll({
+      where :{
+        category_id : product.category_id
+      },
+      include : ['images','brand']
+    }).then(related => {
+      console.log(related);
+      return res.render('products/productDetail', {
+        product,
+        sizes,
+        user:req.session.userLogin,
+        toThousand,
+        related
+      })
     })
-    
   })
+  .catch(error => console.log(error))
 
 }

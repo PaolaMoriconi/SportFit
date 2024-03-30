@@ -1,105 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', {
-    title : "Detalle del Producto"
-  }) %>
+<%- include('../partials/head', { title : "Detalle del Producto" }) %>
+
   <body class="productDetail__body">
-     <%- include('../partials/header') %> 
-    
-    <main class="main--productDetail" >
-      <section class="main__section--productDetail">
-        <article>
-        <div class="title--productDetail">
-          <img class="icon--adidas" src="/images/adidas.png" alt="icon--adidas"/>
-          <h3><%= product.name %></h3>
-        </div>
-      </article>
-        <article class="main__section__article--productDetail">
-          
-           
-            <div class="article--productDetail--imgFront">
-             <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <% if(product.images.length > 0){ %>
-        <% product.images.forEach(imagen => {%>
-          <div class="swiper-slide">
-            <img
-                      src="/images/products/<%=imagen.name%>"
-                      alt=""
-                    />
+    <%- include('../partials/header') %>
+
+      <main class="main--productDetail">
+        <section class="main__section--productDetail">
+          <div class="title--productDetail">
+            <h2>
+              <%= product.name %>
+            </h2>
+            <img class="icon--marca" src="/images/marcas/<%= product.brand.image %>" alt="icon--adidas" />
+          </div>
+          <div class="productDetail--box">
+          <div class="productDetail--boxImages">
+            <div class="productDetail--mainImage">
+              <img src="/images/products/<%= product.images[0].name %>" alt="...">
             </div>
-      
-        <% }) %>
-      <% }else{ %>
-        <div class="swiper-slide">
-          <img
-                    src="/images/products/Imagen_por_defecto.jpg"
-                    alt=""
-                  />
-          </div>  
-      <% } %>
+            <div class="productDetail--images">
+              <% for(let i = 1 ; i < product.images.length; i++) { %>
+                <img  src="/images/products/<%= product.images[i].name %>" alt="...">
+                <% } %>
+            </div>
+          </div>
+
+          <article class="productDetail__info">
+
+          	<% if (product.discount) { %>
+								<p class="productDetail--price small">
+									<span>$<%= toThousand(product.price) %></span>
+									/
+									<b><%= product.discount %>% OFF</b>
+								</p>
+								<p class="productDetail--price">
+									$<%= toThousand(product.price - (product.price * product.discount / 100).toFixed(0))%>
+								</p>
+							<% }else{ %>
+							
+							<p class="productDetail--price">
+								$<%= toThousand(product.price) %>
+							</p>
+							<% } %>
+              <div class="main__section--productDetail--description">
+                <div>
+                  <p class="description__product">
+                    <%= product.description %>
+                  </p>
+                </div>
+              </div>
+            <div class="">
+              <div class="article--productDetail--talles">
+                <% if (product.sizes.length) { %>
+                  <h5>Talles disponibles:</h5>
+
+                  <div class="article--productDetail--sizes">
+  
+                    <% sizes.forEach(s => { %>
+                      <% if (product.sizes.map(s => s.id).includes(s.id)) { %>
+                        <a href="#"><%= s.name %></a>
+                      <% } %>
+                    <% }) %>
+                 
+                  </div>
+                <% } %>
+              
+                <button class="car--btn" type="submit"><a href="/cart">añadir al carrito</a></button>
+
+              </div>
+
+            </div>
+          
+          
           </article>
-<article class="productDetail__info" >
-                
-              <h3 class="price"> $ <%= product.price %></h3>
-            <div class="main__section__article--productDetail--detail">
-            <div class="article--productDetail--talles">
-              <span>Talles</span>
-              <div class="article--productDetail--sizes">
-                
-                <a href="#">S</a>
-                <a href="#">M</a>
-                <a href="#">L</a>
-                <a href="#">XL</a>
-                <a href="#">XXL</a>
+        </div>
+          <div class="productDetail--related">
+            <h4>Productos relacionados</h4>
+            <hr>
+  
+            <div class="swiper detail__swiper">
+              <div class="swiper-wrapper">
+                <% related.forEach(pr => { %>
+                  <div class="swiper-slide detail__swiper-slide">
+                    <a href="/products/detail/<%= pr.id %>">
+                      <img class="detail__swiper-slide--marca" src="/images/marcas/<%= pr.brand.image %>" alt="">
+                      <img class="detail__swiper-slide--producto"  src="/images/products/<%= pr.images[0].name %>" alt="<%= pr.name %>">
+                      <h5 class="detail__swiper-slide--precio">$<%= toThousand(product.price - (product.price * product.discount / 100).toFixed(0))%></h5>
+                    </a>
+                    <bold class="text-dark"><%= pr.name %></bold>
+
+                  </div>
+                <% }) %>
               </div>
             </div>
+    
           </div>
-        <div class="botton">
-            <button class="car--btn" type="submit"><a href="/cart">añadir al carrito</a></button>
-            <div class="box--total">            
-              <small>cantidad</small>
-            <div class="box--cantidad">
-              <a href="#" id="decrementProd">-</a>
-              <p id="cantidadProd">1</p>
-              <a href="#" id="incrementoProd">+</a>
-            </div>
-            </div>
-          </div>
-        <div class="main__section--productDetail--description">
-            <h3>acerca del producto</h3>
-            <div>
-              <p class="description__product"> <%= product.description %> </p>
-            </div>
-          </div>
-          </article>
-        
-      </section>  
-    </main>
-    <%- include('../partials/footer') %>
-   <!-- Swiper JS -->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-   <!-- Initialize Swiper -->
-   <script>
-     var swiper = new Swiper(".mySwiper", {
-       effect: "coverflow",
-       grabCursor: true,
-       centeredSlides: true,
-       slidesPerView: "auto",
-       coverflowEffect: {
-         rotate: 50,
-         stretch: 0,
-         depth: 100,
-         modifier: 1,
-         slideShadows: true,
+        </section>
+      </main>
+      <%- include('../partials/footer') %>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+     var swiper = new Swiper(".detail__swiper", {
+       slidesPerView: 2,
+       spaceBetween: 10,
+       breakpoints: {
+         640: {
+           slidesPerView: 2,
+           spaceBetween: 20,
+         },
+         768: {
+           slidesPerView: 3,
+           spaceBetween: 20,
+         },
+         1024: {
+           slidesPerView: 4,
+           spaceBetween: 30,
+         },
+
        },
-       pagination: {
-         el: ".swiper-pagination",
+       autoplay: {
+         delay: 1500,
+         disableOnInteraction: false,
        },
      });
    </script>
-    <script src="/js/detail.js"></script>
+        <script src="/js/detail.js"></script>
   </body>
+
 </html>

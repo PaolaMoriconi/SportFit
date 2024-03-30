@@ -8,8 +8,24 @@
     <%- include('../partials/header') %>
     <main class="list_products__main">
       
+      <div class="mt-5 text-white text-uppercase container">
+        <% if (category) { %>
+          <h3>categoria: <b><%= category %></b> </h3>
+        <% }else{%>
+          <h3>todos los productos </h3>
 
-      <%- include('../partials/products') %>
+        <% } %>
+        <hr>
+      </div>
+
+      <div class="home__products ">
+        <% products.forEach(product => { %>
+          <%- include('../partials/product',{
+            product
+          }) %>
+  
+        <% }) %>
+       </div>
         
 
    

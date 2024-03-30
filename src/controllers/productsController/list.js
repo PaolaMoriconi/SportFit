@@ -3,6 +3,8 @@ const { Op } = require("sequelize");
 module.exports = async (req, res) => {
   try {
     const { categorie } = req.query;
+
+    const category = await db.Category.findByPk(categorie)
     
     let query = {include:{association:'images'}};
 
@@ -16,6 +18,7 @@ module.exports = async (req, res) => {
     
     return res.render("products/products", {
       products,
+      category : category ? category.name : null, 
       user: req.session.userLogin,
     });
 
