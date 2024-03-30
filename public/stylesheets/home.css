@@ -63,14 +63,11 @@ body.home {
 
 .home__swiper {
   margin-top: 20px;
-}
-
-.swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.home__swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -82,7 +79,7 @@ body.home {
   padding: 10px;
 }
 
-.swiper-slide img {
+.home__swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;

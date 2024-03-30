@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
   
       this.belongsTo(models.Category,{as:"categories",foreignKey:"category_id"}),
-      this.belongsTo(models.Brand,{as:"brands",foreignKey:"brand_id"}),
+      this.belongsTo(models.Brand,{as:"brand",foreignKey:"brand_id"}),
       this.belongsTo(models.Color,{as:"colors",foreignKey:"color_id"}),
       this.hasMany(models.Image,{as:"images",foreignKey:"product_id"}),
       this.hasMany(models.Item,{as:"items",foreignKey:"product_id"}),
