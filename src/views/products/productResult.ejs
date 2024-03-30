@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head', {
+    title : "Todos los productos"
+  }) %>
+
+  <body class="list_products__body">
+    <%- include('../partials/header') %>
+    <main class="list_products__main px-5">
+        <% if (products.length) { %>
+
+        <h3 class="alert alert-success mt-5">Resultados para la búsqueda de <b>"<%= keyword %></b>"</h3>
+
+      <div class="home__products ">
+            <% products.forEach(product => { %>
+                <%- include('../partials/product',{
+                  product
+                }) %>
+        
+              <% }) %>
+            </div>
+
+        <% }else{ %>
+            <div style="height: 100vh;">
+                <h4 class="alert alert-warning mt-5">Lo sentimos, no hay resultados para <b>"<%= keyword %>"</b> </h4>
+            </div>
+            
+
+        <% } %>
+       
+        
+
+   
+    </main>
+
+	
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

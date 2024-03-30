@@ -82,10 +82,13 @@
               <div class="swiper-wrapper">
                 <% related.forEach(pr => { %>
                   <div class="swiper-slide detail__swiper-slide">
-                    <a href="/products/detail/<%= pr.id %>" class="d-flex flex-column justify-content-center gap-2">
-                      <img class="img-fluid" src="/images/products/<%= pr.images[0].name %>" alt="<%= pr.name %>">
-                      <small class="text-dark"><%= pr.name %></small>
+                    <a href="/products/detail/<%= pr.id %>">
+                      <img class="detail__swiper-slide--marca" src="/images/marcas/<%= pr.brand.image %>" alt="">
+                      <img class="detail__swiper-slide--producto"  src="/images/products/<%= pr.images[0].name %>" alt="<%= pr.name %>">
+                      <h5 class="detail__swiper-slide--precio">$<%= toThousand(product.price - (product.price * product.discount / 100).toFixed(0))%></h5>
                     </a>
+                    <bold class="text-dark"><%= pr.name %></bold>
+
                   </div>
                 <% }) %>
               </div>
@@ -107,13 +110,14 @@
            spaceBetween: 20,
          },
          768: {
-           slidesPerView: 4,
+           slidesPerView: 3,
            spaceBetween: 20,
          },
          1024: {
-           slidesPerView: 5,
+           slidesPerView: 4,
            spaceBetween: 30,
          },
+
        },
        autoplay: {
          delay: 1500,

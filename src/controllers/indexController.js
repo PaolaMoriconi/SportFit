@@ -91,7 +91,7 @@ module.exports = {
       where: {
         name: { [Op.substring]: keyword },
       }}).then((products) => {
-      return res.render("index", {
+      return res.render("products/productResult", {
         products,
         keyword,
         user: req.session.userLogin,

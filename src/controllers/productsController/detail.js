@@ -16,7 +16,7 @@ module.exports = (req, res) => {
       where :{
         category_id : product.category_id
       },
-      include : ['images']
+      include : ['images','brand']
     }).then(related => {
       console.log(related);
       return res.render('products/productDetail', {
