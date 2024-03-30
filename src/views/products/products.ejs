@@ -7,40 +7,12 @@
   <body class="list_products__body">
     <%- include('../partials/header') %>
     <main class="list_products__main">
-      <% if(products.length > 0){%>
-      <div class="list_products">
-        <% products.forEach(product => { %>
-        <article class="list_products__article">
-          <a href="/products/detail/<%= product.id %>">
-            <img
-              src="/images/products/<%= product.images.length > 0 ? product.images[0].name : 'Imagen_por_defecto.jpg'  %>"
-              alt="<%= product.name %>"
-            />
-           
-            <div class="list_products__article__info">
-              <h2><%= product.name %></h2>
-              <% if (product.discount) { %>
-                <p>$<%= product.price %></p>
-                <span>$<%= product.price*product.discount/100 %></span>
-              <% }else{ %>
-              <span>$<%= product.price %></span>
-              <% } %>
-             
-            </div>
-          </a>
-        </article>
-        <% }) %>
-      </div>
-      <% } else { %>
-        <div class="alert alert-light" role="alert">
-          Producto no encontrado, intente con otra busqueda        
-        </div>
+      
 
-
-
+      <%- include('../partials/products') %>
         
 
-      <% }%>
+   
     </main>
 
 	
