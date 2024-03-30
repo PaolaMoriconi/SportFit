@@ -161,6 +161,9 @@
 
                     <div class="col-12 mb-3">
                       <label class="form-label">Talles</label>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.talles ? errors.talles.msg : null %>
+                       </small>
 
                       <div class="d-flex">
                         <% talles.forEach(t => { %>
@@ -171,7 +174,9 @@
                             </label>
                           </div>
                         <% }) %>
-                      </div>                      
+                      
+                      </div> 
+                                           
                     </div>
                     <div class="col-12 d-flex justify-content-between">
                       <div>
@@ -195,7 +200,7 @@
             </div>
           </section>
         </main>
-        <!-- <script src="/js/productAdd.js"></script> -->
+        <script src="/js/productAdd.js"></script>
   </body>
 
 </html>
