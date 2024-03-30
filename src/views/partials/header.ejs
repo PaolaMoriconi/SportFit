@@ -27,35 +27,29 @@
     <ul class="header__nav--right">
       
       <% if(locals.user) { %>
-      <li>
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-               <%= user.name %>
-              </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-               <a class="mouse" href="/users/perfil/<%= user.id %>"><strong style="color: rgb(65, 65, 77);">Perfil</strong></a> 
-              
-              <% if (locals.user && user.rol == "admin") { %>
-                
-                  <a  class="mouse" href="/admin"><strong class="mouse" style="color: rgb(65, 65, 77);">Dashboard</strong></a> 
-                 
-                <% } %>
-             
-              <% if (locals.user && user.rol == "user") { %>
-                
-                  <a  class="mouse" href="/cart"><strong style="color: rgb(65, 65, 77);">Carrito</strong></a> 
-                 
-                <% } %>
-              
-                <a  class="mouse" href="/users/logout"><strong style="color: rgb(65, 65, 77);">Cerrar Sesion</strong></a>
-              
-            </div>
-          </div>
-      </li>
+
+                <li class="nav-item dropdown">
+                  <button class="btn btn-transparent dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%= user.name %>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item"  href="/users/perfil/<%= user.id %>">Mi perfil</a></li>
+                    <% if (locals.user && user.rol == "admin") { %>
+                  
+                      <li><a class="dropdown-item" href="/admin">Dashboard</a></li>
+
+                    <% } %>
+                    <% if (locals.user && user.rol == "user") { %>
+                        <li><a class="dropdown-item" href="/cart">Carrito</a></li>
+                    <% } %>
+
+                    <li><a class="dropdown-item"  href="/users/logout">Cerrar sesión</a></li>
+                  </ul>
+                </li>
+    
+     
+      
+
       <%}else{%>
       <li>
         <a href="/users/login"><i class="fa-solid fa-user"></i></a>

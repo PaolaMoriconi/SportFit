@@ -10,7 +10,7 @@
        <div class="register__main__section--registro"> 
         <h2>registro</h2>
       </div>
-         <form action="" method="POST"  enctype="multipart/form-data"  class="register__form--conteiner" >
+         <form id="registerForm" action="" method="POST"  enctype="multipart/form-data"  class="register__form--conteiner" >
           
           <div class="register__group">
             <label  class="register__label" for="name" >Nombre</label>
@@ -26,7 +26,7 @@
 
           <div class="register__group">
             <label class="register__label" for="email">Email <i class="fa-solid fa-envelope email icons icons__email__register "></i></label>
-            <input id = "input_email" class="register__input <%= locals.errors && errors.email ? "register-control is-invalid" :(locals.old && old.email ? 'register-control is-valid' : '' )%>" type= "email" name="email" value =" <%= locals.old && old.email ? old.email : null %>">
+            <input id="input_email" class="register__input <%= locals.errors && errors.email ? "register-control is-invalid" :(locals.old && old.email ? 'register-control is-valid' : '' )%>" type= "email" name="email" value =" <%= locals.old && old.email ? old.email : null %>">
             <small class="text-danger"><%=locals.errors && errors.email ? errors.email.msg : null %> </small>
           </div>
           
@@ -74,32 +74,8 @@
         
       </section>
 </main>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    
-    let inputEmail = document.getElementById('input_email');
-    let inputPassword = document.getElementById('input_password');
-    let inputPassword2 = document.getElementById('input_password2');
-    let iconElement = document.querySelector('.icons');
-    let iconPassword = document.querySelector('.password')
-    let iconPassword2 = document.querySelector('.password2')
 
-  
-  if (inputEmail.classList.contains('is-invalid') || inputEmail.classList.contains('is-valid') ) {
-    iconElement.classList.add('icon_remove');
-  }
-
-  
-  if (inputPassword.classList.contains('is-invalid') || inputPassword.classList.contains('is-valid')) {
-    iconPassword.classList.add('icon_remove');
-  
-  }
-  if (inputPassword2.classList.contains('is-invalid') || inputPassword2.classList.contains('is-valid')) {
-    iconPassword2.classList.add('icon_remove');
-  
-  }  
-  });
-</script>
     <%- include('../partials/footer') %>
+  <script src="/js/register.js"></script>
   </body>
 </html>

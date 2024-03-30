@@ -6,25 +6,18 @@ module.exports = [
     .notEmpty()
     .withMessage('Este campo obligatorio')
     .bail()
-    .isLength({
-      min: 3,
-    })
     .withMessage('Minimo tres caracteres')
-    .bail()
-    .isAlpha('es-ES', { ignore: ' ' })
-    .withMessage('Solo caracteres alfabéticos'),
+    .bail(),
+
 
   check('surname')
     .notEmpty()
     .withMessage('Este campo obligatorio')
     .bail()
-    .isLength({
-      min: 3,
-    })
+
     .withMessage('Minimo tres caracteres')
-    .bail()
-    .isAlpha('es-ES', { ignore: ' ' })
-    .withMessage('Solo caracteres alfabéticos'),
+    .bail(),
+
 
   body('email')
     .notEmpty()
