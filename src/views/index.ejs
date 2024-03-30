@@ -8,7 +8,7 @@
     <%- include('./partials/header') %>
     <main class="main__home">
       
-      <% if (products.length) { %>
+      
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -59,33 +59,7 @@
         </a>
       </div>
 
-       <div class="home__products">
-        <% products.forEach(product => { %>
-        <article class="home__article ">
-          <a href="/products/detail/<%= product.id %>">
-            <img
-              src="/images/products/<%= product.images.length > 0 ? product.images[0].name : 'Imagen_por_defecto.jpg'  %>"
-              alt="<%= product.name %>"
-            />
-            <div class="home__article__info box">
-              <h2><%= product.name %></h2>
-             
-              <% if (product.discount) { %>
-                <p>$<%= product.price %></p>
-                <span>$<%= product.price*product.discount/100 %></span>
-              <% }else{ %>
-              <span>$<%= product.price %></span>
-              <% } %>
-            </div>
-          </a>
-        </article>
-        <% }) %>
-      </div>
-      <% } else { %>
-        <div class="alert alert-light" role="alert">
-          Producto no encontrado, intente con otra busqueda        
-        </div>
-<% }%>
+      <%- include('./partials/products') %>
      
 
     </main>
