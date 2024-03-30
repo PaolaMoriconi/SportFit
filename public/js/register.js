@@ -41,7 +41,7 @@ form.elements[i].addEventListener("blur",async (e)=>{
             alerta[i].textContent=""
            form.elements[i].className="form-control is-valid"
         }
-        if(!isValidEmail(form.elements[2].value)){
+        if(!isValidEmail(form.elements[2].value)&& form.elements[2].value != ""){
             alerta[2].textContent="No es una direccion de correo valida"
             form.elements[2].className="form-control is-invalid"
         }
