@@ -10,6 +10,7 @@ module.exports = async (req, res) => {
     color,
     categoria,
     detalleProducto,
+    section,
   } = req.body;
   const { id } = req.params;
   const images = req.files;
@@ -51,6 +52,7 @@ module.exports = async (req, res) => {
       brand_id: parseInt(marca),
       color_id: parseInt(color),
       size_id: parseInt(talle),
+      section_id: parseInt(section),
     },
     { where: { id } }
   );
