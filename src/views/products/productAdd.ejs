@@ -139,7 +139,7 @@
                         <input
                           class="form-control <%= locals.errors && errors.descuento ? ' is-invalid' : locals.old && old.descuento ? 'is-valid' : '' %>"
                           type="text" name="descuento"
-                          value="<%= locals.old && old.descuento ? old.descuento : null %>" />
+                          value="<%= locals.old && old.descuento ? old.descuento : 0 %>" />
 
                         <label for="descuento">Descuento</label>
                       </div>
