@@ -52,7 +52,6 @@
                      <td> <%=  discount || "0" %>% </td>
                      <td>
                       <div class="d-flex">
-                        <%= console.log("sizeslist: ", sizesList) %>
                         <% sizesList.forEach(s => { %>
                           <div class="form-check" >
                             <input class="form-check-input-lg" name="sizes" type="checkbox" <%= sizes.map(s => s.id).includes(s.id) && 'checked' %> value="<%= s.id %>" id="<%= s.id + s.name %>">
