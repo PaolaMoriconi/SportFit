@@ -150,7 +150,10 @@
                           </label>
                         </div>
                       <% }) %>
-                    </div>                      
+                    </div>    
+                    <small class="text-danger">
+                      <%=locals.errors && errors.talles ? errors.talles.msg : null %>
+                    </small>                  
                   </div>
 
                   <div class="col-12 mb-3">
