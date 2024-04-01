@@ -15,26 +15,3 @@ console.log("hola")
     });;  
 
 // BOTON PARA AGREGAR CANTIDAD DE PRODUCTOS
-
-const signoMas = document.getElementById("incrementoProd")
-const numero = document.getElementById("cantidadProd")
-const signoMenos = document.getElementById("decrementProd")
-
-let cantidad = 0
-
-signoMas.addEventListener("click",(e)=>{
-    e.preventDefault()
-    cantidad++
-    numero.innerHTML = cantidad
-})
-
-signoMenos.addEventListener("click",(e)=>{
-    e.preventDefault()
-    if (parseInt(numero.innerHTML)>1){
-        cantidad--
-        numero.innerHTML=cantidad   
-    }
-})
-    
-
-

@@ -26,8 +26,8 @@ module.exports = async (req, res) => {
 
     //Elimino los archivos y los registros
     oldImages.forEach((image) => {
-      fs.existsSync("public/images/" + image.name) &&
-        fs.unlinkSync("public/images/" + product.image, (err) => {
+      fs.existsSync("public/images/products/" + image.name) &&
+        fs.unlinkSync("public/images/products/" + image.name, (err) => {
           console.log("Se borro la imagen " + image.name);
         });
       image.destroy();
