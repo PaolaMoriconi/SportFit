@@ -17,6 +17,66 @@ function losTalles(talle) {
 function isValidNumber(valor) {
 return valor >= 0? /^-?\d*\.?\d*$/.test(valor) : false;
 }
+
+function showImages(images, idProduct) {
+    const boxImages = document.getElementById('box-images');
+    boxImages.innerHTML = null;
+   
+    for (let i = 0; i < 4; i++) {
+        boxImages.innerHTML += `<div class="col-12 col-md-6 col-lg-3 d-flex align-items-center position-relative" style="height: 250px" id="box${i}">`
+        if (images[i]) {
+            document.getElementById('box' + i).innerHTML += `
+            <img class="img-fluid"  src="/images/products/${images[i].name}" alt="${images[i].name}">
+            <button onclick="removeImage(${images[i].id}, ${idProduct})" type="button" class="btn btn-danger position-absolute bottom-0 end-0"><i class="fa-solid fa-trash-can"></i></button>
+            `
+        }else{
+            document.getElementById('box' + i).innerHTML += `
+            <div class="d-flex justify-content-center align-items-center" style="height: 100px; width: 200px;">
+            <input type="file" hidden id="image${i}" onchange="addImage(event,${idProduct})"/>
+            <label for="image${i}" class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-plus"></i> Agregar</label>
+          </div>`
+        }
+        
+    }
+}
+
+async function addImage(e,idProduct){
+    try {
+
+        const data = new FormData();
+        data.append("image", e.target.files[0]);
+      
+
+        const response = await fetch(`http://localhost:3000/apis/images?id=${idProduct}`,{
+            method : 'POST',
+            body : data
+        })
+
+        const result = await response.json();
+
+        showImages(result.images, idProduct)
+
+           
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function removeImage(idImage, idProduct) {
+    console.log(idImage);
+    try {
+        const response = await fetch(`http://localhost:3000/apis/images?id=${idImage}&product=${idProduct}`,{
+            method : 'DELETE',
+        })
+        const result = await response.json();
+
+        showImages(result.images, idProduct)
+
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
     
 
 for (let i = 0; i < form.elements.length -8; i++) {
