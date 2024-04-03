@@ -2,11 +2,30 @@
   font-family: var(--Texto);
 }
 
+
+.register__main {
+  background-color: var(--colorGrisAzuladoOscuro);
+  padding: 5%;
+}
+.register__main__section{
+  color: var(--colorGrisAzuladoClaro);
+  background-color: white;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+}
+
+.register__main__section--registro{
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
 .register__main__section--registro H2{
   text-transform: uppercase;
   text-align: center;
   margin: 10px 0;
-  color:#788199 ;
 }
 
 .register__form--conteiner{
@@ -14,37 +33,45 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  padding: 30px 40px;
+  gap: 20px;
 }
 .register__group{
   width: 100%;
   text-align: start;
 }
-.icon_remove{
-  opacity:  0;
- }
- 
-.icons__email__register{
-  margin-left: 66vw;
-}
 
-.icons__password__register{
- margin-left: 33vh;
-}
-.icons__password2__register{
-  
-  margin-left: 33vh;
-}
 .register__label{
   color: var(--colorgrisOscuro);
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon_remove{
+  opacity:  0;
+ }
+
+.register__possition {
+  position: relative;
+  align-items: center;
 }
 
+.register__possition i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: var(--colorgrisOscuro);
+}
 .register__input{
   border: none;
   border-bottom: 1px solid var(--colorGrisAzuladoOscuro);
   width: 100%;
+}
+
+.register__group--image{
+  width: 100%;
+  text-align: start;
+  
 }
 .form__botton{
   width: 100%;
@@ -82,76 +109,25 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    width: 400px;
   }
-  .register__form--conteiner{
-    width: 70%;
-  }
-  .icons__email__register{
-    margin-left: 56vw;
-    }
-    
-    .icons__password__register{
-      
-      margin-left: 56vw;
-    }
-    .icons__password2__register{
-      
-      margin-left: 56vw;
-    }
-  }
-
-  /* DESKTOP */
-  @media (min-width: 1024px){
-    .register__main__section {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column; 
-    }
-
-  .register__form--conteiner {
-    width: 100%;
-  }
-   .register__group {
-    width: 60%;
-  }
-    
-.form__botton{
-  width: 60%;
-}
-  .register--btn{
-    width: 100%;
-  }
-  .icons__email__register{
-   
-    margin-left: 52vw;
-    }
-    
-    .icons__password__register{
-     
-      margin-left: 52vw;
-    }
-    .icons__password2__register{
-      
-      margin-left: 52vw;
-    }
-  
 }
 
 /* DESKTOP */
-@media (min-width: 1440px){
-  .icons__email__register{
-   margin-left: 53vw;
-    }
+@media (min-width: 1024px){
+  .register__main__section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+  }
     
-    .icons__password__register{
-     
-      margin-left: 53vw;
-    }
-    .icons__password2__register{
-      
-      margin-left: 53vw;
-    }
-  
+  .register__main__section--registro H2{
+    margin: 40px 0;
+  }    
+  .form__botton{
+    width: 60%;
+  }
+  .register--btn{
+    width: 100%;
+  }
 }
-
-
