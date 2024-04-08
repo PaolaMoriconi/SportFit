@@ -25,7 +25,11 @@ module.exports = {
         },
         {
           association : 'sizes'
+        },
+        {
+          association : 'subcategories'
         }
+        
       ],
     })
     
@@ -33,6 +37,8 @@ module.exports = {
     
     Promise.all([products,sizes])
     .then(([products, sizes]) => {
+      console.log("products: ",products[0])
+      console.log("sizes: ",sizes[0])
       return res.render("dashboard", {
         products,
         sizesList : sizes,

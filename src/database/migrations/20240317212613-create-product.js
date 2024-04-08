@@ -63,12 +63,22 @@ module.exports = {
           key:'id'
         }
       },
-      size_id: {
+      subcategorie_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
           model:{
-            tableName:'colors'
+            tableName:'subcategories'
+          },
+          key:'id'
+        }
+      },
+      section_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'sections'
           },
           key:'id'
         }

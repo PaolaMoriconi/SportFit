@@ -1,0 +1,12 @@
+[{"id":1, "name":"Verde", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":2, "name":"Azul", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":3, "name":"Rojo", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":4, "name":"Amarrillo", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":5, "name":"Violeta", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":6, "name":"Rosa", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":7, "name":"Negro", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":8, "name":"Celeste", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":9, "name":"Naranja", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":10, "name":"Blanco", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":11, "name":"Gris", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":12, "name":"Beige", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"}]

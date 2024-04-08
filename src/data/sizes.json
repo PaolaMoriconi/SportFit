@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "name": "XS",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 2,
+    "name": "S",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 3,
+    "name": "M",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 4,
+    "name": "L",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 5,
+    "name": "XL",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 6,
+    "name": "XXL",
+    "subcategorie_id": 1,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 7,
+    "name": "U",
+    "subcategorie_id": 3,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 8,
+    "name": "24",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 9,
+    "name": "25",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 10,
+    "name": "26",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 11,
+    "name": "27",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 12,
+    "name": "28",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 13,
+    "name": "29",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 14,
+    "name": "30",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 15,
+    "name": "31",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 16,
+    "name": "32",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 17,
+    "name": "33",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 18,
+    "name": "34",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 19,
+    "name": "35",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 20,
+    "name": "36",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 21,
+    "name": "37",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 22,
+    "name": "38",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 23,
+    "name": "39",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 24,
+    "name": "40",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 25,
+    "name": "41",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 26,
+    "name": "42",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 27,
+    "name": "43",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 28,
+    "name": "44",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 29,
+    "name": "45",
+    "subcategorie_id": 2,
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  }
+]

@@ -1,0 +1,4 @@
+[{"id":1, "name":"Hombre", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":2, "name":"Mujer", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":3, "name":"Ni\u00f1os", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"},
+ {"id":4, "name":"Accesorios", "createdAt":"2024-03-19 10:57:12", "updatedAt":"2024-03-19 10:57:12"}]
