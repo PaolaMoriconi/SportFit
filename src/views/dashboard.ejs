@@ -43,7 +43,7 @@
                 </thead>
                 <tbody>
   
-                  <%products.forEach(({id, name, category_id,categories, price, sizes, discount, images, description }, index) => { %>
+                  <%products.forEach(({id, name, category_id,categories, price, sizes, discount, images, description, subcategorie_id }, index) => { %>
                     <tr>
                      <th scope="row"><%= index + 1 %></th>
                      <td><%= name %></td>
@@ -52,12 +52,11 @@
                      <td> <%=  discount || "0" %>% </td>
                      <td>
                       <div class="d-flex">
-                        <% sizesList.forEach(s => { %>
+                        <% sizesList.filter(element => element.subcategorie_id ==  subcategorie_id).forEach(s => { %>
                           <div class="form-check" >
                             <input onchange="updateSizes('<%=id%>','<%=s.id%>' )" class="form-check-input-lg" name="sizes" type="checkbox" <%= sizes.map(s => s.id).includes(s.id) && 'checked' %> value="<%= s.id %>" id="<%= id + s.name %>">
                             <label class="form-check-label" for="<%= id + s.name %>">
-                              <%= s.name %>
-                              
+                              <%= s.name %>                              
                             </label>
                           </div>
                         <% }) %>

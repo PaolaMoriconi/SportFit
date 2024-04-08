@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Category,{as:"categories",foreignKey:"category_id"}),
       this.belongsTo(models.Brand,{as:"brand",foreignKey:"brand_id"}),
       this.belongsTo(models.Color,{as:"colors",foreignKey:"color_id"}),
+      this.belongsTo(models.Subcategorie,{as:"subcategories",foreignKey:"subcategorie_id"}),
       this.hasMany(models.Image,{as:"images",foreignKey:"product_id"}),
       this.hasMany(models.Item,{as:"items",foreignKey:"product_id"}),
       this.belongsToMany(models.Size, {
@@ -34,6 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     category_id: DataTypes.INTEGER,
     color_id: DataTypes.INTEGER,
     section_id: DataTypes.INTEGER,
+    subcategorie_id: DataTypes.INTEGER,
     brand_id:DataTypes.INTEGER
   }, 
   {

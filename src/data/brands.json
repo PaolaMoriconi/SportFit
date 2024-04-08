@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Adidas",
+    "image": "adidas.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 2,
+    "name": "Nike",
+    "image": "nike.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 3,
+    "name": "Topper",
+    "image": "topper.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 4,
+    "name": "Puma",
+    "image": "puma.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 5,
+    "name": "Atomik",
+    "image": "atomik.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 6,
+    "name": "Umbro",
+    "image": "umbro.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 7,
+    "name": "Converse",
+    "image": "converse.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 8,
+    "name": "Fila",
+    "image": "fila.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 9,
+    "name": "Crocs",
+    "image": "crocs.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 10,
+    "name": "Salomon",
+    "image": "salomon.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 11,
+    "name": "Olympikus",
+    "image": "olympikus.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  },
+  {
+    "id": 12,
+    "name": "Rebook",
+    "image": "reebok.png",
+    "createdAt": "2024-03-19 10:57:12",
+    "updatedAt": "2024-03-19 10:57:12"
+  }
+]
