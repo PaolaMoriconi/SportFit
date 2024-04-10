@@ -61,6 +61,25 @@
                     </div>
                     <div class="col-12 col-md-6 mb-3">
                       <div class="form-floating">
+                        <select name="subcategoria" class="form-select" id="subcategoria"
+                          aria-label="Floating label select example">
+                          <option value="" selected hidden></option>
+                          <% subcategorias.forEach(subcategorie=> { %>
+                            <option value="<%= subcategorie.id %>">
+                              <%= subcategorie.name %>
+                            </option>
+                            <% }) %>
+                        </select>
+
+                        <label for="subcategoria">Subcategoria</label>
+
+                      </div>
+                      <small class="text-danger">
+                        <%=locals.errors && errors.subcategoria ? errors.subcategoria.msg : null %>
+                      </small>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating">
                         <select name="section" class="form-select" id="section"
                           aria-label="Floating label select example">
                           <option value="" selected hidden></option>
@@ -159,16 +178,16 @@
                       </small>
                     </div>
 
-                    <div class="col-12 mb-3">
+                    <div class="col-12 mb-3" id="containerTalles" style="display: none; visibility: hidden;"">
                       <label class="form-label">Talles</label>
                       <small class="text-danger">
                         <%=locals.errors && errors.talles ? errors.talles.msg : null %>
                        </small>
 
-                      <div class="d-flex">
+                      <div class="d-flex" ">
                         <% talles.forEach(t => { %>
                           <div class="form-check" >
-                            <input class="form-check-input-lg" name="talles" type="checkbox" value="<%= t.id %>" id="<%= t.id + t.name %>">
+                            <input class="form-check-input-lg" name="talles" type="checkbox" value="<%= t.id %>" id="<%= t.name %>">
                             <label class="form-check-label" for="<%= t.id + t.name %>">
                               <%= t.name %>
                             </label>

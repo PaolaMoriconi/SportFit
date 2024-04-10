@@ -104,4 +104,7 @@ module.exports = {
       });
     });
   },
+  quienesSomos:(req, res) => {
+      return res.render("quienesSomos")
+  },
 };

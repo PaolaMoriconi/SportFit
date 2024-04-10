@@ -27,9 +27,9 @@
           
             <a class="btn btn-primary" href="/products/agregar"> Nuevo </a>
           </div>
-          <div class="card-body table-resposive">
+          <div class="card-body table-resposive" style="width:10%;">
             <% if (products.length) { %>
-              <table class="table">
+              <table class="table" >
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -51,14 +51,16 @@
                      <td>$<%= price %></td> 
                      <td> <%=  discount || "0" %>% </td>
                      <td>
-                      <div class="d-flex">
-                        <% sizesList.filter(element => element.subcategorie_id ==  subcategorie_id).forEach(s => { %>
-                          <div class="form-check" >
+                      <div class="d-flex" >
+                        <% sizesList.filter(element => element.subcategorie_id  ==  subcategorie_id).forEach(s => { %>
+                          <% if ((category_id == 3 && s.name <= 34) || (category_id != 3 && s.name >= 35) || subcategorie_id == 1 || subcategorie_id == 3){%>
+                          <div class="form-check"  >
                             <input onchange="updateSizes('<%=id%>','<%=s.id%>' )" class="form-check-input-lg" name="sizes" type="checkbox" <%= sizes.map(s => s.id).includes(s.id) && 'checked' %> value="<%= s.id %>" id="<%= id + s.name %>">
                             <label class="form-check-label" for="<%= id + s.name %>">
                               <%= s.name %>                              
                             </label>
                           </div>
+                          <% } %>
                         <% }) %>
                       </div>          
 
