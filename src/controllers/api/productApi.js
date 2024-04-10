@@ -19,7 +19,48 @@ const getAllProducts = async (req,res) =>{
     }
 
 }
+const getProduct = async (req,res) =>{
+    const {id} = req.params
+    try {
+        const product = await db.Product.findByPk(id,{
+            include: [
+                {
+                  association: "images",
+                  attributes: ['name']
+                },
+                {
+                  association: "categories",
+                  attributes: ['name']
+                },
+                {
+                  association : 'sizes',
+                  attributes: ['name']
+                }
+              ],
+              attributes:{
+                explude:["category_id"]
+              }
+             
+        })
+        const customProduct ={
+            ...product.dataValues,
+            category:product.categories.name
+        }
 
+        return res.status(200).json({
+            ok:true,
+            product:customProduct
+        })
+        
+    } catch (error) {
+        
+        return res.status(error.status || 500).json({
+            ok:false,
+            msg:error.message || "hubo un error"
+        })
+    }
+
+}
 const updateSizes = async (req,res) => {
     try {
 
@@ -121,10 +162,80 @@ const removeImage = async (req,res) => {
         })
     }
 }
+// COLORES MARCAS Y CATEGORIAS //
+const getSelectsColor = async (req,res) =>{
+    
+    try {
+        const  colores = await db.Color.findAll()
+            
+       
+            return res.status(200).json({
+            ok:true,
+            colores
+        })
+        
+            
+        
+    } catch (error) {
+        
+        return res.status(error.status || 500).json({
+            ok:false,
+            msg:error.message || "hubo un error"
+        })
+    }
 
+}
+const getSelectsCategory = async (req,res) =>{
+    
+    try {
+        const categories = await db.Category.findAll()
+            
+       
+            return res.status(200).json({
+            ok:true,
+            categories
+        })
+        
+            
+        
+    } catch (error) {
+        
+        return res.status(error.status || 500).json({
+            ok:false,
+            msg:error.message || "hubo un error"
+        })
+    }
+
+}
+const getSelectsBrands = async (req,res) =>{
+    
+    try {
+        const brands =  await db.Brand.findAll()
+            
+       
+        return res.status(200).json({
+            ok:true,
+            brands:brands
+        })
+        
+            
+        
+    } catch (error) {
+        
+        return res.status(error.status || 500).json({
+            ok:false,
+            msg:error.message || "hubo un error"
+        })
+    }
+
+}
 module.exports={
     getAllProducts,
     updateSizes,
     addImage,
-    removeImage
+    removeImage,
+    getSelectsColor,
+    getSelectsBrands,
+    getSelectsCategory,
+    getProduct
 }
