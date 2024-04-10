@@ -8,8 +8,6 @@ module.exports = async (req, res) => {
   const images = req.files;
 
   let { nombre, precio, descuento, talles, section, descripcion, categoria, color, marca } = req.body;
-    
-
 
   if (errors.isEmpty()) {
     try {

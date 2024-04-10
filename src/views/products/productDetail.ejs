@@ -16,11 +16,11 @@
           <div class="productDetail--box">
           <div class="productDetail--boxImages">
             <div class="productDetail--mainImage">
-              <img src="/images/products/<%= product.images[0].name %>" alt="...">
+              <img src="/images/products/<%= product.images[0].name %>" alt="..." id="img-main">
             </div>
             <div class="productDetail--images">
               <% for(let i = 1 ; i < product.images.length; i++) { %>
-                <img  src="/images/products/<%= product.images[i].name %>" alt="...">
+                <img  src="/images/products/<%= product.images[i].name %>" alt="..." onclick="changeImage(event)">
                 <% } %>
             </div>
           </div>

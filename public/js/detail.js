@@ -12,6 +12,13 @@ console.log("hola")
         });
             a.style.backgroundColor="#3f8880"         
         }) 
-    });;  
+    });; 
 
 // BOTON PARA AGREGAR CANTIDAD DE PRODUCTOS
+
+// FUNCION PARA CAMBIAR DINÁMICAMENTE LA IMAGEN PRINCIPAL
+function changeImage(event) {
+    const imageOriginal =  document.getElementById('img-main').src
+    document.getElementById('img-main').src = event.target.src
+    event.target.src = imageOriginal
+}

@@ -159,8 +159,10 @@
                       <%=locals.errors && errors.description ? errors.description.msg : null %>
                     </small>
                   </div>
-
+                  <div class="col-12 mb-3 px-4">
                     <div class="d-flex">
+                      <label for="" class="form-label">Talles:</label>
+
                       <% talles.forEach(t => { %>
                         <div class="form-check" >
                           <input class="form-check-input-lg" name="talles" type="checkbox" <%=  productSizes.map(ps => ps.size_id).includes(t.id) && 'checked'%> value="<%= t.id %>" id="<%= t.name %>">
@@ -173,27 +175,34 @@
                     <small class="text-danger">
                       <%=locals.errors && errors.talles ? errors.talles.msg : null %>
                     </small>                  
-                  </div>
+                  </div>    
 
-                  <div class="col-12 mb-3">
-                    <div class="border rounded p-3" >
-                      <% product.images.forEach(elemento=> { %>
-                      <div class="col-12 col-md-3 col-lg-4">
-                        <img class="img-fluid"  src="/images/products/<%= elemento.name %>" alt="<%= elemento.name %>">
+                  <div class="col-12 mb-3 p-4">
+                    <label for="" class="form-label">Imágenes:</label>
+
+                    <div class="row border rounded p-3" id="box-images">
+                      <% for(let i = 0; i < 4; i++) { %>
+                      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center position-relative" style="height: 250px" >
+                        <% if (product.images[i]) { %>
+                            <img class="img-fluid"  src="/images/products/<%= product.images[i].name %>" alt="<%= product.images[i].name %>">
+                            <button onclick="removeImage('<%= product.images[i].id%>', '<%=product.id%>')" type="button" class="btn btn-danger position-absolute bottom-0 end-0"><i class="fa-solid fa-trash-can"></i></button>
+                        <% }else{ %>
+                          <div class="d-flex justify-content-center align-items-center" style="height: 100px; width: 200px;">
+                            <input type="file" hidden id="image<%= i %>" onchange="addImage(event,'<%=product.id%>')"/>
+                            <label for="image<%= i %>" class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-plus"></i> Agregar</label>
+                          </div>
+                        <% } %>
                       </div>
-                        <% }) %>
+                        <% } %>
                     </div>
                   </div>
 
-                  <div class="col-12 d-flex justify-content-between">
-                    <div>
-                      <input name="images" type="file" class="form-control" id="image" hidden multiple>
-                      <label class="btn btn-lg btn-outline-dark w-100" for="image">Imagenes</label>
-                    </div>
+                  <div class="col-12 d-flex justify-content-end">
+                   
                     <small class="text-danger">
                       <%=locals.errors && errors.image ? errors.image.msg : null %>
                     </small>
-                    <button class="btn btn-lg btn-primary">Guardar</l>
+                    <button class="btn btn-lg btn-primary">Guardar cambios</l>
                   </div>
                 </form>
               </div>

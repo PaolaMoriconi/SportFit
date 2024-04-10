@@ -197,18 +197,26 @@
                       </div> 
                                            
                     </div>
-                    <div class="col-12 d-flex justify-content-between">
-                      <div>
-                        <input
-                          class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? ' is-valid' : '' %>"
-                          type="file" name="images" id="images" value="<%= locals.old && old.image ? old.image : null %>"
-                          multiple hidden />
-
-                        <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
+                    <div class="col-12 mb-3 p-4">
+                      <label for="" class="form-label">Imágenes:</label>
+  
+                      <div class="row border rounded p-3">
+                        <% for(let i = 0; i < 4; i++) { %>
+                        <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center " style="height: 250px">
+                        
+                            <div class="d-flex justify-content-center border align-items-center position-relative" id="div<%= i %>" style="height: 250px; width: 200px;">
+                              <button type="button" class="btn btn-sm btn-danger position-absolute bottom-0 start-0" onclick="removeImagePrev('<%=i%>')" id="button<%= i %>" hidden><i class="fa-solid fa-trash-can"></i></button>
+                              <input type="file" hidden id="image<%= i %>" onchange="showImagePrev(event, '<%=i%>')" name="images"/>
+                              <label for="image<%= i %>" id="label<%= i %>" class="btn btn-sm btn-dark position-absolute bottom-0 end-0"><i class="fa-solid fa-plus"></i> Agregar</label>
+                            </div>
+                        
+                        </div>
+                          <% } %>
                       </div>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.image ? errors.image.msg : null %>
-                      </small>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+
+                   
                       <button type="submit" class="btn btn-lg btn-primary">
                         Guardar
                       </button>

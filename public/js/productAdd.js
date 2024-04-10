@@ -77,6 +77,44 @@ const alerta = document.querySelectorAll("small")
 const imagen = document.getElementById("images")
 const talles = document.querySelectorAll(".form-check-input-lg")
 
+
+function showImagePrev(e, i) {
+
+    const div = document.getElementById('div' + i);
+    const label = document.getElementById('label' + i);
+    const button = document.getElementById('button' + i);
+    const img = document.getElementById('img' + i);
+    label.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i> Cambiar'
+    div.classList.remove('border')
+    if(!img){
+        const img = document.createElement('img');
+        img.setAttribute('id','img' + i);
+        img.setAttribute('src', URL.createObjectURL(e.target.files[0]))
+        img.classList.add('img-fluid');
+        img.style.maxHeight = "100%"
+        div.appendChild(img);
+        button.hidden = false;
+    }else{
+        img.setAttribute('src', URL.createObjectURL(e.target.files[0]))
+    }
+
+}
+
+function removeImagePrev(i) {
+    const div = document.getElementById('div' + i);
+    const label = document.getElementById('label' + i);
+    const button = document.getElementById('button' + i);
+    const img = document.getElementById('img' + i);
+    const input = document.getElementById('image' + i);
+    input.value = null;
+    div.classList.add('border');
+    div.removeChild(img);
+    label.innerHTML = '<i class="fa-solid fa-plus"></i> Agregar'
+    button.hidden = true;
+
+}
+
+
 function losTalles(talle) {
     let holaa = 0
     for (let i = 0; i < talle.length; i++) {
