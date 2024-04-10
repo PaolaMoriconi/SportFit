@@ -1,4 +1,84 @@
-const form = document.getElementById("editproductForm")
+const subcategoria = document.querySelector("#subcategoria");
+const categoria = document.querySelector("#categoria");
+const containerTalles = document.querySelector("#containerTalles");
+const formCheck = document.querySelectorAll(".form-check");
+
+const visibleCheck = () => {
+  if (subcategoria.value != "" && categoria.value != "") {
+
+    switch (subcategoria.value) {
+      case "1":
+        formCheck.forEach((element) => {
+          console.log(element);
+          if (
+            element.firstChild.nextElementSibling.id > 1 ||
+            element.firstChild.nextElementSibling.id == "U"
+          ) {
+            element.style.display = "none";
+            element.style.visibility = "hidden";
+          } else {
+            element.style.display = "block";
+            element.style.visibility = "visible";
+          }
+        });
+        break;
+      case "2":
+        formCheck.forEach((element) => {
+          if (
+            categoria.value == 3 &&
+            element.firstChild.nextElementSibling.id < 35
+          ) {
+            element.style.display = "block";
+            element.style.visibility = "visible";
+          } else if (
+            categoria.value != 3 &&
+            element.firstChild.nextElementSibling.id >= 35
+          ) {
+            element.style.display = "block";
+            element.style.visibility = "visible";
+          } else {
+            element.style.display = "none";
+            element.style.visibility = "hidden";
+          }
+        });
+        break;
+      case "3":
+        console.log("ingrese al caso 3");
+
+        formCheck.forEach((element) => {
+          if (element.firstChild.nextElementSibling.id == "U") {
+            element.style.display = "block";
+            element.style.visibility = "visible";
+          } else {
+            element.style.display = "none";
+            element.style.visibility = "hidden";
+          }
+        });
+        break;
+      default:
+        break;
+    }
+
+    containerTalles.style.display = "block";
+    containerTalles.style.visibility = "visible";
+  }
+};
+
+subcategoria.addEventListener("blur", function (e) {
+  visibleCheck();
+});
+
+categoria.addEventListener("blur", function (e) {
+  visibleCheck();
+});
+
+
+
+
+
+
+
+/*const form = document.getElementById("editproductForm")
 const alerta = document.querySelectorAll("small")
 const imagen = document.getElementById("image")
 const talles = document.querySelectorAll(".form-check-input-lg")
@@ -105,5 +185,5 @@ form.elements[i].addEventListener("blur",(e)=>{
      }//CIERRE DEL FOR     
     })
 
-    
+    */
     

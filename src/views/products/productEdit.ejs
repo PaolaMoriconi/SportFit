@@ -56,6 +56,25 @@
                       <label for="categoria">Categoria</label>
                     </div>
                   </div>
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="form-floating">
+                      <select name="subcategoria" class="form-select" id="subcategoria"
+                        aria-label="Floating label select example">
+                        <option value="" selected hidden></option>
+                        <% subcategorias.forEach(subcategorie=> { %>
+                          <option value="<%= subcategorie.id %>">
+                            <%= subcategorie.name %>
+                          </option>
+                          <% }) %>
+                      </select>
+
+                      <label for="subcategoria">Subcategoria</label>
+
+                    </div>
+                    <small class="text-danger">
+                      <%=locals.errors && errors.subcategoria ? errors.subcategoria.msg : null %>
+                    </small>
+                  </div>
                   
                   <div class="col-12 col-md-6 mb-3">
                     <div class="form-floating">
@@ -144,7 +163,7 @@
                     <div class="d-flex">
                       <% talles.forEach(t => { %>
                         <div class="form-check" >
-                          <input class="form-check-input-lg" name="talles" type="checkbox" <%=  productSizes.map(ps => ps.size_id).includes(t.id) && 'checked'%> value="<%= t.id %>" id="<%= t.id + t.name %>">
+                          <input class="form-check-input-lg" name="talles" type="checkbox" <%=  productSizes.map(ps => ps.size_id).includes(t.id) && 'checked'%> value="<%= t.id %>" id="<%= t.name %>">
                           <label class="form-check-label" for="<%= t.id + t.name %>">
                             <%= t.name %>
                           </label>

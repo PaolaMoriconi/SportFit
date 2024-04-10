@@ -16,6 +16,7 @@ module.exports = [
   
   body("marca").notEmpty().withMessage("Este campo es obligario").bail(),
   body("categoria").notEmpty().withMessage("Este campo es obligario").bail(),
+  body("subcategoria").notEmpty().withMessage("Este campo es obligario").bail(),
   body("section").notEmpty().withMessage("Este campo es obligario").bail(),
   body("color").notEmpty().withMessage("Este campo es obligario").bail(),
   body("descripcion").notEmpty().withMessage("Este campo es obligario").bail(),
