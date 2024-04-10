@@ -17,7 +17,7 @@ const [oneProduct, setOneProduct] = useState({});
   const handleShow = async (id) =>{
 
     const product = await getOneProducts(id)
-    
+    console.log(product);
     setOneProduct(product);
 
     setShow(true);
@@ -41,7 +41,7 @@ const [oneProduct, setOneProduct] = useState({});
             <tr key={product.id}> 
             <th scope="row">{product.id}</th>
            <td>{product.name}</td>
-           <td>{product.categories.name}</td>
+           <td>{product.name}</td>
            <td>{product.price}</td> 
            <td>{product.discount}</td>
            <td>

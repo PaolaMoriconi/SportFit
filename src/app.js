@@ -14,7 +14,7 @@ const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const apiRouter = require("./routes/api/apiRouter")
 const { constants } = require('buffer');
-
+const cors = require("cors")
 const app = express();
 
 // view engine setup
@@ -39,7 +39,7 @@ app.use(session( {
 
 app.use(cookieValidator);
 app.use(transferLocals)
-
+app.use(cors())
 app.use('/apis', apiRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
