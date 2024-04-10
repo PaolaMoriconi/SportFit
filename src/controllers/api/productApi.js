@@ -2,11 +2,26 @@ const db = require("../../database/models")
 
 const getAllProducts = async (req,res) =>{
     try {
-        const {count,rows} = await db.Product.findAndCountAll()
+        const rows = await db.Product.findAll({
+            include: [
+                {
+                  association: "images",
+                  attributes: ['name']
+                },
+                {
+                  association: "categories",
+                  attributes: ['name']
+                },
+                {
+                  association : 'sizes',
+                  attributes: ['name']
+                }
+              ],
+        })
 
         return res.status(200).json({
             ok:true,
-            count,
+            
             products:rows
         })
         
