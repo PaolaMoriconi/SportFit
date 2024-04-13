@@ -5,7 +5,8 @@
   title : 'Dashboard'
 }) %>
 
-<body class="dashboard" >
+<body class="dashboard" style=" background-image: url(/images/fondodashboard.jpeg);
+background-size: cover;" >
   
   <%- include('./partials/headerAdmin') %>
   
@@ -13,7 +14,7 @@
     <section class="row my-5">
       <div class="col-12 col-md-10 mx-auto">
         <div class="card">
-          <div class="card-header d-flex justify-content-between">
+          <div class="card-header d-flex justify-content-between" >
       
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
@@ -27,11 +28,11 @@
           
             <a class="btn btn-primary" href="/products/agregar"> Nuevo </a>
           </div>
-          <div class="card-body table-resposive" style="width:10%;">
+          <div class="card-body table-resposive" style="width:100%;">
             <% if (products.length) { %>
               <table class="table" >
                 <thead>
-                  <tr>
+                  <tr >
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Categoria</th>

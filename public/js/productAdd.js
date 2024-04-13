@@ -64,11 +64,11 @@ const visibleCheck = () => {
   }
 };
 
-subcategoria.addEventListener("blur", function (e) {
+subcategoria.addEventListener("change", function (e) {
   visibleCheck();
 });
 
-categoria.addEventListener("blur", function (e) {
+categoria.addEventListener("change", function (e) {
   visibleCheck();
 });
 

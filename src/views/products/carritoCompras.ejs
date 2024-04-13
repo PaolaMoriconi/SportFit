@@ -5,31 +5,32 @@
   }) %>
   <body class="body__carr">
     <%- include('../partials/header') %>
-    <main>
+    <main class="main__product"
+    >
       
       <h2 class="titulo-principal">TU CARRITO</h2>
-   
-      
+      <div class="div-carrito">
         <div class="products">
           <% products.forEach(product => { %>
           <article class="products__article">
+            
             <a href="/products/detail/<%= product.id %>">
+              
               <img
-                src="/images/products/<%= product.images || 'Imagen_por_defecto.jpg'  %>" class="products__article__img"
+                src="/images/products/<%= product.images[0].name || 'Imagen_por_defecto.jpg'  %>" class="products__article__img"
                 alt="<%= product.nombre %>"
               />
               <div class="products__article__info">
                 <h2><%= product.name %></h2>
-                
-                <p>$<%= product.price %></p>
+                <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark"></i></a>
                 <% if (product.discount) { %>
-
-                  <p>precio con descuento $<%= product.price*product.discount/100 %></p>
-  
+                  <p>Antes: $<%= product.price %></p>
+                  <span>Ahora: $<%= product.price*product.discount/100 %></span>
+                <% }else{ %>
+                <p>$<%= product.price.toFixed(0) %></p>
                 <% } %>
-                <div class="icons__products">
-                  <i class="fa-solid fa-circle-xmark"></i>
-                  <i class="fa-regular fa-heart"></i></div>
+                
+                 
                <div  class="select"><small>Cantidad</small>
               <select name="select">
                 <option value="1">1</option>
@@ -43,50 +44,47 @@
           </article>
           <% }) %>
         </div>
-       <section class="section__pagos">
-         <nav class="cod-promo">
-      <i class="fa-solid fa-tag"></i><a href="#"><b> USA UN CODIGO PROMOCIONAL</i></a>
+        <section class="section__pagos">
+          <div class="section__pagos__datos">
+          <nav class="codigo__de">
+            <a href="./"><i class="fa-solid fa-arrow-left">Seguir comprando</i></a>
+          </nav>
+    <div class="detalle__pedido">
+      <h3>DETALLE DEL PEDIDO</h3>
+    </div>
+    <div class="div__total">
+      <p><%= products.length %> Productos</p><span>$<%= total %></span>
+    </div>
+    <% if (total < 19999) { %>
+      <div class="div__total">
+        <p>Entrega</p><span><%= envio %></span>
+      </div>
+      <div class="div__total">
+        <p>TOTAL</p><span>$<%= total + envio  %></span>
+      </div>
+    <% }else{%>
+      <div class="div__total">
+        <p>Entrega</p><span>Gratis</span>
+      </div>
+      <div class="div__total">
+        <p>TOTAL</p><span>$<%= total%></span>
+      </div>
+    <%} %>
+    <nav class="cod-promo">
+      <a href="#"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
     </nav>
-  <div class="detalle__pedido">
-    <h3>DETALLE DEL PEDIDO</h3>
-  </div>
-  <div class="div__products">
-    <p><%= products.length %> Productos</p><p>$<%= total  %></p>
-  </div>
-  <% if (total < 19999) { %>
-    <div class="div__products">
-      <p>Entrega</p><p><%= envio %></p>
+      <div class="button">
+        <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      
+      <div class="envio-cambio">
+        <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
+        <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
+      </div>
     </div>
-    <div class="div__products">
-      <p>TOTAL</p><p>$<%= total + envio  %></p>
-    </div>
-  <% }else{%>
-    <div class="div__products">
-      <p>Entrega</p><p>Gratis</p>
-    </div>
-    <div class="div__products">
-      <p>TOTAL</p><p>$<%= total%></p>
-    </div>
-  <%} %>
+        </section>
+      </div>
 
-    <div class="button">
-      <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-    
-    <div class="envio-cambio">
-      <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
-      <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
-    </div>
-    <div class="medio-pago">
-      <h3>MEDIOS DE PAGO</h3>
-      <div class="medio__pago__iconos">
-      <i class="fa-brands fa-cc-visa"></i>
-      <i class="fa-brands fa-cc-mastercard"></i>
-      <i class="fa-brands fa-cc-amex"></i>
-    </div>
-  </div>
- 
-  </section>
   
   </main>
   <%- include('../partials/footer') %>

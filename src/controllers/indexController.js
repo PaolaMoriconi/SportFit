@@ -46,20 +46,20 @@ module.exports = {
       });
     });
   },
-  cart: (req, res) => {
-    db.Product.findAll().then((products) => {
-      const total = products.reduce((n1, n2) => n1 + n2.price, 0);
+  cart: async (req, res) => {
+    const products = await db.Product.findAll({include:{association:'images'}})
+  
+  // res.send(products)
+  res.render('products/carritoCompras', {
+    products:products,
+    user:req.session.userLogin,
+    total : products.reduce(
+      (accumulator, currentValue) => accumulator.price + currentValue.price,0),
+    envio: 3000
+  })
+}
+  ,
 
-      const envio = 10000;
-
-      res.render("products/carritoCompras", {
-        products,
-        user: req.session.userLogin,
-        total,
-        envio,
-      });
-    });
-  },
   searchAdmin: (req, res) => {
     const { keyword } = req.query;
     db.Product.findAll({
@@ -107,4 +107,7 @@ module.exports = {
   quienesSomos:(req, res) => {
       return res.render("quienesSomos")
   },
+  sucursales:(req, res) => {
+    return res.render("sucursales")
+},
 };

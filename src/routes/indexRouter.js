@@ -6,7 +6,8 @@ const {
   cart,
   searchAdmin,
   search,
- quienesSomos
+ quienesSomos,
+ sucursales
 } = require('../controllers/indexController');
 const isAdmin = require('../middlewares/isAdmin');
 isAdmin
@@ -19,7 +20,7 @@ router
   .get('/admin/products/search', searchAdmin)
   .get('/search', search)
   .get('/quienesSomos',quienesSomos)
-    
+  .get('/sucursales',sucursales)
 
 
 module.exports = router;

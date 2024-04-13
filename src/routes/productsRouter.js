@@ -19,5 +19,6 @@ router
   .get("/agregar", add)
   .put("/update/:id",upload.array("images",4),update)
   .delete("/remove/:id", remove)
+  
 
 module.exports = router;

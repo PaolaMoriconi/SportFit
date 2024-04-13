@@ -82,7 +82,8 @@ const updateSizes = async (req,res) => {
         }else {
             await db.ProductSize.create({
                 product_id : idProduct,
-                size_id : idSize
+                size_id : idSize,
+                quantity: 10
             })
         }
 

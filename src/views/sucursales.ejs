@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./partials/head', {
+    title : "sucursales"
+  }) %>
+
+ 
+  <body style="background-image:url(/images/fondogris.jpg); background-size: cover;">
+    <%- include('./partials/header') %>
+    <main >
+ <h2 class="titulo">sucursales</h2>
+ <section style="display: flex; flex-direction: row;justify-content: space-around;">
+ <div class="card" style="width: 18rem;">
+    <img src="/images/sucursallanuscentro.jpg" class="card-img-top" alt="sucersalelanuscentro">
+    <div class="card-body">
+      <h5 class="card-title">Sucursal Lanus Centro</h5>
+      <p class="card-text">horarios de atencion al cliente.</p>
+      <p class="card-text">lun a vie:8:00 a 20:00 y sabados:9:00 a 20:00</p>
+      <a href="https://maps.app.goo.gl/ZLh26sTwqtrfutem8" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> Sucursal Lanus Centro</a>
+    </div>
+  </div>
+<div class="card" style="width: 18rem;">
+  <img src="/images/sucursallanus2.jpg" class="card-img-top" alt="sucursallanus2">
+  <div class="card-body">
+    <h5 class="card-title">Sucursal Lanus</h5>
+    <p class="card-text">horarios de atencion al cliente.</p>
+    <p class="card-text">lun a vie:8:00 a 20:00 y sabados:9:00 a 20:00</p>
+    <a href="https://maps.app.goo.gl/yDS855nn9u24mMhS8" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> Sucursal Lanus</a>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="/images/sucursalsanmiguel.jpg" class="card-img-top" alt="sucursalsanmiguel">
+  <div class="card-body">
+    <h5 class="card-title">Sucursal San Miguel</h5>
+    <p class="card-text">horarios de atencion al cliente.</p>
+    <p class="card-text">lun a vie:8:00 a 20:00 y sabados:9:00 a 20:00</p>
+    <a href="https://maps.app.goo.gl/VNMaeGJC8PF5JReX8"" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> Sucursal San Miguel</a>
+  </div>
+</div>
+</section>
+</main>
+<%- include('./partials/footer') %>
+  </body>
+</html>

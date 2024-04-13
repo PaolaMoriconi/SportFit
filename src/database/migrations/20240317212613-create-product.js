@@ -81,7 +81,8 @@ module.exports = {
             tableName:'sections'
           },
           key:'id'
-        }
+        },
+        onDelete: 'cascade'
       },
       createdAt: {
         allowNull: false,

@@ -17,7 +17,7 @@
     padding: 10px 0;
 }
 
-.footer__nav ul li a {
+.footer__nav ul li a  {
     color: #000;
     font-weight: 700;
 }
@@ -28,8 +28,3 @@
     
 }
 
-.footer__nav__redes a{
-color: #000;
-font-size: 2em;
-margin: 0 5px;
-}

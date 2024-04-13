@@ -7,11 +7,11 @@ module.exports = async (req, res) => {
   const errors = validationResult(req);
   const images = req.files;
 
-  let { nombre, precio, descuento, talles, section, descripcion, categoria, color, marca } = req.body;
+  let { nombre, precio, descuento, talles, section, subcategoria, descripcion, categoria, color, marca, stock } = req.body;
 
   if (errors.isEmpty()) {
     try {
-    
+      console.log("body",req.body)
       const product = await db.Product.create({
         name: nombre,
         price: precio,
@@ -20,7 +20,8 @@ module.exports = async (req, res) => {
         category_id: categoria,
         section_id: section,
         color_id: color,
-        brand_id: marca 
+        brand_id: marca,
+        subcategorie_id:subcategoria, 
       })
 
       if(talles){
@@ -32,7 +33,9 @@ module.exports = async (req, res) => {
 
           await db.ProductSize.create({
             product_id : product.id,
-            size_id : t
+            size_id : t,
+            quantity: stock
+
           })
         
         });
@@ -72,6 +75,10 @@ module.exports = async (req, res) => {
         order : ['name']
     })
 
+    const subcategorias = db.Subcategorie.findAll({
+      order : ['name']
+  })
+
     const talles = db.Size.findAll()
 
     
@@ -86,9 +93,9 @@ module.exports = async (req, res) => {
       }
     })
 
-    Promise.all([colores, categorias, sections,marcas, talles])
+    Promise.all([colores,subcategorias, categorias, sections,marcas, talles])
     
-    .then(([colores, categorias,sections,marcas, talles]) => {
+    .then(([colores,subcategorias,categorias,sections,marcas, talles]) => {
       
       res.render("products/productAdd", {
         user: req.session.userLogin,
@@ -98,7 +105,8 @@ module.exports = async (req, res) => {
         categorias,
         talles,
         marcas,
-        sections
+        sections,
+        subcategorias
       });
     });
   }

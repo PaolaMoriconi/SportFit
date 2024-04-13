@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Brand,{as:"brand",foreignKey:"brand_id"}),
       this.belongsTo(models.Color,{as:"colors",foreignKey:"color_id"}),
       this.belongsTo(models.Subcategorie,{as:"subcategories",foreignKey:"subcategorie_id"}),
-      this.hasMany(models.Image,{as:"images",foreignKey:"product_id"}),
+      this.hasMany(models.Image,{as:"images",foreignKey:"product_id",onDelete: 'CASCADE', onUpdate: 'CASCADE'}),
       this.hasMany(models.Item,{as:"items",foreignKey:"product_id"}),
       this.belongsToMany(models.Size, {
         as : 'sizes',

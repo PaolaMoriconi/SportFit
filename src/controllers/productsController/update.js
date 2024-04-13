@@ -9,9 +9,13 @@ module.exports = async (req, res) => {
     marca,
     color,
     categoria,
+    subcategoria,
     detalleProducto,
     section,
   } = req.body;
+  
+  console.log("body",req.body);
+
   const { id } = req.params;
   const images = req.files;
   console.log("images: ",images);
@@ -49,6 +53,7 @@ module.exports = async (req, res) => {
       discount: descuento,
       description: detalleProducto.trim(),
       category_id: parseInt(categoria),
+      subcategorie_id: parseInt(subcategoria),
       brand_id: parseInt(marca),
       color_id: parseInt(color),
       size_id: parseInt(talle),

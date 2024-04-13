@@ -3,6 +3,7 @@ const categoria = document.querySelector("#categoria");
 const containerTalles = document.querySelector("#containerTalles");
 const formCheck = document.querySelectorAll(".form-check");
 
+
 const visibleCheck = () => {
   if (subcategoria.value != "" && categoria.value != "") {
 
@@ -64,11 +65,15 @@ const visibleCheck = () => {
   }
 };
 
-subcategoria.addEventListener("blur", function (e) {
+window.onload( 
+  visibleCheck()
+)
+
+subcategoria.addEventListener("change", function (e) {
   visibleCheck();
 });
 
-categoria.addEventListener("blur", function (e) {
+categoria.addEventListener("change", function (e) {
   visibleCheck();
 });
 

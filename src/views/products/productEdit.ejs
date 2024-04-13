@@ -62,7 +62,8 @@
                         aria-label="Floating label select example">
                         <option value="" selected hidden></option>
                         <% subcategorias.forEach(subcategorie=> { %>
-                          <option value="<%= subcategorie.id %>">
+                          <option value="<%= subcategorie.id %>" <%=subcategorie.id==product.subcategorie_id ? "selected" : null
+                            %>>
                             <%= subcategorie.name %>
                           </option>
                           <% }) %>
@@ -125,6 +126,19 @@
                       </small>
                       <label for="colores">Color</label>
                     </div>
+                  </div>
+                  <div class="col-6 col-md-3 mb-3">
+                    <div class="form-floating">
+                      <input
+                        class="form-control <%= locals.errors && errors.stock ? ' is-invalid' : locals.old && old.stock ? 'is-valid' : '' %>"
+                        type="text" name="stock"
+                        value="<%= locals.old && old.stock ? old.stock : 0 %>" />
+
+                      <label for="descuento">stock</label>
+                    </div>
+                    <small class="text-danger">
+                      <%=locals.errors && errors.stock ? errors.stock.msg : null %>
+                    </small>
                   </div>
 
                   <div class="col-6  col-md-3 mb-3 ">
