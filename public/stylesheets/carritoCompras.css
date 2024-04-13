@@ -60,7 +60,7 @@
   .products__article__info p {
  text-align: center;
 color: #332f2c;
-    text-decoration: none;
+    text-decoration: line-through;
     position: relative;
     bottom: 32px;
   }
@@ -93,7 +93,7 @@ color: #332f2c;
    right: 40px;
     gap:5px;
 }
-.cod-promo a {
+.cod-promo  {
     color: black;
 }
 .section__pagos{
@@ -103,7 +103,7 @@ color: #332f2c;
     background-color: var( --colorVerdeAgua);
    
 }
-.codigo__de a{
+.codigo__de {
     margin:5px 40px 0px;
 
 }
@@ -120,7 +120,7 @@ text-align: center;
     flex-wrap: wrap;
     margin: 0px 10px;
 }
-.cod-promo a {
+.cod-promo  {
     font-size: 15px;
     color: black;
     padding: 6px;
@@ -192,12 +192,12 @@ bottom: 40px;
     position: relative;
     right: 10vw;
  }
- .codigo__de a{
+ .codigo__de {
     margin:5px 270px 0px;
     gap: 5px;
 
 }
-.cod-promo a {
+.cod-promo  {
    width: 60%;
    margin: 25px 160px;
 
@@ -270,21 +270,23 @@ position: relative;
        
         }
      .section__pagos__datos{
+        width: 40%;
         display: flex;
         flex-direction: column;
      }
-     .codigo__de a{
-        position: relative;
-        left: 8vw;
-        top: 10px;
+     .codigo__de {
+        width: 60%;
+        position: absolute;
+        left: -16vw;
+        top: 7px;
        
     
     }
     .detalle__pedido h3{
  font-size: 25px;
- position: relative;
-        left: 12vw;
-        top: 20px;
+ position:absolute;
+        left: 8vw;
+        top: 37px;
     }
     .div__total{
         font-size: 18px;
@@ -292,31 +294,32 @@ position: relative;
         
     }
     .div__total p{
-        position: relative;
-        left: 25vw;
-        top: 30px
+        position: absolute;
+        left: -24vw;
+        top: 85px
     }
     .div__total span{
         position: relative;
-        top: 30px;
-        right: 2vw;
+        top: 85px;
+        right: -5vw;
     }
-    .cod-promo a {
+    .cod-promo  {
         position: relative;
-       width: 45%;
-       left: 14vw;
-       top:35px;
+       width: 200%;
+       right: 35vw;
+       top:9vh;
     
     }
     .button{
         position: relative;
-        width: 50%;
-        left: 10vw;
-        bottom:0px;
+        width: 190%;
+        right: 37vw;
+        top:2vh;
     }
     .envio-cambio{
+        width: 187%;
         position:relative;
-        left: 15vw;
+        right: 33vw;
         
     }
     }
@@ -342,18 +345,19 @@ position: relative;
       {
         right: 106px;
         }
-    .codigo__de a{
-        position: relative;
-        left: 0vw;
-        top: 10px;
+    .codigo__de {
+        width: 60%;
+        position: absolute;
+        left: -5vw;
+        top: 7px;
        
     
     }
     .detalle__pedido h3{
- font-size: 25px;
- position: relative;
-        left: 2vw;
-        top: 20px;
+        font-size: 25px;
+        position:absolute;
+               left: 12vw;
+               top: 37px;
     }
     .div__total{
         font-size: 18px;
@@ -361,37 +365,37 @@ position: relative;
         
     }
     .div__total p{
-        position: relative;
-        left: 7vw;
-        top: 30px
+        position: absolute;
+        left: -24vw;
+        top: 85px
     }
     .div__total span{
         position: relative;
-        top: 30px
+        top: 85px;
+        left: 8vw;
     }
-    .cod-promo a {
+    .cod-promo  {
         position: relative;
-       width: 55%;
-       left: 2vw;
-       top:35px;
+        width: 200%;
+        right: 32vw;
+        top:9vh;
     
     }
     .button{
         position: relative;
-        width: 55%;
-        left: 0vw;
-        bottom:0px;
+        width: 190%;
+        right: 32vw;
+        top:4vh;
     }
     .envio-cambio{
+        width: 187%;
         position:relative;
-        left: -3vw;
+        right: 33vw;
         
     }
 }
 
-@media (min-width: 1600px) {
- 
-}
+
 
 
 

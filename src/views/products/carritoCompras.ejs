@@ -27,7 +27,7 @@
                   <p>Antes: $<%= product.price %></p>
                   <span>Ahora: $<%= product.price*product.discount/100 %></span>
                 <% }else{ %>
-                <p>$<%= product.price.toFixed(0) %></p>
+                <span>$<%= product.price.toFixed(0) %></span>
                 <% } %>
                 
                  
@@ -46,9 +46,9 @@
         </div>
         <section class="section__pagos">
           <div class="section__pagos__datos">
-          <nav class="codigo__de">
-            <a href="./"><i class="fa-solid fa-arrow-left">Seguir comprando</i></a>
-          </nav>
+         
+            <a href="./"  class="codigo__de"><i class="fa-solid fa-arrow-left">Seguir comprando</i></a>
+         
     <div class="detalle__pedido">
       <h3>DETALLE DEL PEDIDO</h3>
     </div>
@@ -70,9 +70,9 @@
         <p>TOTAL</p><span>$<%= total%></span>
       </div>
     <%} %>
-    <nav class="cod-promo">
-      <a href="#"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
-    </nav>
+   
+      <a href="#" class="cod-promo"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
+   
       <div class="button">
         <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
       </div>

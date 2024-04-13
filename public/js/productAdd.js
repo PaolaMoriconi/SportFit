@@ -72,7 +72,7 @@ categoria.addEventListener("change", function (e) {
   visibleCheck();
 });
 
-/*const form = document.getElementById("productAddForm")
+const form = document.getElementById("productAddForm")
 const alerta = document.querySelectorAll("small")
 const imagen = document.getElementById("images")
 const talles = document.querySelectorAll(".form-check-input-lg")
@@ -115,16 +115,16 @@ function removeImagePrev(i) {
 }
 
 
-function losTalles(talle) {
-    let holaa = 0
-    for (let i = 0; i < talle.length; i++) {
-        if (talle[i].checked) {
-            holaa ++
-        } 
-    }
-    return holaa
-}
-
+// function losTalles(talle) {
+//     let holaa = 0
+//     for (let i = 0; i < talle.length; i++) {
+//         if (talle[i].checked) {
+//             holaa ++
+//         } 
+//     }
+//     return holaa
+// }
+/*
 
 function isValidNumber(valor) {
 return valor >= 0? /^-?\d*\.?\d*$/.test(valor) : false;

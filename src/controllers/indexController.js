@@ -3,18 +3,18 @@ const { Op } = require("sequelize");
 
 module.exports = {
   index: async function (req, res) {
-    
-    const products = await db.Product.findAll({ include: [{association: "images"}]})
-    const brands = await db.Brand.findAll()
+    const products = await db.Product.findAll({
+      include: [{ association: "images" }],
+    });
+    const brands = await db.Brand.findAll();
 
     return res.render("index", {
-        products,
-        brands,
-        user: req.session.userLogin,
-      });
+      products,
+      brands,
+      user: req.session.userLogin,
+    });
   },
   admin: (req, res) => {
-
     const products = db.Product.findAll({
       include: [
         {
@@ -24,42 +24,43 @@ module.exports = {
           association: "categories",
         },
         {
-          association : 'sizes'
+          association: "sizes",
         },
         {
-          association : 'subcategories'
-        }
-        
+          association: "subcategories",
+        },
       ],
-    })
-    
-    const sizes = db.Size.findAll()
-    
-    Promise.all([products,sizes])
-    .then(([products, sizes]) => {
-      console.log("products: ",products[0])
-      console.log("sizes: ",sizes[0])
+    });
+
+    const sizes = db.Size.findAll();
+
+    Promise.all([products, sizes]).then(([products, sizes]) => {
+      console.log("products: ", products[0]);
+      console.log("sizes: ", sizes[0]);
       return res.render("dashboard", {
         products,
-        sizesList : sizes,
+        sizesList: sizes,
         user: req.session.userLogin,
       });
     });
   },
   cart: async (req, res) => {
-    const products = await db.Product.findAll({include:{association:'images'}})
-  
-  // res.send(products)
-  res.render('products/carritoCompras', {
-    products:products,
-    user:req.session.userLogin,
-    total : products.reduce(
-      (accumulator, currentValue) => accumulator.price + currentValue.price,0),
-    envio: 3000
-  })
-}
-  ,
+    const products = await db.Product.findAll({
+      include: { association: "images" },
+    });
 
+    const suma = products.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.price,
+      0
+    );
+
+    res.render("products/carritoCompras", {
+      products: products,
+      user: req.session.userLogin,
+      total: suma,
+      envio: 3000,
+    });
+  },
   searchAdmin: (req, res) => {
     const { keyword } = req.query;
     db.Product.findAll({
@@ -73,9 +74,9 @@ module.exports = {
       ],
       where: {
         name: { [Op.substring]: keyword },
-      }
+      },
     }).then((products) => {
-      console.log("buscador admin: ",products);
+      console.log("buscador admin: ", products);
       return res.render("dashboard", {
         products,
         keyword,
@@ -96,7 +97,8 @@ module.exports = {
       ],
       where: {
         name: { [Op.substring]: keyword },
-      }}).then((products) => {
+      },
+    }).then((products) => {
       return res.render("products/productResult", {
         products,
         keyword,
@@ -104,10 +106,10 @@ module.exports = {
       });
     });
   },
-  quienesSomos:(req, res) => {
-      return res.render("quienesSomos")
+  quienesSomos: (req, res) => {
+    return res.render("quienesSomos");
   },
-  sucursales:(req, res) => {
-    return res.render("sucursales")
-},
+  sucursales: (req, res) => {
+    return res.render("sucursales");
+  },
 };
