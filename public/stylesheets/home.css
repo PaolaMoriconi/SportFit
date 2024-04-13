@@ -47,6 +47,15 @@ body.home {
   text-align: center;
   color: #332f2c;
   font-size: 2rem;
+  overflow: hidden;
+  /*si es una linea
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  
+  si es 2 lineas*/
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .home__article  span {
   text-align: center;
