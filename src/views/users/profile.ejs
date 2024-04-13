@@ -51,10 +51,6 @@
             <label class="form__label"  for="telefono" >Telefono</label>
             <input id="input_telefono" class="profile__input " type="telefono" name="phone" value="<%= locals.usuario && usuario.phone ? usuario.phone : locals.old ? old.phone : null %>">
             </div>
-          <div class="col-12 col-md-7" >
-            <label for="avatar" class="form__label">Agregar imagen</label>
-            <input id="avatar" type="file"  name="avatar" value="<%= locals.usuario && usuario.avatar ? usuario.avatar : locals.old ? old.avatar : null %>">          
-          </div>
 
           <div class="form__botton">
             <button class="profile--btn" type="submit">Actualizar</button>
