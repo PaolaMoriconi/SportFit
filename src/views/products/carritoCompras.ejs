@@ -24,10 +24,10 @@
                 <h2><%= product.name %></h2>
                 <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark"></i></a>
                 <% if (product.discount) { %>
-                  <p>Antes: $<%= product.price %></p>
-                  <span>Ahora: $<%= product.price*product.discount/100 %></span>
+                  <p>Antes: $<%= product.price.toLocaleString('es') %></p>
+                  <span>Ahora: $<%= (product.price*product.discount/100).toLocaleString('es') %></span>
                 <% }else{ %>
-                <span>$<%= product.price.toFixed(0) %></span>
+                <span>$<%= product.price.toLocaleString('es') %></span>
                 <% } %>
                 
                  
@@ -53,21 +53,21 @@
       <h3>DETALLE DEL PEDIDO</h3>
     </div>
     <div class="div__total">
-      <p><%= products.length %> Productos</p><span>$<%= total %></span>
+      <p><%= products.length %> Productos</p><span>$<%= total.toLocaleString('es') %></span>
     </div>
     <% if (total < 19999) { %>
       <div class="div__total">
         <p>Entrega</p><span><%= envio %></span>
       </div>
       <div class="div__total">
-        <p>TOTAL</p><span>$<%= total + envio  %></span>
+        <p>TOTAL</p><span>$<%= (total + envio).toLocaleString('es')  %></span>
       </div>
     <% }else{%>
       <div class="div__total">
         <p>Entrega</p><span>Gratis</span>
       </div>
       <div class="div__total">
-        <p>TOTAL</p><span>$<%= total%></span>
+        <p>TOTAL</p><span>$<%= total.toLocaleString('es')%></span>
       </div>
     <%} %>
    
