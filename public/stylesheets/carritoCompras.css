@@ -73,6 +73,7 @@ color: #332f2c;
    left: 25px;
   }
   .icons__products  {
+    color: red;
       display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -243,6 +244,7 @@ position: relative;
         margin: 10px 10vw;
       }
       .icons__products  {
+        
     bottom: 24px;
       left: 19vw;
           
@@ -307,7 +309,7 @@ position: relative;
         position: relative;
        width: 200%;
        right: 35vw;
-       top:7vh;
+       top:12vh;
     
     }
     .button{
