@@ -185,4 +185,13 @@ module.exports = {
     res.clearCookie("remember");
     res.redirect("/");
   },
+  coverPassword:(req,res)=>{
+    res.render("users/coverPassword")
+  },
+  recuerarPassword:(req,res)=>{
+    res.render("users/recuperarPassword")
+  }
 };
+
+
+

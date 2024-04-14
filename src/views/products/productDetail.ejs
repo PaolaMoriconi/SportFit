@@ -65,7 +65,7 @@
                   </div>
                 <% } %>
               
-                <button class="car--btn" type="submit"><a href="/cart">añadir al carrito</a></button>
+                <button class="car--btn" type="submit"><a href="/cart" onclick='addCart("<%=product.id%>","<%=product.name%>","<%=product.discount%>","<%=product.price%>","<%= product.images[0].name %>")'>añadir al carrito</a></button>
 
               </div>
 

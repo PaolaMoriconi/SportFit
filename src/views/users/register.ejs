@@ -15,37 +15,34 @@
           
           <div class="register__group">
             <label  class="register__label" for="name" >Nombre</label>
-            <input class="register__input <%= locals.errors && errors.name ? 'form-control is-invalid' : locals.old && old.name ? 'form-control is-valid' : '' %>" type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+            <input style="outline: none;" class="register__input <%= locals.errors && errors.name ? 'form-control is-invalid' : locals.old && old.name ? 'form-control is-valid' : '' %>" type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>">
             <small class="text-danger"><%=locals.errors && errors.name ? errors.name.msg : null %></small>
           </div>
 
           <div class="register__group">
             <label class="register__label"  for="surname" >Apellido</label>
-            <input class="register__input <%= locals.errors && errors.surname ? 'form-control is-invalid' : (locals.old && old.surname ? 'form-control is-valid' : '') %>" type="text" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
+            <input style="outline: none;" class="register__input <%= locals.errors && errors.surname ? 'form-control is-invalid' : (locals.old && old.surname ? 'form-control is-valid' : '') %>" type="text" name="surname" value="<%= locals.old && old.surname ? old.surname : null %>">
             <small class="text-danger"><%=locals.errors && errors.surname ? errors.surname.msg : null %></small>
           </div>
 
           <div class="register__group">
             <label class="register__label" for="email">Email <i class="fa-solid fa-envelope email icons icons__email__register "></i></label>
-            <input id="input_email" class="register__input <%= locals.errors && errors.email ? "register-control is-invalid" :(locals.old && old.email ? 'register-control is-valid' : '' )%>" type= "email" name="email" value =" <%= locals.old && old.email ? old.email : null %>">
+            <input style="outline: none;" id="input_email" class="register__input <%= locals.errors && errors.email ? "register-control is-invalid" :(locals.old && old.email ? 'register-control is-valid' : '' )%>" type= "email" name="email" value =" <%= locals.old && old.email ? old.email : null %>">
             <small class="text-danger"><%=locals.errors && errors.email ? errors.email.msg : null %> </small>
           </div>
           
           <div class="register__group">
             <label class="register__label"  for="password" >Contraseña <i class="fa-solid fa-lock password icons__password__register "></i></label>
-            <input id="input_password"  class="register__input <%= locals.errors && errors.password ? "register-control is-invalid" : null %>" type="password"  name="password">
+            <input style="outline: none;" id="input_password"  class="register__input <%= locals.errors && errors.password ? "register-control is-invalid" : null %>" type="password"  name="password">
             <small class="text-danger"><%=locals.errors && errors.password ? errors.password.msg : null %> </small>
           </div>
 
           <div class="register__group">
             <label class="register__label"  for="password2" >Confirma tu contraseña <i class="fa-solid fa-lock password2 icons__password2__register"></i></label>
-            <input id="input_password2" class="register__input <%= locals.errors && errors.password2 ? "form-control is-invalid" : null %>" type="password" name="password2">
+            <input style="outline: none;" id="input_password2" class="register__input <%= locals.errors && errors.password2 ? "form-control is-invalid" : null %>" type="password" name="password2">
             <small class="text-danger"><%=locals.errors && errors.password2 ? errors.password2.msg : null %> </small>
           </div>
-          <div class="register__group--image col-12 col-md-7" >
-            <label for="avatar" class="register__label">Agregar imagen</label>
-            <input id="avatar" type="file"  name="avatar">          
-          </div>
+   
 
           <div class="form__botton">
             <button class="register--btn" type="submit">Regístrate</button>

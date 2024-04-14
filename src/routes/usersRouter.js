@@ -8,7 +8,9 @@ const {
   profile,
   updateProfile,
   test,
-  logout
+  logout,
+  coverPassword,
+  recuerarPassword
 } = require("../controllers/usersController");
 
 const usersRegisterValidator = require("../validations/users-register-validator");
@@ -38,5 +40,7 @@ router
     updateProfile
   )
   .get('/logout',logout)
+  .get("/coverPassword",coverPassword)
+  .get("/recuperarPassword",recuerarPassword)
 
 module.exports = router;
