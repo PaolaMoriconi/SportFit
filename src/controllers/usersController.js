@@ -60,7 +60,6 @@ module.exports = {
         },
       ],
     }).then((usuario) => {
-      console.log(usuario);
       return res.render("users/profile", {
         usuario,
         user: req.session.userLogin,
@@ -69,6 +68,7 @@ module.exports = {
 
   },
   updateProfile: async (req, res) => {
+    console.log("update");
     const errores = validationResult(req);
     const { name, surname, email, adress, state, district, phone } = req.body;
     const { id } = req.params;
@@ -119,6 +119,7 @@ module.exports = {
           return res.redirect("/");
         });
     } else {
+      console.log("hay errores");
       res.render("users/profile", {
         user: req.session.userLogin,
         old: req.body,

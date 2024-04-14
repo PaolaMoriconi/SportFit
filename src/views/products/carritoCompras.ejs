@@ -22,7 +22,7 @@
               />
               <div class="products__article__info">
                 <h2><%= product.name %></h2>
-                <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark"></i></a>
+                <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark" style="color: red; font-weight: bold;font-size: 1.2rem;"></i></a>
                 <% if (product.discount) { %>
                   <p>Antes: $<%= product.price %></p>
                   <span>Ahora: $<%= product.price*product.discount/100 %></span>
