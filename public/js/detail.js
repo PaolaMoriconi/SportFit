@@ -8,7 +8,7 @@ console.log("hola")
         a.addEventListener("click",(h) =>{
         h.preventDefault()
         tallesP.forEach(t => {
-            t.style.backgroundColor="#b5bac9"
+            t.style.backgroundColor="#fff"
         });
             a.style.backgroundColor="#3f8880"         
         }) 
