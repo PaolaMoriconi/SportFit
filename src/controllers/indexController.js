@@ -45,10 +45,11 @@ module.exports = {
     });
   },
   cart: async (req, res) => {
+    
     const products = await db.Product.findAll({
       include: { association: "images" },
     });
-
+    
     const suma = products.reduce(
       (accumulator, currentValue) => accumulator + currentValue.price,
       0
