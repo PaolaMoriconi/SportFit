@@ -192,23 +192,26 @@
 
                     <div class="col-12 mb-3" id="containerTalles" style="display: none; visibility: hidden;"">
                       <label class="form-label">Talles</label>
-                      <small class="text-danger">
-                        <%=locals.errors && errors.talles ? errors.talles.msg : null %>
-                       </small>
+                     
 
-                      <div class="d-flex" ">
+                      <div class="d-flex">
                         <% talles.forEach(t => { %>
                           <div class="form-check" >
                             <input class="form-check-input-lg" name="talles" type="checkbox" value="<%= t.id %>" id="<%= t.name %>">
                             <label class="form-check-label" for="<%= t.id + t.name %>">
                               <%= t.name %>
                             </label>
+                          
                           </div>
+                         
                         <% }) %>
-                      
+                        <small class="text-danger">
+                          <%=locals.errors && errors.talles ? errors.talles.msg : null %>
+                         </small>
                       </div> 
                                            
                     </div>
+                
                     <div class="col-12 mb-3 p-4">
                       <label for="" class="form-label">Imágenes:</label>
   
@@ -218,12 +221,15 @@
                         
                             <div class="d-flex justify-content-center border align-items-center position-relative" id="div<%= i %>" style="height: 250px; width: 200px;">
                               <button type="button" class="btn btn-sm btn-danger position-absolute bottom-0 start-0" onclick="removeImagePrev('<%=i%>')" id="button<%= i %>" hidden><i class="fa-solid fa-trash-can"></i></button>
-                              <input type="file" hidden id="image<%= i %>" onchange="showImagePrev(event, '<%=i%>')" name="images"/>
+                              <input class="imagenCreate" type="file" hidden id="image<%= i %>" onchange="showImagePrev(event, '<%=i%>')" name="images"/>
                               <label for="image<%= i %>" id="label<%= i %>" class="btn btn-sm btn-dark position-absolute bottom-0 end-0"><i class="fa-solid fa-plus"></i> Agregar</label>
                             </div>
                         
                         </div>
                           <% } %>
+                          <small class="text-danger">
+                            <%=locals.errors && errors.images ? errors.images.msg : null %>
+                           </small>
                       </div>
                     </div>
                     <div class="col-12 d-flex justify-content-end">
