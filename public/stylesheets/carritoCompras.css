@@ -82,8 +82,7 @@ color: #332f2c;
     bottom: 30px;
     left: 33vw;
        }
-       
-    
+
     .select
  {
    display: flex;
@@ -91,7 +90,7 @@ color: #332f2c;
     justify-content: flex-end;
     position: absolute;
    padding-top: 20px;
-   right: 50px;
+   right: 15%;
     gap:5px;
 }
 .cod-promo  {
@@ -182,7 +181,6 @@ bottom: 40px;
   {
    position: absolute;
     padding-top: 20px;
-    right: 94px;
      gap:5px;
  }
  .section__pagos__datos p{
@@ -251,9 +249,13 @@ position: relative;
       }
       .select
       {
-       padding-top: 10px;
-        right: 109px;
+        display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-end;
+         position: absolute;
+        padding-top: 10px;
          gap:5px;
+         right: 15%;
      }
      .section__pagos{
         width: 40%;
@@ -339,10 +341,6 @@ position: relative;
     bottom: 40px;
       left: 18vw;
       }
-      .select
-      {
-        right: 106px;
-        }
     .codigo__de {
         width: 60%;
         position: absolute;
@@ -420,10 +418,6 @@ position: relative;
 bottom: 40px;
   left: 17vw;
   }
-  .select {
-   
-    right: 180px;
-    }
 .codigo__de {
     font-size: 20px;
     width: 60%;

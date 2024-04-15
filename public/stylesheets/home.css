@@ -10,6 +10,10 @@ body.home {
   margin: 0 auto;
 }
 
+.carousel-item {
+  height: 350px;
+  background-position: center;
+}
 .home__article {
   margin: 10px 0;
   width: 90%;
@@ -71,6 +75,21 @@ body.home {
   animation-iteration-count: infinite;
 }
 
+.banner-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .home__swiper {
   margin-top: 20px;
   width: 100%;
