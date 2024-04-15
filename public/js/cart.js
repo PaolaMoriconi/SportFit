@@ -1,37 +1,14 @@
 if (!sessionStorage.getItem("cart")) {
     sessionStorage.setItem("cart",JSON.stringify([]))
-    console.log("carrito");
 }
 
-var cart = JSON.parse(sessionStorage.getItem("cart"))
+let cart = JSON.parse(sessionStorage.getItem("cart"))
 
-const addCart = (id,name,discount,price,imagen,count = 1) =>{
-    console.log(id,name,discount,imagen)
+const contador = document.querySelector('#contador-cart');
+if (cart.length > 0){
+    contador.innerText = cart.length;
+    contador.style.display = 'inline';
+}else{
+    contador.style.display = 'none';
+} 
 
-    const product = cart.find(item => item.id == id)
-
-    if (product) {
-        
-    } else {
-        const newProductCart ={
-            id,
-            name,
-            discount,
-            price,
-            imagen
-        }
-        cart.push(newProductCart)
-        sessionStorage.setItem("cart",JSON.stringify(cart))
-     
-    }
-
-}
-
-
-
-
-
-
-  
-    
-    

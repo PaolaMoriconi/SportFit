@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const { getAllProducts, updateSizes, addImage, removeImage, getSelectsColor, getSelectsBrands, getSelectsCategory, getProduct } = require('../../controllers/api/productApi');
+const { getAllProducts, getCart,updateSizes, addImage, removeImage, getSelectsColor, getSelectsBrands, getSelectsCategory, getProduct } = require('../../controllers/api/productApi');
 const { checkEmail } = require('../../controllers/api/userApi');
 const { checkPassword } = require('../../controllers/api/loginApi.');
 const upload = require('../../middlewares/uploadProduct');
@@ -19,6 +19,7 @@ router
   .get("/getSelectsBrands",getSelectsBrands)
   .get("/getSelectsCategory",getSelectsCategory)
   .get('/oneproduct/:id', getProduct)
+  .post('/getCart',getCart)
  
 
 

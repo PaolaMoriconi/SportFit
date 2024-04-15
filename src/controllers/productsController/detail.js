@@ -12,13 +12,14 @@ module.exports = (req, res) => {
   const sizes = db.Size.findAll();
   Promise.all([product,sizes])
   .then(([product,sizes]) =>{
+    console.log(product);
     db.Product.findAll({
       where :{
         category_id : product.category_id
       },
       include : ['images','brand']
     }).then(related => {
-      console.log(related);
+      
       return res.render('products/productDetail', {
         product,
         sizes,

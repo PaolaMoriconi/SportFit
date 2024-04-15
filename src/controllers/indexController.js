@@ -7,7 +7,7 @@ module.exports = {
       include: [{ association: "images" }],
     });
     const brands = await db.Brand.findAll();
-
+    console.log("user",req.session.userLogin)
     return res.render("index", {
       products,
       brands,

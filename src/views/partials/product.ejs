@@ -9,7 +9,7 @@
              
               <% if (product.discount) { %>
                 <p>Antes: $<%= product.price %></p>
-                <span>Ahora: $<%= product.price*product.discount/100 %></span>
+                <span>Ahora: $<%= product.price - (product.price*product.discount/100) %></span>
               <% }else{ %>
               <span>$<%= product.price.toFixed(0) %></span>
               <% } %>
