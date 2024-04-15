@@ -22,10 +22,10 @@
                 <h2><%= product.name %></h2>
                 <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark" style="color: red; font-weight: bold;font-size: 1.2rem;"></i></a>
                 <% if (product.discount) { %>
-                  <p>Antes: $<%= product.price %></p>
-                  <span>Ahora: $<%= product.price*product.discount/100 %></span>
+                  <p>Antes: $<%= product.price.toLocaleString('es') %></p>
+                  <span>Ahora: $<%= (product.price*product.discount/100).toLocaleString('es') %></span>
                 <% }else{ %>
-                <span>$<%= product.price.toFixed(0) %></span>
+                <span>$<%= product.price.toLocaleString('es') %></span>
                 <% } %>
               </div>
                <div  class="select"><small>Cantidad</small>

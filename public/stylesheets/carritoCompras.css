@@ -82,16 +82,15 @@ color: #332f2c;
     bottom: 30px;
     left: 33vw;
        }
-       
-    
+
     .select
  {
    display: flex;
    flex-wrap: wrap;
     justify-content: flex-end;
     position: absolute;
-   padding-top: 20px;
-   right: 50px;
+   padding-top: 183px;
+   right: 15%;
     gap:5px;
 }
 .cod-promo  {
@@ -182,7 +181,6 @@ bottom: 40px;
   {
    position: absolute;
     padding-top: 20px;
-    right: 94px;
      gap:5px;
  }
  .section__pagos__datos p{
@@ -209,6 +207,9 @@ bottom: 40px;
 }
 }
 @media (min-width: 1024px) {
+    .main__product{
+        margin-bottom: 16vh;;
+    }
     .div-carrito{
         display: flex;
         flex-direction: row;
@@ -228,6 +229,7 @@ position: relative;
     }
    
     .products__article{
+       position: relative;
         height: 215px;
     }
     .products__article h2{
@@ -251,9 +253,15 @@ position: relative;
       }
       .select
       {
-       padding-top: 10px;
-        right: 109px;
-         gap:5px;
+        /*display: flex;
+        flex-wrap: wrap;
+         justify-content: flex-end;
+         position:absolute;*/
+        top: 156px;
+         /*gap:5px;
+         right: 15%;*/
+         right: 1vw;
+         margin-right: 1vw;
      }
      .section__pagos{
         width: 40%;
@@ -275,7 +283,7 @@ position: relative;
      .codigo__de {
         width: 60%;
         position: absolute;
-        left: -9vw;
+        left: -17vw;
         top: 7px;
        
     
@@ -311,8 +319,11 @@ position: relative;
     .button{
         position: relative;
         width: 190%;
-        right: 31vw;
+        right: 37vw;
         top:7vh;
+    }
+    .button-pagar{
+        margin-top: 5vh
     }
     .envio-cambio{
         width: 187%;
@@ -339,10 +350,6 @@ position: relative;
     bottom: 40px;
       left: 18vw;
       }
-      .select
-      {
-        right: 106px;
-        }
     .codigo__de {
         width: 60%;
         position: absolute;
@@ -420,10 +427,6 @@ position: relative;
 bottom: 40px;
   left: 17vw;
   }
-  .select {
-   
-    right: 180px;
-    }
 .codigo__de {
     font-size: 20px;
     width: 60%;

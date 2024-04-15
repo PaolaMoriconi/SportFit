@@ -123,6 +123,8 @@ if (cart.length == 0) {
         //creacion de select
         const select = document.createElement("div");
         select.classList.add("select");
+        select.innerText="Cantidad";
+
         const cantidad = document.createElement("select");
         cantidad.name = "select";
         for (let i = 1; i < 6; i++) {

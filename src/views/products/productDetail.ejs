@@ -29,17 +29,17 @@
 
           	<% if (product.discount) { %>
 								<p class="productDetail--price small">
-									<span>$<%= toThousand(product.price) %></span>
+									<span>$<%= product.price.toLocaleString('es') %></span>
 									/
 									<b><%= product.discount %>% OFF</b>
 								</p>
 								<p class="productDetail--price">
-									$<%= toThousand(product.price - (product.price * product.discount / 100).toFixed(0))%>
+									$<%= (product.price - (product.price * product.discount / 100)).toLocaleString('es')%>
 								</p>
 							<% }else{ %>
 							
 							<p class="productDetail--price">
-								$<%= toThousand(product.price) %>
+								$<%= product.price.toLocaleString('es')%>
 							</p>
 							<% } %>
               <div class="main__section--productDetail--description">
@@ -85,7 +85,7 @@
                     <a href="/products/detail/<%= pr.id %>">
                       <img class="detail__swiper-slide--marca" src="/images/marcas/<%= pr.brand.image %>" alt="">
                       <img class="detail__swiper-slide--producto"  src="/images/products/<%= pr.images[0].name %>" alt="<%= pr.name %>">
-                      <h5 class="detail__swiper-slide--precio">$<%= toThousand(product.price - (product.price * product.discount / 100).toFixed(0))%></h5>
+                      <h5 class="detail__swiper-slide--precio">$<%= (pr.price - (pr.price * pr.discount / 100)).toLocaleString('es')%></h5>
                     </a>
                     <bold class="text-dark"><%= pr.name %></bold>
 

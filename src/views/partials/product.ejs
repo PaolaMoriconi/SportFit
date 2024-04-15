@@ -11,7 +11,7 @@
                 <p>Antes: $<%= product.price %></p>
                 <span>Ahora: $<%= product.price - (product.price*product.discount/100) %></span>
               <% }else{ %>
-              <span>$<%= product.price.toFixed(0) %></span>
+              <span>$<%= product.price.toLocaleString('es') %></span>
               <% } %>
             </div>
           </a>
