@@ -8,21 +8,16 @@
     <%- include('./partials/header') %>
     <main class="main__home">
       
-      
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url('/images/banner1.jpg');  height: 350px;background-repeat: no-repeat; background-position: center;">
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/banner2.jpg');  height: 350px;background-repeat: no-repeat; background-position: center;">
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/banner3.jpg');  height: 350px;background-repeat: no-repeat; background-position: center;">
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/banner4.jpg');  height: 350px;background-repeat: no-repeat; background-position: center;">
-          </div>
-          <div class="carousel-item" style="background-image: url('/images/banner5.jpg');  height: 350px;background-repeat: no-repeat; background-position: center;">
-          </div>
-        </div>
+    <div class="swiper bannerSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide banner-slide"><img src="/images/banner1.jpg" alt=""></div>
+        <div class="swiper-slide banner-slide"><img src="/images/banner2.jpg" alt=""></div>
+        <div class="swiper-slide banner-slide"><img src="/images/banner3.jpg" alt=""></div>
+        <div class="swiper-slide banner-slide"><img src="/images/banner4.jpg" alt=""></div>
+        <div class="swiper-slide banner-slide"><img src="/images/banner5.jpg" alt=""></div>
       </div>
+    </div>
+      
 
       <div class="swiper home__swiper">
         <div class="swiper-wrapper">
@@ -117,6 +112,17 @@
       },
     });
   </script>
-    
+    <!-- Initialize Swiper -->
+  <script>
+    var swiper2 = new Swiper(".bannerSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
   </body>
 </html>
