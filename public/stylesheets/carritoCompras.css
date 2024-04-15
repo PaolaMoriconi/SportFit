@@ -89,7 +89,7 @@ color: #332f2c;
    flex-wrap: wrap;
     justify-content: flex-end;
     position: absolute;
-   padding-top: 20px;
+   padding-top: 183px;
    right: 15%;
     gap:5px;
 }
@@ -207,6 +207,9 @@ bottom: 40px;
 }
 }
 @media (min-width: 1024px) {
+    .main__product{
+        margin-bottom: 16vh;;
+    }
     .div-carrito{
         display: flex;
         flex-direction: row;
@@ -226,6 +229,7 @@ position: relative;
     }
    
     .products__article{
+       position: relative;
         height: 215px;
     }
     .products__article h2{
@@ -249,13 +253,15 @@ position: relative;
       }
       .select
       {
-        display: flex;
+        /*display: flex;
         flex-wrap: wrap;
          justify-content: flex-end;
-         position: absolute;
-        padding-top: 10px;
-         gap:5px;
-         right: 15%;
+         position:absolute;*/
+        top: 156px;
+         /*gap:5px;
+         right: 15%;*/
+         right: 1vw;
+         margin-right: 1vw;
      }
      .section__pagos{
         width: 40%;
@@ -277,7 +283,7 @@ position: relative;
      .codigo__de {
         width: 60%;
         position: absolute;
-        left: -9vw;
+        left: -17vw;
         top: 7px;
        
     
@@ -313,8 +319,11 @@ position: relative;
     .button{
         position: relative;
         width: 190%;
-        right: 31vw;
-        top:3vh;
+        right: 37vw;
+        top:7vh;
+    }
+    .button-pagar{
+        margin-top: 5vh
     }
     .envio-cambio{
         width: 187%;

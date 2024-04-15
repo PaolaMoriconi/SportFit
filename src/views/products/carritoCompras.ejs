@@ -5,10 +5,8 @@
   }) %>
   <body class="body__carr">
     <%- include('../partials/header') %>
-    <main class="main__product"
-    >
-      
-      <h2 class="titulo-principal">TU CARRITO</h2>
+    <main class="main__product">
+     <!--<h2 class="titulo-principal">TU CARRITO</h2>
       <div class="div-carrito">
         <div class="products">
           <% products.forEach(product => { %>
@@ -29,63 +27,59 @@
                 <% }else{ %>
                 <span>$<%= product.price.toLocaleString('es') %></span>
                 <% } %>
-                
-                 
+              </div>
                <div  class="select"><small>Cantidad</small>
-              <select name="select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+                <select name="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
                 
               </div>
             </a>
           </article>
           <% }) %>
-        </div>
+        </div> 
         <section class="section__pagos">
           <div class="section__pagos__datos">
-         
-            <a href="./"  class="codigo__de"><i class="fa-solid fa-arrow-left">Seguir comprando</i></a>
-         
-    <div class="detalle__pedido">
-      <h3>DETALLE DEL PEDIDO</h3>
-    </div>
-    <div class="div__total">
-      <p><%= products.length %> Productos</p><span>$<%= total.toLocaleString('es') %></span>
-    </div>
-    <% if (total < 19999) { %>
-      <div class="div__total">
-        <p>Entrega</p><span><%= envio %></span>
+            <a href="./"  class="codigo__de">
+              <i class="fa-solid fa-arrow-left">Seguir comprando</i>
+            </a>
+            <div class="detalle__pedido">
+              <h3>DETALLE DEL PEDIDO</h3>
+            </div>
+            <div class="div__total">
+              <p><%= products.length %> Productos</p><span>$<%= total %></span>
+            </div>
+          <% if (total < 19999) { %>
+              <div class="div__total">
+                <p>Entrega</p><span><%= envio %></span>
+              </div>
+              <div class="div__total">
+                <p>TOTAL</p><span>$<%= total + envio  %></span>
+              </div>
+          <% }else{%>
+              <div class="div__total">
+                <p>Entrega</p><span>Gratis</span>
+              </div>
+              <div class="div__total">
+                <p>TOTAL</p><span>$<%= total%></span>
+              </div>
+          <%} %>   
+           <a href="#" class="cod-promo"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
+            <div class="button">
+              <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        
+            <div class="envio-cambio">
+              <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
+              <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
+            </div>
+          </div>
+        </section>-->
       </div>
-      <div class="div__total">
-        <p>TOTAL</p><span>$<%= (total + envio).toLocaleString('es')  %></span>
-      </div>
-    <% }else{%>
-      <div class="div__total">
-        <p>Entrega</p><span>Gratis</span>
-      </div>
-      <div class="div__total">
-        <p>TOTAL</p><span>$<%= total.toLocaleString('es')%></span>
-      </div>
-    <%} %>
-
-   
-      <a href="#" class="cod-promo"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
-   
-      <div class="button">
-        <button class="button-pagar" type="button">IR A PAGAR<i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-      
-      <div class="envio-cambio">
-        <p><i class="fa-solid fa-truck"></i> ENVIO GRATIS A PARTIR DE $19.999</p>
-        <p><i class="fa-solid fa-right-left"></i> CAMBIOS GRATIS</p>
-      </div>
-    </div>
-        </section>
-      </div>
-
+  <script src="/js/viewCart.js"></script>
   
   </main>
   <%- include('../partials/footer') %>

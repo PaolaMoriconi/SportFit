@@ -44,6 +44,29 @@
   cursor:pointer
 }
 
+.image-profile{
+  border-radius: 50%;
+  width: 4vw;
+}
+
+.fa-cart-shopping{
+  font-size: 1.5rem;
+  color: white;
+}
+.cart-container{
+  position: relative;
+}
+#contador-cart{
+  font-size: 0.7rem;
+  color: white;
+  font-weight: bold;
+  padding: 0.3vw;
+  background-color: rgb(90, 113, 240);
+  border-radius: 40%;
+  position: absolute;
+  right: 6%;
+}
+
 @keyframes rotar{
   from{
     transform: rotateY(-180deg)

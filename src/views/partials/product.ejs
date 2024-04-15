@@ -8,8 +8,8 @@
               <h2><%= product.name %></h2>
              
               <% if (product.discount) { %>
-                <p>Antes: $<%= product.price.toLocaleString('es') %></p>
-                <span>Ahora: $<%= (product.price-(product.price*product.discount/100)).toLocaleString('es') %></span>
+                <p>Antes: $<%= product.price %></p>
+                <span>Ahora: $<%= product.price - (product.price*product.discount/100) %></span>
               <% }else{ %>
               <span>$<%= product.price.toLocaleString('es') %></span>
               <% } %>

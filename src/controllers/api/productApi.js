@@ -1,4 +1,5 @@
 const db = require("../../database/models")
+const { Op } = require("sequelize");
 
 const getAllProducts = async (req,res) =>{
     try {
@@ -245,6 +246,22 @@ const getSelectsBrands = async (req,res) =>{
     }
 
 }
+const getCart = async (req,res) => {
+    try {
+        const ids = req.body.ids
+        const productos = await db.Product.findAll({
+          where: {
+            id: {
+              [Op.in]: ids
+            }
+          }
+        });
+        return productos;
+      } catch (error) {
+        console.error('Error al obtener productos:', error);
+        throw error;
+      }
+}
 module.exports={
     getAllProducts,
     updateSizes,
@@ -253,5 +270,6 @@ module.exports={
     getSelectsColor,
     getSelectsBrands,
     getSelectsCategory,
-    getProduct
+    getProduct,
+    getCart
 }

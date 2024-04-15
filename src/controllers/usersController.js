@@ -22,18 +22,19 @@ module.exports = {
       db.User.findOne({
         where: { email },
         include: [{ association: "rols" }],
-      }).then(({ id, email, name, rols }) => {
+      }).then(({ id, email, name, rols, image }) => {
         req.session.userLogin = {
           id,
           name,
           rol: rols.name,
           email,
+          image
         };
 
         if (req.body.remember == "on") {
           res.cookie(
             "user",
-            { id, name, rol: rols.name, email },
+            { id, name, rol: rols.name, email,image },
             1000 * 60 * 15
           );
           res.cookie("remember", "true", 1000 * 60 * 15);

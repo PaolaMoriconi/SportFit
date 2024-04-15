@@ -43,6 +43,11 @@
             <small class="text-danger"><%=locals.errors && errors.password2 ? errors.password2.msg : null %> </small>
           </div>
 
+          <div class="register__group--image col-12 col-md-7" >
+            <label for="avatar" class="register__label">Agregar imagen</label>
+            <input id="avatar" type="file"  name="avatar">          
+          </div>
+
           <div class="form__botton">
             <button class="register--btn" type="submit">Regístrate</button>
 

@@ -58,14 +58,14 @@
   
                     <% sizes.forEach(s => { %>
                       <% if (product.sizes.map(s => s.id).includes(s.id)) { %>
-                        <a href="#"><%= s.name %></a>
+                        <a href="#" ><%= s.name %></a>
                       <% } %>
                     <% }) %>
                  
                   </div>
                 <% } %>
               
-                <button class="car--btn" type="submit"><a href="/cart" onclick='addCart("<%=product.id%>","<%=product.name%>","<%=product.discount%>","<%=product.price%>","<%= product.images[0].name %>")'>añadir al carrito</a></button>
+                <button class="car--btn" type="submit"><a onclick='addCart("<%=product.id%>")'>añadir al carrito</a></button>
 
               </div>
 
