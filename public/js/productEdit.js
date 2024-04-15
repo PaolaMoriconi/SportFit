@@ -4,6 +4,126 @@ const containerTalles = document.querySelector("#containerTalles");
 const formCheck = document.querySelectorAll(".form-check");
 
 
+
+const form = document.getElementById("editproductForm")
+const alerta = document.querySelectorAll("small")
+const imagen = document.getElementById("image")
+const talles = document.querySelectorAll(".form-check-input-lg")
+
+console.log("hola");
+
+
+function isValidNumber(valor) {
+  return valor >= 0? /^-?\d*\.?\d*$/.test(valor) : false;
+  }
+      
+  console.log(form.elements);
+  for (let i = 0; i < 10; i++) {
+      
+  form.elements[i].addEventListener("blur",(e)=>{
+  
+  
+       //SI EL CAMPO NO ESTA VACIO LE DA UN TRUE
+          if (form.elements[i].value !== "") {
+              alerta[i].textContent=""
+             form.elements[i].className="form-control is-valid"
+          }
+              //DETECTA SI HAY UN CAMPO VACIO
+              if (form.elements[i].value == "") {
+                  alerta[i].textContent= `El campo esta vacio`
+                  form.elements[i].className="form-control is-invalid"
+                  }
+      
+              if (form.elements[0].value !== "" && form.elements[0].value.length < 10 ) {
+                  alerta[0].textContent= `Debe tener mas de 10 caracteres`
+                  form.elements[0].className="form-control is-invalid"
+                  }
+          if (form.elements[9].value !== "" && form.elements[9].value.length < 150 ) {
+                  alerta[9].textContent= `Debe tener mas de 150 caracteres`
+                  form.elements[9].className="form-control is-invalid"
+                  }
+  
+      ////////SOLO NUMEROS EN LOS CAMPOS DE NUMEROS Y LIMITACION EN EL DESCUENTO
+          if (!isValidNumber(form.elements[6].value)&& form.elements[6].value !== "") {
+              form.elements[6].className="form-control is-invalid"
+              alerta[6].textContent="Solo caracteres numericos"
+              }
+          if (!isValidNumber(form.elements[7].value)&& form.elements[7].value !== "") {
+              form.elements[7].className="form-control is-invalid"
+              alerta[7].textContent="Solo caracteres numericos"
+              }
+              if (!isValidNumber(form.elements[8].value)&& form.elements[8].value !== "") {
+                form.elements[8].className="form-control is-invalid"
+                alerta[8].textContent="Solo caracteres numericos"
+                    } 
+          if (form.elements[8].value > 80) {
+          form.elements[8].className="form-control is-invalid"
+  
+          alerta[8].textContent="No puedes dar descuentos mayores a 80%"
+              } 
+         
+              console.log(alerta);
+  
+      })
+     }//CIERRE DEL FOR 
+  
+       function losTalles(talle) {
+       let holaa = 0
+       for (let i = 0; i < talle.length; i++) {
+           if (talle[i].checked) {
+               holaa ++
+           } 
+       }
+       return holaa
+   }
+    
+      form.addEventListener("submit", (e) =>{
+          let error =  0  
+         
+  /////////////VALIDACION DE LA IMAGEN Y LAS TALLAS////////////////
+           const eee = losTalles(talles)
+          if (!eee) {
+              alerta[8].textContent="Debes seleecionar al menos una talla"
+              error ++
+          }else{
+              alerta[8].textContent=""
+              
+          } 
+  
+             if (imagen.files.length > 4) {
+                  alerta[11].textContent="Solo puede subir 4 imagenes"
+                  form.elements[11].className="form-control is-invalid"
+                  error ++
+              }else{
+                  form.elements[11].className="form-control is-valid"
+                  alerta[11].textContent=""
+                  
+              } 
+        
+    
+             
+  
+              for (let i = 0; i < 10; i++) {
+  
+                  if (form.elements[i].value == "") {
+                  alerta[i].textContent= `El campo esta vacio`
+                  form.elements[i].className="form-control is-invalid" 
+                  error++}
+  
+              if (form.elements[i].className == "form-control is-valid") {
+                  
+                 
+              }
+  
+              if (error == 0) {
+                  form.submit()
+              }
+              console.log(error)
+              e.preventDefault()
+  
+       }//CIERRE DEL FOR      
+      })
+
 const visibleCheck = () => {
   if (subcategoria.value != "" && categoria.value != "") {
 
@@ -83,25 +203,20 @@ categoria.addEventListener("change", function (e) {
 
 
 
-// const form = document.getElementById("editproductForm")
-// const alerta = document.querySelectorAll("small")
-// const imagen = document.getElementById("image")
-// const talles = document.querySelectorAll(".form-check-input-lg")
-
-// function losTalles(talle) {
-//     let holaa = 0
-//     for (let i = 0; i < talle.length; i++) {
-//         if (talle[i].checked) {
-//             holaa ++
-//         } 
-//     }
-//     return holaa
-// }
+ function losTalles(talle) {
+     let holaa = 0
+     for (let i = 0; i < talle.length; i++) {
+         if (talle[i].checked) {
+             holaa ++
+         } 
+     }
+     return holaa
+ }
 
 
-// function isValidNumber(valor) {
-// return valor >= 0? /^-?\d*\.?\d*$/.test(valor) : false;
-// }
+ function isValidNumber(valor) {
+ return valor >= 0? /^-?\d*\.?\d*$/.test(valor) : false;
+ }
 
 function showImages(images, idProduct) {
     const boxImages = document.getElementById('box-images');
@@ -164,91 +279,4 @@ async function addImage(e,idProduct){
 // }
     
 
-// for (let i = 0; i < form.elements.length -8; i++) {
-    
-// form.elements[i].addEventListener("blur",(e)=>{
 
-
-//      //SI EL CAMPO NO ESTA VACIO LE DA UN TRUE
-//         if (form.elements[i].value !== "") {
-//             alerta[i].textContent=""
-//            form.elements[i].className="form-control is-valid"
-//         }
-//             //DETECTA SI HAY UN CAMPO VACIO
-//             if (form.elements[i].value == "") {
-//                 alerta[i].textContent= `El campo esta vacio`
-//                 form.elements[i].className="form-control is-invalid"
-//                 }
-    
-//             if (form.elements[0].value !== "" && form.elements[0].value.length < 10 ) {
-//                 alerta[0].textContent= `Debe tener mas de 10 caracteres`
-//                 form.elements[0].className="form-control is-invalid"
-//                 }
-//         if (form.elements[7].value !== "" && form.elements[7].value.length < 150 ) {
-//                 alerta[7].textContent= `Debe tener mas de 150 caracteres`
-//                 form.elements[7].className="form-control is-invalid"
-//                 }
-
-//     ////////SOLO NUMEROS EN LOS CAMPOS DE NUMEROS Y LIMITACION EN EL DESCUENTO
-//         if (!isValidNumber(form.elements[5].value)&& form.elements[5].value !== "") {
-//             form.elements[5].className="form-control is-invalid"
-//             alerta[5].textContent="Solo caracteres numericos"
-//             }
-//         if (!isValidNumber(form.elements[6].value)&& form.elements[6].value !== "") {
-//             form.elements[6].className="form-control is-invalid"
-//             alerta[6].textContent="Solo caracteres numericos"
-//             }
-//         if (form.elements[6].value > 80) {
-//         form.elements[6].className="form-control is-invalid"
-//         alerta[6].textContent="No puedes dar descuentos mayores a 80%"
-//             } 
-       
-   
-
-//     })
-//    }//CIERRE DEL FOR 
-    
-  
-//     form.addEventListener("submit", (e) =>{
-//         let error =  0  
-// /////////////VALIDACION DE LA IMAGEN Y LAS TALLAS////////////////
-//         const eee = losTalles(talles)
-//         if (!eee) {
-//             alerta[8].textContent="Debes seleecionar al menos una talla"
-//             error ++
-//         }else{
-//             alerta[8].textContent=""
-            
-//         }
-
-//             if (imagen.files.length > 4) {
-//                 alerta[9].textContent="Solo puede subir 4 imagenes"
-//                 form.elements[14].className="form-control is-invalid"
-//                 error ++
-//             }else{
-//                 form.elements[14].className="form-control is-valid"
-//                 alerta[9].textContent=""
-                
-//             }
-
-//             for (let i = 0; i < form.elements.length -8; i++) {
-
-//                 if (form.elements[i].value == "") {
-//                 alerta[i].textContent= `El campo esta vacio`
-//                 form.elements[i].className="form-control is-invalid"
-//                 error++ }
-
-//             if (form.elements[i].className == "form-control is-valid") {
-                
-//                console.log(error)
-//             }
-//             if (error == 0) {
-//                 form.submit()
-//             }
-//             e.preventDefault()
-
-//      }//CIERRE DEL FOR     
-//     })
-
-//     */
-    

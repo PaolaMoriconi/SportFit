@@ -38,7 +38,7 @@
   .products__article__img{
     position: relative;
     width:100%;
-   top:60px
+    top:60px
   }
   
  .products__article__info {
@@ -73,6 +73,7 @@ color: #332f2c;
    left: 25px;
   }
   .icons__products  {
+ 
       display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -80,10 +81,9 @@ color: #332f2c;
     position: relative;
     bottom: 30px;
     left: 33vw;
-       
-        color: #332f2c;
-    }
-.select
+       }
+
+    .select
  {
    display: flex;
    flex-wrap: wrap;
@@ -242,6 +242,7 @@ position: relative;
         margin: 10px 10vw;
       }
       .icons__products  {
+        
     bottom: 24px;
       left: 19vw;
           
@@ -254,6 +255,7 @@ position: relative;
          position: absolute;
         padding-top: 10px;
          gap:5px;
+         right: 15%;
      }
      .section__pagos{
         width: 40%;
@@ -275,7 +277,7 @@ position: relative;
      .codigo__de {
         width: 60%;
         position: absolute;
-        left: -16vw;
+        left: -9vw;
         top: 7px;
        
     
@@ -304,14 +306,14 @@ position: relative;
     .cod-promo  {
         position: relative;
        width: 200%;
-       right: 35vw;
-       top:7vh;
+       right: 31vw;
+       top:12vh;
     
     }
     .button{
         position: relative;
         width: 190%;
-        right: 37vw;
+        right: 31vw;
         top:3vh;
     }
     .envio-cambio{

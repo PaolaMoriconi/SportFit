@@ -22,7 +22,7 @@
               />
               <div class="products__article__info">
                 <h2><%= product.name %></h2>
-                <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark"></i></a>
+                <a href="" class="icons__products"><i class="fa-regular fa-circle-xmark" style="color: red; font-weight: bold;font-size: 1.2rem;"></i></a>
                 <% if (product.discount) { %>
                   <p>Antes: $<%= product.price.toLocaleString('es') %></p>
                   <span>Ahora: $<%= (product.price*product.discount/100).toLocaleString('es') %></span>
@@ -70,6 +70,7 @@
         <p>TOTAL</p><span>$<%= total.toLocaleString('es')%></span>
       </div>
     <%} %>
+
    
       <a href="#" class="cod-promo"><i class="fa-solid fa-tag"> USA UN CODIGO PROMOCIONAL</i></a>
    
